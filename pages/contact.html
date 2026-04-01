@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - A1 Technovation</title>
+    <meta name="description" content="Contact A1 Technovation for premium web design, SEO, and social media support in Bangladesh.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <h1>A1 Technovation</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html" class="active btn-primary">Contact Us</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <div class="container">
+            <span class="section-tag hero-tag">Contact</span>
+            <h1>Tell us what you want to build, improve, or relaunch.</h1>
+            <p>We work with brands that want a more premium website presence, better SEO clarity, and cleaner digital communication.</p>
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <span class="section-tag">Reach Out</span>
+                    <h2>Start the conversation</h2>
+                    <p>If you already know what you need, send us the basics. If you do not, that is fine too. We can help shape the direction.</p>
+                    <div class="contact-item">
+                        <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="content">
+                            <h4>Address</h4>
+                            <p>35/A Srijoni Road, Ibrahimpur, Dhaka Cantonment, Dhaka 1206, Dhaka, Bangladesh</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="icon"><i class="fas fa-phone"></i></div>
+                        <div class="content">
+                            <h4>Phone</h4>
+                            <p><a href="tel:+8801799976295">+8801799-976295</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="icon"><i class="fas fa-envelope"></i></div>
+                        <div class="content">
+                            <h4>Email</h4>
+                            <p><a href="mailto:contact@a1technovation.com">contact@a1technovation.com</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="icon"><i class="fas fa-globe"></i></div>
+                        <div class="content">
+                            <h4>Website</h4>
+                            <p><a href="https://a1technovation.com" target="_blank" rel="noreferrer">a1technovation.com</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="icon"><i class="fab fa-instagram"></i></div>
+                        <div class="content">
+                            <h4>Social</h4>
+                            <p>@a1technovation</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="company">Company Name</label>
+                            <input type="text" id="company" name="company">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Service Interested In *</label>
+                            <select id="service" name="service" required>
+                                <option value="">Select a service</option>
+                                <option value="web-dev">Web Design & Development</option>
+                                <option value="seo">White-Hat SEO</option>
+                                <option value="social-media">Social Media Marketing</option>
+                                <option value="all">Full Digital Support</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="budget">Project Budget</label>
+                            <select id="budget" name="budget">
+                                <option value="">Select budget range</option>
+                                <option value="starter">Starter project</option>
+                                <option value="growth">Growth-focused build</option>
+                                <option value="premium">Premium multi-page scope</option>
+                                <option value="custom">Custom / not sure yet</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="6" placeholder="Tell us what you are building, what feels outdated, or what result you want next." required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label class="checkbox">
+                                <input type="checkbox" name="agree" required>
+                                I agree to be contacted about my inquiry
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq-section">
+        <div class="container">
+            <span class="section-tag">FAQ</span>
+            <h2>Questions clients usually ask first</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h4>Can you redesign an existing website?</h4>
+                    <p>Yes. We can refresh the homepage only or redesign the full site depending on the current condition and business goals.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Do you work on SEO and design together?</h4>
+                    <p>Yes. That combination is often where the biggest improvement happens because structure and visibility support each other.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Can you help after launch?</h4>
+                    <p>Yes. We can support updates, new sections, campaign pages, and continued optimization after the initial work is done.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Do you only work with businesses in Bangladesh?</h4>
+                    <p>No. We are Dhaka-based, but digital work allows us to support brands in other markets as well.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>What if I am not sure what service I need?</h4>
+                    <p>That is normal. Share the business goal and what currently feels weak, and we will help define the right approach.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>How fast can we get started?</h4>
+                    <p>Once we align on scope and priorities, we can move quickly into discovery, page planning, and the first design direction.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <span class="section-tag cta-tag">Ready</span>
+            <h2>Need a cleaner, stronger digital presence?</h2>
+            <p>Use the form, email us directly, or call and we will help you define the next best move.</p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>A1 Technovation</h4>
+                    <p>Modern SEO, web design, and social media systems for ambitious brands.</p>
+                    <div class="social-links">
+                        <a href="https://a1technovation.com" target="_blank" rel="noreferrer"><i class="fas fa-globe"></i></a>
+                        <a href="https://www.instagram.com/a1technovation/" target="_blank" rel="noreferrer"><i class="fab fa-instagram"></i></a>
+                        <a href="mailto:contact@a1technovation.com"><i class="fas fa-envelope"></i></a>
+                        <a href="tel:+8801799976295"><i class="fas fa-phone"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services-seo.html">White-Hat SEO</a></li>
+                        <li><a href="services-web-dev.html">Web Design & Development</a></li>
+                        <li><a href="services-social-media.html">Social Media Marketing</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> 35/A Srijoni Road, Ibrahimpur, Dhaka Cantonment, Dhaka 1206, Dhaka, Bangladesh</p>
+                    <p><i class="fas fa-phone"></i> +8801799-976295</p>
+                    <p><i class="fas fa-envelope"></i> contact@a1technovation.com</p>
+                    <p><i class="fab fa-instagram"></i> @a1technovation</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 A1 Technovation. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
