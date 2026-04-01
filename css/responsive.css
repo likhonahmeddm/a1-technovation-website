@@ -575,9 +575,22 @@
         max-width: none;
     }
 
+    .hero-visual-image,
+    .experience-screen-image {
+        opacity: 0.2;
+    }
+
     .hero-panel-main,
     .experience-screen {
         padding: 22px;
+    }
+
+    .service-card-media,
+    .case-card-media,
+    .editorial-panel-image,
+    .contact-visual-card {
+        height: auto;
+        min-height: 220px;
     }
 
     .panel-highlights {
