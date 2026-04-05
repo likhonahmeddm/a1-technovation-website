@@ -272,24 +272,6 @@ function initializeScrollAnimations() {
     // Lazy loading animation on scroll
     observeElements();
 
-    // Parallax effect on scroll
-    initializeParallaxEffect();
-}
-
-function initializeParallaxEffect() {
-    // Add parallax effect to hero and sections with background images
-    window.addEventListener('scroll', function() {
-        const scrollY = window.scrollY;
-        const pageHeader = document.querySelector('.page-header');
-        const hero = document.querySelector('.hero');
-        
-        if (pageHeader) {
-            pageHeader.style.backgroundPosition = `center ${scrollY * 0.5}px`;
-        }
-        if (hero) {
-            hero.style.backgroundPosition = `center ${scrollY * 0.5}px`;
-        }
-    });
 }
 
 function createScrollToTopButton() {
@@ -361,7 +343,8 @@ function observeElements() {
     const observer = new IntersectionObserver(function(entries) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.style.animation = 'fadeInUp 0.6s ease forwards';
+                entry.target.classList.add('is-visible');
+                entry.target.style.animation = 'fadeInUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards';
                 observer.unobserve(entry.target);
             }
         });
@@ -374,6 +357,7 @@ function observeElements() {
 
     elementsToObserve.forEach(element => {
         element.style.opacity = '0';
+        element.style.transform = 'translateY(30px)';
         observer.observe(element);
     });
 

@@ -1,13 +1,190 @@
 /* ============================================
-   RESPONSIVE DESIGN - MEDIA QUERIES
+   RESPONSIVE DESIGN
    ============================================ */
 
-/* ============================================
-   TABLETS (768px and below)
-   ============================================ */
+@media (max-width: 1199px) {
+    .container {
+        max-width: 1040px;
+    }
+
+    .hero-home .hero-summary-points {
+        grid-template-columns: 1fr;
+    }
+
+    .services-grid-four {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .journey-strip,
+    .process-ribbon {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .testimonial-grid,
+    .proof-bar,
+    .case-grid,
+    .insight-grid,
+    .service-menu {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .hero-layout,
+    .service-hero-layout,
+    .experience-layout,
+    .editorial-grid,
+    .story-grid,
+    .contact-band-grid,
+    .overview-grid {
+        gap: 32px;
+    }
+}
+
+@media (max-width: 980px) {
+    .hero-layout,
+    .service-hero-layout,
+    .experience-layout,
+    .editorial-grid,
+    .story-grid,
+    .founder-spotlight-grid,
+    .contact-band-grid,
+    .overview-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-content,
+    .experience-copy,
+    .service-hero-copy,
+    .founder-spotlight-copy,
+    .editorial-copy {
+        max-width: none;
+    }
+
+    .hero-content,
+    .experience-copy,
+    .service-hero-copy,
+    .founder-spotlight-copy {
+        text-align: center;
+    }
+
+    .experience-copy h2,
+    .editorial-copy h2,
+    .founder-spotlight-copy h2,
+    .contact-band-grid h2,
+    .service-section h2,
+    .overview-text h2 {
+        text-align: center;
+    }
+
+    .hero-content p,
+    .experience-copy > p,
+    .service-hero-copy p,
+    .founder-spotlight-copy p,
+    .editorial-copy p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons,
+    .hero-metrics,
+    .hero-checklist,
+    .hero-trust-row,
+    .service-hero-actions,
+    .service-hero-badges {
+        justify-content: center;
+    }
+
+    .hero-visual,
+    .hero-visual-rich,
+    .service-hero-visual,
+    .experience-screen,
+    .dual-image-stack {
+        min-height: auto;
+    }
+
+    .hero-panel-main,
+    .service-visual-main,
+    .service-visual-card,
+    .stack-image,
+    .screen-card,
+    .mini-stat {
+        position: static;
+        inset: auto;
+        max-width: none;
+    }
+
+    .hero-panel-main,
+    .service-visual-main,
+    .stack-image-large,
+    .stack-image-small {
+        margin-bottom: 18px;
+    }
+
+    .hero-panel-main {
+        padding: 24px;
+    }
+
+    .hero-home .hero-summary-card h3,
+    .hero-home .hero-content h1 {
+        max-width: none;
+    }
+
+    .service-visual-main {
+        min-height: 320px;
+    }
+
+    .founder-portrait-card {
+        min-height: 420px;
+    }
+
+    .service-visual-card {
+        margin-top: 14px;
+    }
+
+    .stack-image-large,
+    .stack-image-small {
+        width: 100%;
+        height: 260px;
+        border-width: 0;
+    }
+
+    .stack-image-small {
+        margin-top: 0;
+    }
+
+    .service-anchor-nav {
+        position: static;
+        top: auto;
+    }
+
+    .anchor-nav-list {
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        padding-bottom: 4px;
+    }
+
+    .stats-grid,
+    .service-hero-metrics,
+    .faq-grid,
+    .related-services-grid,
+    .tools-grid,
+    .platforms-grid,
+    .services-list,
+    .proof-bar,
+    .case-grid,
+    .insight-grid,
+    .service-menu,
+    .testimonial-grid,
+    .journey-strip,
+    .process-ribbon {
+        grid-template-columns: 1fr;
+    }
+}
 
 @media (max-width: 768px) {
-    /* Navigation */
+    .utility-bar {
+        display: none;
+    }
+
     .hamburger {
         display: flex;
     }
@@ -15,14 +192,15 @@
     .nav-menu {
         display: none;
         position: absolute;
-        top: 70px;
+        top: 78px;
         left: 0;
         width: 100%;
-        background: white;
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(16px);
         flex-direction: column;
         gap: 0;
         padding: 20px 0;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 18px 40px rgba(8, 22, 58, 0.12);
     }
 
     .nav-menu.active {
@@ -30,24 +208,66 @@
     }
 
     .nav-menu li {
-        padding: 15px 20px;
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .nav-menu a {
+        display: block;
+        padding: 14px 0;
     }
 
     .nav-menu a::after {
         display: none;
     }
 
-    /* Hero */
+    .nav-menu .btn-primary {
+        margin-top: 8px;
+        text-align: center;
+    }
+
+    .hero-home {
+        padding: 108px 0 84px;
+    }
+
     .hero {
-        padding: 60px 0;
+        padding: 72px 0 56px;
     }
 
-    .hero-content h1 {
-        font-size: 36px;
+    .page-header,
+    .service-hero-header {
+        padding: 56px 0 44px;
     }
 
-    .hero-content p {
+    section {
+        padding: 64px 0;
+    }
+
+    section h2 {
+        font-size: 34px;
+    }
+
+    .hero-content h1,
+    .page-header h1,
+    .service-hero-copy h1 {
+        font-size: 40px;
+    }
+
+    .hero-content p,
+    .page-header p,
+    .service-hero-copy p,
+    .section-subtitle {
         font-size: 16px;
+    }
+
+    .hero-home .hero-summary-card,
+    .editorial-panel-content,
+    .editorial-static-grid {
+        padding: 24px;
+    }
+
+    .hero-proof-top {
+        grid-template-columns: 1fr;
     }
 
     .hero-buttons {
@@ -55,168 +275,43 @@
         align-items: center;
     }
 
-    .hero-buttons .btn {
+    .hero-buttons .btn,
+    .service-hero-actions .btn {
         width: 100%;
-        max-width: 300px;
-    }
-
-    /* Page Header */
-    .page-header {
-        padding: 50px 0;
-    }
-
-    .page-header h1 {
-        font-size: 36px;
-    }
-
-    .page-header p {
-        font-size: 16px;
-    }
-
-    /* Section */
-    section {
-        padding: 60px 0;
-    }
-
-    section h2 {
-        font-size: 32px;
-    }
-
-    /* Services Grid */
-    .services-grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-
-    .service-card {
-        padding: 30px;
-    }
-
-    /* Features Grid */
-    .features-grid,
-    .mvv-grid,
-    .team-grid,
-    .achievements-list,
-    .features-list,
-    .testimonials-grid,
-    .faq-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    /* Stats */
-    .stats {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 30px;
-    }
-
-    .stat-item h3 {
-        font-size: 36px;
-    }
-
-    /* Service Detail */
-    .service-detail {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-
-    .service-section.alternate .service-detail {
-        grid-template-columns: 1fr;
-    }
-
-    .service-section.alternate .service-text,
-    .service-section.alternate .service-image {
-        order: 0;
-    }
-
-    .service-section h2 {
+        max-width: 320px;
         text-align: center;
     }
 
-    /* Placeholder Images */
-    .placeholder-image,
-    .placeholder-image-large {
-        min-height: 250px;
-        font-size: 48px;
-    }
-
-    .placeholder-image-large {
-        min-height: 300px;
-    }
-
-    /* Pricing Grid */
-    .pricing-grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-
-    .pricing-card.featured {
-        transform: scale(1);
-    }
-
-    /* Portfolio */
-    .portfolio-items {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .portfolio-image {
-        height: 200px;
-    }
-
-    /* Case Study */
-    .case-study-content {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-
-    .case-study-text h3 {
-        font-size: 24px;
-    }
-
-    /* Blog Grid */
-    .blog-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    /* Newsletter Form */
-    .newsletter-form {
-        flex-direction: column;
-    }
-
-    .newsletter-form input {
-        min-width: 100%;
-    }
-
-    .newsletter-form button {
-        width: 100%;
-    }
-
-    /* Contact */
-    .contact-wrapper {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-
-    .contact-info h2 {
-        text-align: center;
-    }
-
-    .contact-item {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .contact-item .icon {
-        margin: 0 auto;
-    }
-
-    .contact-section .social-links {
+    .hero-checklist,
+    .hero-trust-row {
         justify-content: center;
     }
 
-    /* Footer */
+    .logo-link,
+    .footer-brand {
+        gap: 10px;
+    }
+
+    .logo-mark {
+        width: 44px;
+        height: 44px;
+        border-radius: 14px;
+        font-size: 18px;
+    }
+
+    .logo-type strong {
+        font-size: 17px;
+    }
+
+    .logo-type small {
+        font-size: 9px;
+        letter-spacing: 0.1em;
+    }
+
+    .editorial-static-grid {
+        grid-template-columns: 1fr;
+    }
+
     .footer-content {
         grid-template-columns: 1fr;
         gap: 30px;
@@ -230,328 +325,90 @@
     .footer-section .social-links {
         justify-content: center;
     }
-
-    /* Process Steps */
-    .process-steps {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
-    }
-
-    /* Campaign Features */
-    .campaign-features {
-        grid-template-columns: 1fr;
-        gap: 15px;
-    }
-
-    /* Tech Stack */
-    .tech-stack {
-        justify-content: center;
-    }
-
-    /* Pagination */
-    .pagination {
-        flex-wrap: wrap;
-    }
 }
-
-/* ============================================
-   MOBILE (480px and below)
-   ============================================ */
 
 @media (max-width: 480px) {
     .container {
         padding: 0 15px;
     }
 
-    /* Logo */
-    .logo h1 {
-        font-size: 20px;
-    }
-
-    /* Hero */
     .hero {
-        padding: 40px 0;
+        padding: 48px 0;
     }
 
-    .hero-content h1 {
-        font-size: 28px;
-        line-height: 1.3;
-    }
-
-    .hero-content p {
-        font-size: 14px;
-        margin-bottom: 25px;
-    }
-
-    .hero-buttons .btn {
-        padding: 12px 24px;
-        font-size: 14px;
-    }
-
-    /* Page Header */
-    .page-header {
-        padding: 40px 0;
-    }
-
-    .page-header h1 {
-        font-size: 28px;
-    }
-
-    .page-header p {
-        font-size: 14px;
-    }
-
-    /* Section */
+    .page-header,
+    .service-hero-header,
     section {
-        padding: 50px 0;
+        padding-top: 48px;
+        padding-bottom: 48px;
     }
 
-    section h2 {
-        font-size: 24px;
+    .hero-content h1,
+    .page-header h1 {
+        font-size: 30px;
+        line-height: 1.15;
     }
 
+    .service-hero-copy h1 {
+        font-size: 31px;
+        line-height: 1.12;
+    }
+
+    .hero-content p,
+    .page-header p,
+    .service-hero-copy p,
     .section-subtitle {
-        font-size: 16px;
-    }
-
-    /* Cards */
-    .service-card,
-    .mvv-card,
-    .team-member,
-    .achievement,
-    .feature,
-    .blog-card,
-    .pricing-card,
-    .testimonial {
-        padding: 20px;
-    }
-
-    .service-card .icon {
-        font-size: 40px;
-    }
-
-    /* Stats */
-    .stats {
-        grid-template-columns: 1fr;
-        gap: 20px;
-        padding: 50px 0;
-    }
-
-    .stat-item h3 {
-        font-size: 28px;
-    }
-
-    .stat-item p {
         font-size: 14px;
     }
 
-    /* CTA */
-    .cta {
-        padding: 50px 0;
+    section h2,
+    .overview-text h2 {
+        font-size: 26px;
     }
 
-    .cta h2 {
-        font-size: 28px;
-    }
-
-    .cta p {
-        font-size: 16px;
-        margin-bottom: 20px;
-    }
-
-    /* Button */
     .btn {
-        padding: 11px 24px;
+        padding: 11px 22px;
         font-size: 13px;
     }
 
-    /* Service Detail */
-    .service-detail h4 {
-        font-size: 16px;
+    .service-hero-actions {
+        flex-direction: column;
     }
 
-    .service-features li {
-        padding: 8px 0;
+    .service-hero-actions .btn,
+    .service-hero-badges span,
+    .anchor-nav-list a {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
     }
 
-    .tech-badge {
-        padding: 6px 12px;
-        font-size: 12px;
-    }
-
-    .step-number {
-        width: 40px;
-        height: 40px;
-        font-size: 20px;
-    }
-
-    .feature-box i {
-        font-size: 28px;
-    }
-
-    /* Contact */
-    .contact-item .icon {
-        width: 40px;
-        height: 40px;
-        font-size: 24px;
-    }
-
-    .contact-item .content h4 {
-        font-size: 16px;
-    }
-
-    /* Form */
+    .service-card,
+    .proof-card,
+    .faq-card,
+    .related-service-card,
+    .testimonial-card,
+    .journey-step,
+    .service-item,
+    .tool-card,
+    .platform-card,
+    .ribbon-step,
+    .editorial-panel,
+    .service-menu-card,
+    .feature-card,
     .contact-form {
-        padding: 25px;
-    }
-
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
-        padding: 10px 12px;
-        font-size: 13px;
-    }
-
-    /* Footer */
-    .footer {
-        padding: 40px 0 15px;
-    }
-
-    .footer-bottom {
-        font-size: 12px;
-        padding-top: 15px;
-    }
-
-    /* Blog Date */
-    .blog-date {
-        font-size: 12px;
-    }
-
-    .blog-card h3 {
-        font-size: 18px;
-    }
-
-    .blog-card p {
-        font-size: 13px;
-    }
-
-    /* Newsletter */
-    .newsletter {
-        padding: 40px 0;
-    }
-
-    .newsletter-content h3 {
-        font-size: 24px;
-    }
-
-    .newsletter-form input {
-        padding: 12px 10px;
-    }
-
-    .newsletter-form button {
-        padding: 12px 20px;
-    }
-
-    /* Filters */
-    .filter-btn {
-        padding: 8px 16px;
-        margin: 5px 4px;
-        font-size: 12px;
-    }
-
-    /* Pagination */
-    .page-link {
-        width: 35px;
-        height: 35px;
-        font-size: 13px;
-    }
-
-    /* FAQ */
-    .faq-item {
         padding: 20px;
     }
 
-    .faq-item h4 {
-        font-size: 15px;
+    .hero-panel-main,
+    .experience-screen,
+    .cta .container {
+        padding: 22px;
     }
 
-    .faq-item p {
-        font-size: 13px;
-    }
-
-    /* Portfolio */
-    .portfolio-image {
-        height: 180px;
-    }
-
-    .portfolio-overlay p {
-        font-size: 16px;
-    }
-
-    /* Feature List */
-    .feature-item {
-        gap: 15px;
-        padding: 20px;
-    }
-
-    .feature-icon i {
-        font-size: 28px;
-    }
-
-    .feature-content h4 {
-        font-size: 16px;
-    }
-
-    /* Achievements */
-    .achievement i {
-        font-size: 36px;
-    }
-
-    .achievement h4 {
-        font-size: 16px;
-    }
-
-    /* Team */
-    .team-member .member-image {
-        font-size: 48px;
-    }
-
-    .team-member h4 {
-        font-size: 18px;
-    }
-
-    /* Pricing */
-    .pricing-card h3 {
-        font-size: 20px;
-    }
-
-    .pricing-card .price {
-        font-size: 36px;
-    }
-
-    .pricing-card .price span {
-        font-size: 14px;
-    }
-
-    /* Social Links */
-    .social-links {
-        gap: 10px;
-    }
-
-    .social-links a {
-        width: 38px;
-        height: 38px;
-        font-size: 16px;
-    }
-
-    .footer-section .social-links a {
-        width: 35px;
-        height: 35px;
-    }
-
-    .hero-layout,
-    .experience-layout {
-        gap: 26px;
+    .hero-metric,
+    .service-visual-card {
+        max-width: 100%;
     }
 
     .hero-metrics {
@@ -562,400 +419,90 @@
         width: 100%;
     }
 
-    .hero-visual,
-    .experience-screen {
-        min-height: auto;
+    .hero-checklist span,
+    .hero-trust-chip {
+        width: 100%;
+        justify-content: center;
     }
 
-    .hero-panel-main,
-    .hero-floating-card,
-    .screen-card,
-    .mini-stat {
-        position: static;
+    .hero-home .hero-buttons .btn,
+    .hero-home .hero-trust-chip {
         max-width: none;
     }
 
-    .hero-panel-main,
-    .experience-screen {
-        padding: 22px;
+    .panel-highlights,
+    .editorial-static-grid {
+        grid-template-columns: 1fr;
     }
 
     .service-card-media,
     .case-card-media,
-    .editorial-panel-image,
-    .contact-visual-card {
-        height: auto;
+    .service-visual-main,
+    .stack-image-large,
+    .stack-image-small,
+    .editorial-panel-image {
+        height: 220px;
         min-height: 220px;
     }
 
-    .panel-highlights {
-        grid-template-columns: 1fr;
-    }
-
-    .experience-point {
-        grid-template-columns: 1fr;
-    }
-
-    .experience-point > span {
-        width: 56px;
-        height: 56px;
-    }
-}
-
-/* ============================================
-   LARGE SCREENS (1200px and above)
-   ============================================ */
-
-@media (min-width: 1200px) {
-    .container {
-        max-width: 1200px;
-    }
-
-    section {
-        padding: 100px 0;
-    }
-
-    section h2 {
-        font-size: 48px;
-        margin-bottom: 25px;
-    }
-
-    .hero-content h1 {
-        font-size: 64px;
-    }
-
-    .page-header h1 {
-        font-size: 56px;
-    }
-}
-
-@media (max-width: 980px) {
-    .service-hero-layout,
-    .service-hero-metrics {
-        grid-template-columns: 1fr;
-    }
-
-    .service-hero-copy h1,
-    .service-hero-copy p {
-        max-width: none;
-    }
-
-    .service-hero-visual {
-        margin-top: 12px;
-    }
-
-    .hero-layout,
-    .experience-layout {
-        grid-template-columns: 1fr;
-    }
-
-    .hero-content,
-    .experience-copy h2 {
-        max-width: none;
-        text-align: center;
-    }
-
-    .hero-content p,
-    .experience-copy > p {
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .hero-buttons,
-    .hero-metrics {
-        justify-content: center;
-    }
-
-    .hero-visual {
-        min-height: auto;
-    }
-
-    .hero-panel-main,
-    .hero-floating-card {
-        position: static;
-    }
-
-    .hero-panel-main {
-        inset: auto;
-        margin-bottom: 18px;
-    }
-
-    .panel-highlights {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .hero-floating-card {
-        max-width: none;
-    }
-
-    .experience-screen {
-        min-height: auto;
-    }
-
-    .screen-card-secondary {
-        margin-top: 20px;
-    }
-
-    .mini-stat {
-        max-width: none;
-    }
-
-    .stats-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .proof-bar,
-    .case-grid,
-    .insight-grid,
-    .service-menu,
-    .process-ribbon,
-    .editorial-grid,
-    .story-grid,
-    .contact-band-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 768px) {
-    .proof-bar,
-    .case-grid,
-    .insight-grid,
-    .service-menu,
-    .process-ribbon,
-    .editorial-grid,
-    .story-grid,
-    .contact-band-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .proof-card,
-    .case-card,
-    .insight-card,
-    .editorial-panel,
-    .service-menu-card,
-    .story-card,
-    .feature-card,
-    .ribbon-step {
-        padding: 22px;
-    }
-
-    .contact-band-grid h2,
-    .editorial-copy h2 {
-        text-align: center;
-    }
-}
-
-/* ============================================
-   SUB-SERVICE PAGES RESPONSIVE
-   ============================================ */
-
-/* Tablet Responsiveness for Service Pages */
-@media (max-width: 768px) {
-    .service-hero-header {
-        padding: 56px 0 44px;
-    }
-
-    .service-hero-layout,
-    .faq-grid,
-    .related-services-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .service-hero-copy h1 {
-        font-size: 38px;
-    }
-
-    .service-hero-copy p,
-    .breadcrumb-trail,
-    .service-hero-copy,
-    .anchor-nav-list {
-        text-align: left;
-    }
-
-    .service-hero-visual,
-    .dual-image-stack {
-        min-height: auto;
-    }
-
-    .service-visual-main,
-    .stack-image,
-    .service-visual-card {
-        position: static;
-    }
-
     .service-visual-main {
+        min-height: 220px;
+    }
+
+    .service-card .icon {
+        font-size: 40px;
+    }
+
+    .hero-support-card,
+    .editorial-static-card {
+        min-height: auto;
+    }
+
+    .founder-portrait-card {
         min-height: 320px;
-        margin-bottom: 18px;
     }
 
-    .service-visual-card {
-        max-width: none;
-        margin-top: 14px;
+    .stats {
+        padding: 48px 0;
     }
 
-    .service-hero-metrics {
-        grid-template-columns: 1fr;
-    }
-
-    .service-anchor-nav {
-        position: static;
-    }
-
-    .anchor-nav-list {
-        overflow-x: auto;
-        flex-wrap: nowrap;
-        padding-bottom: 4px;
-    }
-
-    .stack-image-large,
-    .stack-image-small {
-        width: auto;
-        height: auto;
-        inset: auto;
-        border-width: 0;
-    }
-
-    .stack-image-small {
-        margin-top: 18px;
-    }
-
-    .service-card-points,
-    .clean-list {
-        text-align: left;
-    }
-
-    .overview-grid {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-
-    .overview-text h2 {
+    .stat-item h3 {
         font-size: 28px;
-        text-align: center;
     }
 
-    .key-benefits h4 {
-        text-align: center;
+    .cta h2 {
+        font-size: 28px;
     }
 
-    .services-list {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .tools-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
-    }
-
-    .platforms-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
-    }
-
-    .process-timeline {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .timeline-number {
-        width: 50px;
-        height: 50px;
+    .blog-card h3,
+    .faq-card h3,
+    .related-service-card h3 {
         font-size: 20px;
     }
 
-    .founder-bio {
-        padding: 30px;
+    .social-links {
+        gap: 10px;
     }
 
-    .benefits-list {
-        grid-template-columns: 1fr;
-        gap: 15px;
-    }
-}
-
-/* Mobile Responsiveness for Service Pages */
-@media (max-width: 480px) {
-    .service-hero-copy h1 {
-        font-size: 31px;
+    .social-links a,
+    .footer-section .social-links a {
+        width: 38px;
+        height: 38px;
+        font-size: 16px;
     }
 
-    .service-hero-actions {
+    .feature-item,
+    .benefit-item,
+    .contact-item {
+        gap: 14px;
+    }
+
+    .benefit-item,
+    .contact-item {
         flex-direction: column;
     }
 
-    .service-hero-actions .btn {
-        width: 100%;
-        text-align: center;
-    }
-
-    .service-hero-badges span,
-    .anchor-nav-list a {
-        width: 100%;
-        justify-content: center;
-    }
-
-    .overview-text h2 {
-        font-size: 24px;
-    }
-
-    .service-item {
-        padding: 20px;
-    }
-
-    .service-icon {
-        width: 60px;
-        height: 60px;
-        font-size: 36px;
-    }
-
-    .tool-card {
-        padding: 20px;
-    }
-
-    .platform-card {
-        padding: 20px 15px;
-    }
-
-    .platform-card i {
-        font-size: 32px;
-    }
-
-    .timeline-item {
-        text-align: center;
-    }
-
-    .timeline-number {
-        width: 45px;
-        height: 45px;
-        font-size: 18px;
-        margin-bottom: 15px;
-    }
-
-    .timeline-item h4 {
-        font-size: 15px;
-    }
-
-    .timeline-item p {
-        font-size: 13px;
-    }
-
-    .benefit-item {
-        flex-direction: column;
-        padding: 12px;
-    }
-
-    .faq-card,
-    .related-service-card,
-    .hero-metric-card {
-        padding: 22px;
-    }
-
-    .benefit {
-        padding: 12px;
-    }
-
-    .founder-bio {
-        padding: 20px;
+    .contact-item .icon {
+        margin: 0 auto;
     }
 }
