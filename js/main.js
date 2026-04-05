@@ -369,7 +369,7 @@ function observeElements() {
 
     // Add animation to cards and sections
     const elementsToObserve = document.querySelectorAll(
-        '.service-card, .feature, .team-member, .portfolio-item, .blog-card, .pricing-card, .testimonial, .service-item, .benefit-item, .tool-card, .platform-card, .timeline-item, .mvv-card, .achievement'
+        '.service-card, .feature, .team-member, .portfolio-item, .blog-card, .pricing-card, .testimonial, .service-item, .benefit-item, .tool-card, .platform-card, .timeline-item, .mvv-card, .achievement, .proof-card, .feature-card, .faq-card, .related-service-card, .reveal-card'
     );
 
     elementsToObserve.forEach(element => {
