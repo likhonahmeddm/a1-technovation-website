@@ -20,17 +20,21 @@ function initializeNavigation() {
 
     if (!hamburger) return;
 
+    function setMenuState(isOpen) {
+        navMenu.classList.toggle('active', isOpen);
+        hamburger.classList.toggle('active', isOpen);
+        document.body.classList.toggle('menu-open', isOpen);
+    }
+
     // Toggle mobile menu
     hamburger.addEventListener('click', function() {
-        navMenu.classList.toggle('active');
-        hamburger.classList.toggle('active');
+        setMenuState(!navMenu.classList.contains('active'));
     });
 
     // Close mobile menu when a link is clicked
     navLinks.forEach(link => {
         link.addEventListener('click', function() {
-            navMenu.classList.remove('active');
-            hamburger.classList.remove('active');
+            setMenuState(false);
         });
     });
 
@@ -38,8 +42,13 @@ function initializeNavigation() {
     document.addEventListener('click', function(event) {
         const isClickInsideNav = hamburger.contains(event.target) || navMenu.contains(event.target);
         if (!isClickInsideNav && navMenu.classList.contains('active')) {
-            navMenu.classList.remove('active');
-            hamburger.classList.remove('active');
+            setMenuState(false);
+        }
+    });
+
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 768 && navMenu.classList.contains('active')) {
+            setMenuState(false);
         }
     });
 

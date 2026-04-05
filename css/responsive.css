@@ -7,6 +7,10 @@
         max-width: 1040px;
     }
 
+    .hero-minimal-grid {
+        grid-template-columns: 1fr;
+    }
+
     .hero-home .hero-summary-points {
         grid-template-columns: 1fr;
     }
@@ -22,62 +26,100 @@
 
     .testimonial-grid,
     .proof-bar,
+    .about-values-grid,
+    .about-reasons-grid,
     .case-grid,
     .insight-grid,
-    .service-menu {
+    .service-menu,
+    .portfolio-items {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
     .hero-layout,
+    .about-hero-layout,
+    .about-story-grid,
+    .about-capability-grid,
     .service-hero-layout,
+    .blog-hero-layout,
+    .portfolio-hero-layout,
+    .contact-hero-layout,
     .experience-layout,
     .editorial-grid,
     .story-grid,
     .contact-band-grid,
-    .overview-grid {
+    .overview-grid,
+    .case-study-content,
+    .contact-wrapper {
         gap: 32px;
     }
 }
 
 @media (max-width: 980px) {
     .hero-layout,
+    .about-hero-layout,
+    .about-story-grid,
+    .about-capability-grid,
     .service-hero-layout,
+    .blog-hero-layout,
+    .portfolio-hero-layout,
+    .contact-hero-layout,
     .experience-layout,
     .editorial-grid,
     .story-grid,
     .founder-spotlight-grid,
     .contact-band-grid,
-    .overview-grid {
+    .overview-grid,
+    .case-study-content,
+    .contact-wrapper {
         grid-template-columns: 1fr;
     }
 
     .hero-content,
+    .about-hero-copy,
+    .about-story-copy,
     .experience-copy,
     .service-hero-copy,
+    .blog-hero-copy,
+    .portfolio-hero-copy,
+    .contact-hero-copy,
     .founder-spotlight-copy,
     .editorial-copy {
         max-width: none;
     }
 
     .hero-content,
+    .about-hero-copy,
     .experience-copy,
     .service-hero-copy,
+    .blog-hero-copy,
+    .portfolio-hero-copy,
+    .contact-hero-copy,
     .founder-spotlight-copy {
         text-align: center;
     }
 
+    .about-hero-copy h1,
+    .about-story-copy h2,
     .experience-copy h2,
     .editorial-copy h2,
     .founder-spotlight-copy h2,
     .contact-band-grid h2,
     .service-section h2,
-    .overview-text h2 {
+    .overview-text h2,
+    .blog-hero-copy h1,
+    .portfolio-hero-copy h1,
+    .contact-hero-copy h1 {
         text-align: center;
     }
 
     .hero-content p,
+    .about-hero-copy p,
+    .about-story-copy p,
     .experience-copy > p,
     .service-hero-copy p,
+    .blog-hero-copy p,
+    .portfolio-hero-copy p,
+    .contact-hero-copy p,
     .founder-spotlight-copy p,
     .editorial-copy p {
         margin-left: auto;
@@ -87,13 +129,18 @@
     .hero-buttons,
     .hero-metrics,
     .hero-checklist,
+    .about-hero-checklist,
     .hero-trust-row,
     .service-hero-actions,
-    .service-hero-badges {
+    .service-hero-badges,
+    .blog-hero-chips,
+    .portfolio-hero-chips,
+    .contact-hero-actions {
         justify-content: center;
     }
 
     .hero-visual,
+    .about-hero-visual,
     .hero-visual-rich,
     .service-hero-visual,
     .experience-screen,
@@ -125,6 +172,10 @@
 
     .hero-home .hero-summary-card h3,
     .hero-home .hero-content h1 {
+        max-width: none;
+    }
+
+    .hero-minimal-panel h3 {
         max-width: none;
     }
 
@@ -164,6 +215,8 @@
 
     .stats-grid,
     .service-hero-metrics,
+    .about-values-grid,
+    .about-reasons-grid,
     .faq-grid,
     .related-services-grid,
     .tools-grid,
@@ -175,32 +228,47 @@
     .service-menu,
     .testimonial-grid,
     .journey-strip,
-    .process-ribbon {
+    .process-ribbon,
+    .portfolio-items {
         grid-template-columns: 1fr;
     }
 }
 
 @media (max-width: 768px) {
+    body.menu-open {
+        overflow: hidden;
+    }
+
     .utility-bar {
         display: none;
     }
 
     .hamburger {
         display: flex;
+        position: relative;
+        z-index: 1201;
+        padding: 6px 0;
     }
 
     .nav-menu {
         display: none;
-        position: absolute;
-        top: 78px;
+        position: fixed;
+        top: 79px;
         left: 0;
+        right: 0;
+        bottom: 0;
         width: 100%;
-        background: rgba(255, 255, 255, 0.98);
-        backdrop-filter: blur(16px);
+        background:
+            linear-gradient(180deg, rgba(7, 14, 27, 0.98), rgba(5, 10, 20, 0.99));
+        backdrop-filter: blur(22px);
         flex-direction: column;
         gap: 0;
-        padding: 20px 0;
-        box-shadow: 0 18px 40px rgba(8, 22, 58, 0.12);
+        align-items: stretch;
+        padding: 18px 20px 28px;
+        overflow-y: auto;
+        border-top: 1px solid rgba(125, 211, 252, 0.1);
+        box-shadow: none;
+        z-index: 1200;
     }
 
     .nav-menu.active {
@@ -209,21 +277,34 @@
 
     .nav-menu li {
         width: 100%;
-        padding: 0 20px;
+        padding: 0;
     }
 
     .nav-menu a {
         display: block;
-        padding: 14px 0;
+        padding: 16px 4px;
+        color: rgba(234, 244, 255, 0.9);
+        font-size: 18px;
+        font-weight: 700;
+        border-bottom: 1px solid rgba(125, 211, 252, 0.08);
     }
 
     .nav-menu a::after {
         display: none;
     }
 
+    .nav-menu a:hover,
+    .nav-menu a.active {
+        color: #8edfff;
+    }
+
     .nav-menu .btn-primary {
-        margin-top: 8px;
+        margin-top: 18px;
         text-align: center;
+        border-bottom: 0;
+        width: 100%;
+        justify-content: center;
+        padding: 15px 20px;
     }
 
     .hero-home {
@@ -262,7 +343,32 @@
 
     .hero-home .hero-summary-card,
     .editorial-panel-content,
-    .editorial-static-grid {
+    .editorial-static-grid,
+    .blog-hero-panel,
+    .portfolio-hero-panel,
+    .contact-hero-panel,
+    .contact-info,
+    .contact-form {
+        padding: 24px;
+    }
+
+    .about-hero-image-card {
+        min-height: 300px;
+    }
+
+    .about-story-panel-image,
+    .about-capability-team,
+    .story-card-media,
+    .story-card-profile .member-image {
+        height: 260px;
+        min-height: 260px;
+    }
+
+    .about-hero-mini-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-minimal-panel {
         padding: 24px;
     }
 
@@ -276,15 +382,28 @@
     }
 
     .hero-buttons .btn,
-    .service-hero-actions .btn {
+    .service-hero-actions .btn,
+    .contact-hero-actions .btn {
         width: 100%;
         max-width: 320px;
         text-align: center;
     }
 
     .hero-checklist,
-    .hero-trust-row {
+    .hero-trust-row,
+    .blog-hero-chips,
+    .portfolio-hero-chips {
         justify-content: center;
+    }
+
+    .blog-hero-point,
+    .portfolio-hero-point,
+    .contact-hero-point {
+        text-align: center;
+    }
+
+    .about-reason-card {
+        flex-direction: column;
     }
 
     .logo-link,
@@ -377,7 +496,10 @@
 
     .service-hero-actions .btn,
     .service-hero-badges span,
-    .anchor-nav-list a {
+    .blog-hero-chips span,
+    .anchor-nav-list a,
+    .portfolio-hero-chips span,
+    .portfolio-filters .filter-btn {
         width: 100%;
         justify-content: center;
         text-align: center;
@@ -430,6 +552,18 @@
         max-width: none;
     }
 
+    .about-capability-card,
+    .about-value-card,
+    .about-reason-card {
+        padding: 20px;
+    }
+
+    .hero-minimal-note {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+
     .panel-highlights,
     .editorial-static-grid {
         grid-template-columns: 1fr;
@@ -440,7 +574,9 @@
     .service-visual-main,
     .stack-image-large,
     .stack-image-small,
-    .editorial-panel-image {
+    .editorial-panel-image,
+    .portfolio-image,
+    .contact-visual-card {
         height: 220px;
         min-height: 220px;
     }
