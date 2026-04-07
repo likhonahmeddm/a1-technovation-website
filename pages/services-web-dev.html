@@ -41,7 +41,7 @@
                         </span>
                     </a>
                 </div>
-                <ul class="nav-menu">
+                <ul class="nav-menu" id="site-nav-menu">
                     <li><a href="../index.html">Home</a></li>
                     <li><a href="about.html">About Us</a></li>
                     <li><a href="services.html">Services</a></li>
@@ -49,55 +49,66 @@
                     <li><a href="blog.html">Blog</a></li>
                     <li><a href="contact.html" class="btn-primary">Contact Us</a></li>
                 </ul>
-                <div class="hamburger">
+                <button class="hamburger" type="button" aria-expanded="false" aria-controls="site-nav-menu" aria-label="Toggle navigation menu">
                     <span></span>
                     <span></span>
                     <span></span>
-                </div>
+                </button>
             </div>
         </div>
     </nav>
 
-    <header class="page-header service-hero-header service-hero-web">
+    <section class="hero hero-home">
         <div class="container">
-            <div class="breadcrumb-trail">
-                <a href="../index.html">Home</a>
-                <span>/</span>
-                <a href="services.html">Services</a>
-                <span>/</span>
-                <span>Web Design & Development</span>
-            </div>
-            <div class="service-hero-layout">
-                <div class="service-hero-copy">
+            <div class="hero-layout">
+                <div class="hero-content">
+                    <div class="breadcrumb-trail">
+                        <a href="../index.html">Home</a>
+                        <span>/</span>
+                        <a href="services.html">Services</a>
+                        <span>/</span>
+                        <span>Web Design & Development</span>
+                    </div>
                     <span class="section-tag hero-tag">Web Design & Development</span>
                     <h1>Modern business websites designed to look premium, load smoothly, and convert visitors more effectively.</h1>
                     <p>We create responsive websites and service pages with stronger visual hierarchy, clearer messaging, and a polished user journey that supports SEO and lead generation at the same time.</p>
-                    <div class="service-hero-actions">
-                        <a href="contact.html" class="btn btn-primary">Start a Website Project</a>
-                        <a href="#web-features" class="btn btn-secondary">Explore Website Features</a>
-                    </div>
-                    <div class="service-hero-badges">
+                    <div class="hero-checklist">
                         <span><i class="fas fa-check-circle"></i> Responsive design</span>
                         <span><i class="fas fa-check-circle"></i> Conversion-focused UI</span>
                         <span><i class="fas fa-check-circle"></i> SEO-friendly structure</span>
                     </div>
+                    <div class="hero-buttons hero-action-row">
+                        <a href="contact.html" class="btn btn-primary">Start a Website Project</a>
+                        <a href="#web-features" class="btn btn-secondary">Explore Website Features</a>
+                    </div>
                 </div>
-                <div class="service-hero-visual">
-                    <div class="service-visual-main">
-                        <img src="../assets/images/web dev 4.jpg" alt="High-end business website design mockup shown across responsive screens" class="media-fill">
-                    </div>
-                    <div class="service-visual-card service-visual-card-top">
-                        <strong>Premium Layouts</strong>
-                        <p>Bold, clean, and built around your offer.</p>
-                    </div>
-                    <div class="service-visual-card service-visual-card-bottom">
-                        <strong>Ready To Convert</strong>
-                        <p>Better flow from headline to inquiry.</p>
+                <div class="hero-visual hero-visual-rich">
+                    <div class="hero-minimal-panel">
+                        <span class="proof-label">Premium Layouts</span>
+                        <h3>Bold, clean, and built around your offer.</h3>
+                        <div class="hero-minimal-grid">
+                            <div class="hero-minimal-item">
+                                <strong>Design</strong>
+                                <span>Premium</span>
+                            </div>
+                            <div class="hero-minimal-item">
+                                <strong>Flow</strong>
+                                <span>Smooth</span>
+                            </div>
+                            <div class="hero-minimal-item">
+                                <strong>Conversion</strong>
+                                <span>Optimized</span>
+                            </div>
+                        </div>
+                        <div class="hero-minimal-note">
+                            <i class="fas fa-arrow-right"></i>
+                            <span>Better flow from headline to inquiry</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </header>
+    </section>
 
     <section class="service-anchor-nav">
         <div class="container">

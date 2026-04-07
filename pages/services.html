@@ -59,7 +59,7 @@
                         </span>
                     </a>
                 </div>
-                <ul class="nav-menu">
+                <ul class="nav-menu" id="site-nav-menu">
                     <li><a href="../index.html">Home</a></li>
                     <li><a href="about.html">About Us</a></li>
                     <li><a href="services.html" class="active">Services</a></li>
@@ -67,68 +67,69 @@
                     <li><a href="blog.html">Blog</a></li>
                     <li><a href="contact.html" class="btn-primary">Contact Us</a></li>
                 </ul>
-                <div class="hamburger">
+                <button class="hamburger" type="button" aria-expanded="false" aria-controls="site-nav-menu" aria-label="Toggle navigation menu">
                     <span></span>
                     <span></span>
                     <span></span>
-                </div>
+                </button>
             </div>
         </div>
     </nav>
 
-    <header class="page-header service-hero-header">
+    <section class="hero hero-home">
         <div class="container">
-            <div class="breadcrumb-trail">
-                <a href="../index.html">Home</a>
-                <span>/</span>
-                <span>Services</span>
-            </div>
-            <div class="service-hero-layout">
-                <div class="service-hero-copy">
-                    <span class="section-tag hero-tag">Growth Services</span>
-                    <h1>SEO, web, social, and PPC services built to make your brand easier to find and easier to trust.</h1>
-                    <p>We build websites, SEO systems, social media support, and PPC campaigns that make the offer clearer and the next step easier.</p>
-                    <div class="service-hero-actions">
-                        <a href="contact.html" class="btn btn-primary">Book a Strategy Call</a>
-                        <a href="#service-catalog" class="btn btn-secondary">Explore Services</a>
+            <div class="hero-layout">
+                <div class="hero-content">
+                    <div class="breadcrumb-trail">
+                        <a href="../index.html">Home</a>
+                        <span>/</span>
+                        <span>Services</span>
                     </div>
-                    <div class="service-hero-badges">
-                        <span><i class="fas fa-check-circle"></i> SEO-first structure</span>
-                        <span><i class="fas fa-check-circle"></i> Conversion-led design</span>
-                        <span><i class="fas fa-check-circle"></i> Consistent brand growth</span>
-                        <span><i class="fas fa-check-circle"></i> Paid campaign support</span>
+                    <span class="section-tag hero-tag">Bangladesh-Based Digital Growth Agency</span>
+                    <h1>Websites and landing pages built to generate inquiries.</h1>
+                    <p>We build service pages, landing pages, and conversion paths that help businesses get more calls, messages, and form submissions.</p>
+                    <div class="hero-checklist">
+                        <span><i class="fas fa-check-circle"></i> Clear service structure</span>
+                        <span><i class="fas fa-check-circle"></i> Better CTA placement</span>
+                        <span><i class="fas fa-check-circle"></i> SEO and PPC ready</span>
                     </div>
-                </div>
-                <div class="service-hero-visual">
-                    <div class="service-visual-main">
-                        <img src="../assets/images/business common.jpg" alt="Creative digital strategy board used for SEO, web design, and campaign planning" class="media-fill">
+                    <div class="hero-buttons hero-action-row">
+                        <a href="contact.html" class="btn btn-primary">Book Free Consultation</a>
+                        <a href="#service-catalog" class="btn btn-secondary">See All Services</a>
                     </div>
-                    <div class="service-visual-card service-visual-card-top">
-                        <strong>Search + Design</strong>
-                        <p>Built as one system, not disconnected tasks.</p>
-                    </div>
-                    <div class="service-visual-card service-visual-card-bottom">
-                        <strong>Better Service Pages</strong>
-                        <p>Clearer hierarchy, stronger proof, more action.</p>
+                    <div class="hero-trust-row">
+                        <a href="tel:+8801799976295" class="hero-trust-chip"><i class="fas fa-phone"></i> +8801799-976295</a>
+                        <a href="https://wa.me/8801799976295" target="_blank" rel="noreferrer" class="hero-trust-chip"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                        <a href="contact.html" class="hero-trust-chip"><i class="fas fa-paper-plane"></i> Send Inquiry</a>
                     </div>
                 </div>
-            </div>
-            <div class="service-hero-metrics">
-                <div class="hero-metric-card">
-                    <strong>3</strong>
-                    <span>Core service lines</span>
-                </div>
-                <div class="hero-metric-card">
-                    <strong>1</strong>
-                    <span>Connected growth system</span>
-                </div>
-                <div class="hero-metric-card">
-                    <strong>100%</strong>
-                    <span>Custom strategy by business goals</span>
+                <div class="hero-visual hero-visual-rich">
+                    <div class="hero-minimal-panel">
+                        <span class="proof-label">Connected Growth Stack</span>
+                        <h3>Clear pages. Better inquiries.</h3>
+                        <div class="hero-minimal-grid">
+                            <div class="hero-minimal-item">
+                                <strong>Offer</strong>
+                                <span>Clear</span>
+                            </div>
+                            <div class="hero-minimal-item">
+                                <strong>CTA</strong>
+                                <span>Visible</span>
+                            </div>
+                            <div class="hero-minimal-item">
+                                <strong>Flow</strong>
+                                <span>Direct</span>
+                            </div>
+                        </div>
+                        <div class="hero-minimal-note">
+                            <i class="fas fa-arrow-right"></i>
+                            <span>SEO, PPC, and landing pages aligned</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </header>
+    </section>
 
     <section class="service-anchor-nav">
         <div class="container">
@@ -144,49 +145,73 @@
     <section class="service-menu-section" id="service-catalog">
         <div class="container">
             <span class="section-tag">Core Services</span>
-            <h2>Choose the service your business needs now</h2>
-            <p class="section-subtitle">Each service works on its own. Together, they create a cleaner growth system.</p>
+            <h2>Choose the service your brand needs most right now</h2>
+            <p class="section-subtitle">Each service solves a clear problem. Together, they build a stronger digital presence.</p>
             <div class="service-menu premium-service-menu">
                 <a href="services-seo.html" class="service-menu-card">
-                    <span class="proof-label">SEO Services</span>
-                    <h3>SEO strategy and execution for long-term organic growth</h3>
-                    <p>Technical SEO, keyword mapping, topical authority, on-page optimization, and search-led content planning.</p>
+                    <div class="service-menu-media">
+                        <img src="../assets/images/SEO BG.jpg" alt="SEO dashboard and search strategy planning" class="media-fill">
+                    </div>
+                    <div class="service-menu-meta">
+                        <span class="proof-label">SEO Services</span>
+                        <span class="service-menu-icon"><i class="fas fa-magnifying-glass"></i></span>
+                    </div>
+                    <h3>SEO systems built for visibility and authority</h3>
+                    <p>Search strategy, technical fixes, and content structure that help the right people find you.</p>
                     <ul class="service-card-points">
-                        <li>Search intent mapping</li>
-                        <li>Technical cleanup and page optimization</li>
-                        <li>Content planning and internal linking</li>
+                        <li>Search intent and keyword planning</li>
+                        <li>Technical cleanup and page structure</li>
+                        <li>Content depth and internal linking</li>
                     </ul>
                     <span class="text-link">View SEO Service <i class="fas fa-arrow-right"></i></span>
                 </a>
                 <a href="services-web-dev.html" class="service-menu-card">
-                    <span class="proof-label">Web Design</span>
-                    <h3>Web design and development that turns interest into inquiries</h3>
-                    <p>Responsive websites, service page systems, messaging hierarchy, and visual direction built around conversion.</p>
+                    <div class="service-menu-media">
+                        <img src="../assets/images/web design.jpg" alt="Modern website interface and brand presentation" class="media-fill">
+                    </div>
+                    <div class="service-menu-meta">
+                        <span class="proof-label">Web Design</span>
+                        <span class="service-menu-icon"><i class="fas fa-layer-group"></i></span>
+                    </div>
+                    <h3>Web design that turns attention into trust</h3>
+                    <p>Responsive websites and landing pages built around strong structure, clarity, and action.</p>
                     <ul class="service-card-points">
                         <li>Premium layouts and responsive UI</li>
-                        <li>SEO-friendly content structure</li>
-                        <li>Landing pages and service page builds</li>
+                        <li>Service pages with cleaner hierarchy</li>
+                        <li>Landing pages built to convert</li>
                     </ul>
                     <span class="text-link">View Web Service <i class="fas fa-arrow-right"></i></span>
                 </a>
                 <a href="services-social-media.html" class="service-menu-card">
-                    <span class="proof-label">Social Media</span>
-                    <h3>Social media marketing built around consistency, authority, and reach</h3>
-                    <p>Content systems, campaign planning, platform strategy, and visual communication that keeps your brand memorable.</p>
+                    <div class="service-menu-media">
+                        <img src="../assets/images/social media marketing - rectangle image.jpg" alt="Social media campaign planning and content direction" class="media-fill">
+                    </div>
+                    <div class="service-menu-meta">
+                        <span class="proof-label">Social Media</span>
+                        <span class="service-menu-icon"><i class="fas fa-share-nodes"></i></span>
+                    </div>
+                    <h3>Social media built for consistency and reach</h3>
+                    <p>Content direction, campaign planning, and visual consistency that keep your brand active and memorable.</p>
                     <ul class="service-card-points">
                         <li>Content pillars and monthly planning</li>
-                        <li>Campaign creative direction</li>
+                        <li>Creative direction and campaign ideas</li>
                         <li>Organic and paid support</li>
                     </ul>
                     <span class="text-link">View Social Media Service <i class="fas fa-arrow-right"></i></span>
                 </a>
                 <a href="services-ppc-ads.html" class="service-menu-card">
-                    <span class="proof-label">PPC Ads</span>
-                    <h3>PPC campaign management built for lead quality, not wasted spend</h3>
-                    <p>Google Ads strategy, landing page alignment, remarketing support, and campaign refinement shaped around conversion.</p>
+                    <div class="service-menu-media">
+                        <img src="../assets/images/ppc-agency-usa.jpg" alt="PPC campaign dashboard and paid media reporting" class="media-fill">
+                    </div>
+                    <div class="service-menu-meta">
+                        <span class="proof-label">PPC Ads</span>
+                        <span class="service-menu-icon"><i class="fas fa-bullhorn"></i></span>
+                    </div>
+                    <h3>PPC campaigns focused on lead quality and control</h3>
+                    <p>Paid media strategy built around clearer offers, better landing pages, and tighter budget use.</p>
                     <ul class="service-card-points">
                         <li>Search and display campaign setup</li>
-                        <li>Landing page and ad message alignment</li>
+                        <li>Ad message and landing page alignment</li>
                         <li>Ongoing optimization and budget control</li>
                     </ul>
                     <span class="text-link">View PPC Service <i class="fas fa-arrow-right"></i></span>
@@ -198,22 +223,22 @@
     <section class="proof-bar-section" id="why-choose-us">
         <div class="container">
             <span class="section-tag">Why Brands Choose Us</span>
-            <h2>We build the structure behind stronger digital performance</h2>
+            <h2>We build the structure behind stronger digital growth</h2>
             <div class="proof-bar">
                 <div class="proof-card reveal-card">
                     <span class="proof-label">Positioning</span>
-                    <h3>Sharper service messaging</h3>
-                    <p>We organize your offer so visitors understand what you do, who it is for, and why they should trust you.</p>
+                    <h3>Sharper message</h3>
+                    <p>We make the offer easier to understand and easier to trust.</p>
                 </div>
                 <div class="proof-card reveal-card">
                     <span class="proof-label">Performance</span>
-                    <h3>SEO-ready architecture</h3>
-                    <p>Pages are structured around intent, headings, internal linking, and content depth that support long-term discoverability.</p>
+                    <h3>SEO-ready pages</h3>
+                    <p>Structure, content depth, and page flow support stronger discoverability.</p>
                 </div>
                 <div class="proof-card reveal-card">
                     <span class="proof-label">Presentation</span>
-                    <h3>Premium visual consistency</h3>
-                    <p>We give brands cleaner layouts, stronger imagery, and a more polished digital presence across key customer touchpoints.</p>
+                    <h3>Premium presentation</h3>
+                    <p>Cleaner layouts and stronger visual direction lift the whole brand.</p>
                 </div>
             </div>
         </div>
@@ -224,14 +249,13 @@
             <div class="editorial-grid service-story-grid">
                 <div class="editorial-copy">
                     <span class="section-tag">Delivery Model</span>
-                    <h2>Most growth problems start with a weak page structure.</h2>
-                    <p>If the offer is unclear, the proof is buried, or the CTA is hard to find, traffic does not convert well. That problem affects SEO, paid campaigns, and direct inquiries.</p>
-                    <p>We fix the structure first. Then we connect design, content, and traffic around a clearer user path.</p>
+                    <h2>Most growth problems start with unclear structure.</h2>
+                    <p>If the message is weak or the next step feels hidden, traffic will struggle to convert. We fix the page system first, then strengthen the channels around it.</p>
                     <ul class="clean-list">
-                        <li>Keyword-informed page architecture and section sequencing</li>
-                        <li>Benefit-led copy that supports conversion instead of filler text</li>
-                        <li>Visual hierarchy that makes service pages feel more premium</li>
-                        <li>Internal links between services, supporting pages, and contact points</li>
+                        <li>Page structure shaped around user intent</li>
+                        <li>Benefit-led copy instead of filler</li>
+                        <li>Premium hierarchy across service pages</li>
+                        <li>Clear paths to inquiry and contact</li>
                     </ul>
                 </div>
                 <div class="editorial-panel reveal-card">
@@ -240,12 +264,12 @@
                     </div>
                     <div class="editorial-panel-content">
                         <span class="proof-label">Built For Growth</span>
-                        <h3>What improves after the rebuild</h3>
+                        <h3>What improves after the reset</h3>
                         <ul class="clean-list">
-                            <li>Clearer service explanation above the fold</li>
-                            <li>Stronger keyword coverage without sounding robotic</li>
-                            <li>More trust signals, process clarity, and proof blocks</li>
-                            <li>Better mobile flow and cleaner calls to action</li>
+                            <li>Clearer value above the fold</li>
+                            <li>Stronger keyword coverage with natural copy</li>
+                            <li>Better proof, trust, and flow</li>
+                            <li>Cleaner mobile experience and CTAs</li>
                         </ul>
                     </div>
                 </div>
@@ -256,27 +280,27 @@
     <section class="process-ribbon-section">
         <div class="container">
             <span class="section-tag">How We Work</span>
-            <h2>A practical process from strategy to launch</h2>
+            <h2>A clear process from audit to launch</h2>
             <div class="process-ribbon">
                 <div class="ribbon-step reveal-card">
                     <strong>01</strong>
                     <h4>Audit</h4>
-                    <p>We review the current site, messaging gaps, SEO structure, and conversion flow.</p>
+                    <p>We review the current pages, gaps, and bottlenecks.</p>
                 </div>
                 <div class="ribbon-step reveal-card">
                     <strong>02</strong>
                     <h4>Plan</h4>
-                    <p>We map the page hierarchy, keywords, visual tone, and the highest-impact priorities.</p>
+                    <p>We map the structure, keywords, visuals, and priorities.</p>
                 </div>
                 <div class="ribbon-step reveal-card">
                     <strong>03</strong>
                     <h4>Create</h4>
-                    <p>We design, write, optimize, and assemble a stronger service experience across the site.</p>
+                    <p>We design, write, and build the stronger version.</p>
                 </div>
                 <div class="ribbon-step reveal-card">
                     <strong>04</strong>
                     <h4>Refine</h4>
-                    <p>We sharpen the details, strengthen internal connections, and prepare for growth campaigns.</p>
+                    <p>We sharpen the details and prepare the system to grow.</p>
                 </div>
             </div>
         </div>
@@ -286,10 +310,10 @@
         <div class="container">
             <span class="section-tag stats-tag">What Clients Need</span>
             <div class="stats-grid">
-                <div class="stat-item reveal-card"><h3>Visibility</h3><p>Show up more clearly in search and social spaces</p></div>
-                <div class="stat-item reveal-card"><h3>Trust</h3><p>Build confidence faster through stronger presentation</p></div>
-                <div class="stat-item reveal-card"><h3>Leads</h3><p>Give visitors a more obvious next step to take</p></div>
-                <div class="stat-item reveal-card"><h3>Scale</h3><p>Create a system that supports future campaigns and pages</p></div>
+                <div class="stat-item reveal-card"><h3>Visibility</h3><p>Show up with clearer positioning in search and campaigns.</p></div>
+                <div class="stat-item reveal-card"><h3>Trust</h3><p>Look stronger through cleaner presentation and proof.</p></div>
+                <div class="stat-item reveal-card"><h3>Leads</h3><p>Give visitors an easier next step to take.</p></div>
+                <div class="stat-item reveal-card"><h3>Scale</h3><p>Build a system ready for the next stage of growth.</p></div>
             </div>
         </div>
     </section>
@@ -297,23 +321,23 @@
     <section class="faq-section" id="faqs">
         <div class="container">
             <span class="section-tag">FAQs</span>
-            <h2>Questions businesses usually ask before starting</h2>
+            <h2>Questions brands usually ask before starting</h2>
             <div class="faq-grid">
                 <article class="faq-card reveal-card">
                     <h3>Which service should we start with first?</h3>
-                    <p>If your site looks weak or unclear, web design and content structure usually come first. If the site is already solid, SEO or social media can often accelerate growth more quickly. We help you choose based on the biggest bottleneck.</p>
+                    <p>If the website feels weak or unclear, structure comes first. If the site is already solid, SEO or campaigns usually move faster.</p>
                 </article>
                 <article class="faq-card reveal-card">
                     <h3>Can you combine SEO, website, and social media in one project?</h3>
-                    <p>Yes. Many brands get the best results when website structure, search visibility, and campaign communication are planned together instead of managed as separate pieces.</p>
+                    <p>Yes. The strongest results usually come when structure, search, and campaign messaging are planned together.</p>
                 </article>
                 <article class="faq-card reveal-card">
                     <h3>Do you rewrite service page content too?</h3>
-                    <p>Yes. We improve content hierarchy, headings, benefit statements, proof sections, and calls to action so the page performs better for both search engines and visitors.</p>
+                    <p>Yes. We improve headings, flow, proof, and calls to action so the page reads better and converts better.</p>
                 </article>
                 <article class="faq-card reveal-card">
                     <h3>Are the service pages mobile friendly?</h3>
-                    <p>Yes. Every page is designed to keep the content easy to scan and visually polished across desktop, tablet, and mobile screen sizes.</p>
+                    <p>Yes. Every page is built to stay clear, polished, and easy to scan on desktop, tablet, and mobile.</p>
                 </article>
             </div>
         </div>
@@ -322,8 +346,8 @@
     <section class="cta">
         <div class="container">
             <span class="section-tag cta-tag">Let's Build</span>
-            <h2>Need service pages that look stronger, rank better, and convert with more confidence?</h2>
-            <p>We can shape the right combination of SEO, web design, and social media support around your business goals.</p>
+            <h2>Need service pages that look stronger and convert with more confidence?</h2>
+            <p>We can shape the right mix of strategy, design, SEO, and campaigns around your goals.</p>
             <a href="contact.html" class="btn btn-primary">Start Your Project</a>
         </div>
     </section>

@@ -26,7 +26,7 @@
                         </span>
                     </a>
                 </div>
-                <ul class="nav-menu">
+                <ul class="nav-menu" id="site-nav-menu">
                     <li><a href="../index.html">Home</a></li>
                     <li><a href="about.html">About Us</a></li>
                     <li><a href="services.html">Services</a></li>
@@ -34,41 +34,58 @@
                     <li><a href="blog.html">Blog</a></li>
                     <li><a href="contact.html" class="active btn-primary">Contact Us</a></li>
                 </ul>
-                <div class="hamburger">
+                <button class="hamburger" type="button" aria-expanded="false" aria-controls="site-nav-menu" aria-label="Toggle navigation menu">
                     <span></span>
                     <span></span>
                     <span></span>
-                </div>
+                </button>
             </div>
         </div>
     </nav>
 
-    <section class="page-header contact-page-header">
+    <section class="hero hero-home">
         <div class="container">
-            <div class="contact-hero-layout">
-                <div class="contact-hero-copy">
+            <div class="hero-layout">
+                <div class="hero-content">
                     <span class="section-tag hero-tag">Contact Us</span>
-                    <h1>Tell us what needs to improve.</h1>
-                    <p>Website, SEO, PPC, or social media. Share the goal and we will suggest the right next step.</p>
-                    <div class="contact-hero-actions">
-                        <a href="https://wa.me/8801799976295" class="btn btn-primary" target="_blank" rel="noreferrer">Talk on WhatsApp</a>
-                        <a href="#contactForm" class="btn btn-secondary">Open the Form</a>
+                    <h1>Let's build something that actually works.</h1>
+                    <p>Share your website goals, challenges, or current issues. We'll provide clear recommendations and a realistic path forward.</p>
+                    <div class="hero-checklist">
+                        <span><i class="fas fa-check-circle"></i> Free consultation</span>
+                        <span><i class="fas fa-check-circle"></i> Clear recommendations</span>
+                        <span><i class="fas fa-check-circle"></i> No pressure approach</span>
+                    </div>
+                    <div class="hero-buttons hero-action-row">
+                        <a href="https://wa.me/8801799976295" class="btn btn-primary" target="_blank" rel="noreferrer">Start on WhatsApp</a>
+                        <a href="#contactForm" class="btn btn-secondary">Use Contact Form</a>
+                    </div>
+                    <div class="hero-trust-row">
+                        <a href="tel:+8801799976295" class="hero-trust-chip"><i class="fas fa-phone"></i> +8801799-976295</a>
+                        <a href="mailto:contact@a1technovation.com" class="hero-trust-chip"><i class="fas fa-envelope"></i> Email Us</a>
+                        <a href="#contactForm" class="hero-trust-chip"><i class="fas fa-paper-plane"></i> Send Inquiry</a>
                     </div>
                 </div>
-                <div class="contact-hero-panel">
-                    <span class="proof-label">Quick Contact</span>
-                    <div class="contact-hero-points">
-                        <div class="contact-hero-point">
-                            <strong>Call</strong>
-                            <span>+8801799-976295</span>
+                <div class="hero-visual hero-visual-rich">
+                    <div class="hero-minimal-panel">
+                        <span class="proof-label">How We Help</span>
+                        <h3>Listen • Analyze • Recommend</h3>
+                        <div class="hero-minimal-grid">
+                            <div class="hero-minimal-item">
+                                <strong>Listen</strong>
+                                <span>Understand your goals</span>
+                            </div>
+                            <div class="hero-minimal-item">
+                                <strong>Analyze</strong>
+                                <span>Review your current setup</span>
+                            </div>
+                            <div class="hero-minimal-item">
+                                <strong>Recommend</strong>
+                                <span>Suggest clear solutions</span>
+                            </div>
                         </div>
-                        <div class="contact-hero-point">
-                            <strong>Email</strong>
-                            <span>contact@a1technovation.com</span>
-                        </div>
-                        <div class="contact-hero-point">
-                            <strong>Base</strong>
-                            <span>Dhaka, Bangladesh</span>
+                        <div class="hero-minimal-note">
+                            <i class="fas fa-arrow-right"></i>
+                            <span>From website issues to growth strategies</span>
                         </div>
                     </div>
                 </div>
@@ -81,8 +98,8 @@
             <div class="contact-wrapper">
                 <div class="contact-info">
                     <span class="section-tag">Direct Contact</span>
-                    <h2>Talk with our team</h2>
-                    <p>Use the form, call us, or send a WhatsApp message. We reply with a clear next step.</p>
+                    <h2>Let's clarify your digital goals</h2>
+                    <p>Share your website, SEO, or campaign challenge and we’ll reply with a clear first step.</p>
                     <div class="contact-item">
                         <div class="icon"><i class="fas fa-phone"></i></div>
                         <div class="content">
@@ -116,10 +133,15 @@
                     <div class="contact-visual-card">
                         <img src="../assets/images/team 2.jpg" alt="A1 Technovation team workspace ready for client collaboration" class="media-fill">
                         <div class="contact-visual-copy">
-                            <span class="proof-label">Quick Start</span>
-                            <h3>Share the problem. We will shape the right solution.</h3>
-                            <p>Weak page structure, low leads, unclear messaging, or campaign issues.</p>
+                            <span class="proof-label">What to Send</span>
+                            <h3>Tell us your biggest website challenge.</h3>
+                            <p>Current performance, page clarity, leads, or campaign results—start with the issue and we’ll respond with the best next step.</p>
                         </div>
+                    </div>
+                    <div class="contact-form-header">
+                        <span class="section-tag">Send a Message</span>
+                        <h2>Start with your current challenge</h2>
+                        <p>Provide details and we’ll suggest the most effective next step.</p>
                     </div>
                     <form class="contact-form" id="contactForm">
                         <div class="form-group">

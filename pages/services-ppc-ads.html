@@ -41,7 +41,7 @@
                         </span>
                     </a>
                 </div>
-                <ul class="nav-menu">
+                <ul class="nav-menu" id="site-nav-menu">
                     <li><a href="../index.html">Home</a></li>
                     <li><a href="about.html">About Us</a></li>
                     <li><a href="services.html">Services</a></li>
@@ -49,55 +49,66 @@
                     <li><a href="blog.html">Blog</a></li>
                     <li><a href="contact.html" class="btn-primary">Contact Us</a></li>
                 </ul>
-                <div class="hamburger">
+                <button class="hamburger" type="button" aria-expanded="false" aria-controls="site-nav-menu" aria-label="Toggle navigation menu">
                     <span></span>
                     <span></span>
                     <span></span>
-                </div>
+                </button>
             </div>
         </div>
     </nav>
 
-    <header class="page-header service-hero-header service-hero-ppc">
+    <section class="hero hero-home">
         <div class="container">
-            <div class="breadcrumb-trail">
-                <a href="../index.html">Home</a>
-                <span>/</span>
-                <a href="services.html">Services</a>
-                <span>/</span>
-                <span>PPC Ads Campaign</span>
-            </div>
-            <div class="service-hero-layout">
-                <div class="service-hero-copy">
+            <div class="hero-layout">
+                <div class="hero-content">
+                    <div class="breadcrumb-trail">
+                        <a href="../index.html">Home</a>
+                        <span>/</span>
+                        <a href="services.html">Services</a>
+                        <span>/</span>
+                        <span>PPC Ads Campaign</span>
+                    </div>
                     <span class="section-tag hero-tag">PPC Ads Campaign</span>
                     <h1>PPC campaigns built to bring the right clicks to the right landing page.</h1>
                     <p>We plan, launch, and refine paid campaigns with a practical focus on ad intent, landing page match, conversion tracking, and cost control.</p>
-                    <div class="service-hero-actions">
-                        <a href="contact.html" class="btn btn-primary">Request PPC Consultation</a>
-                        <a href="#ppc-deliverables" class="btn btn-secondary">See Deliverables</a>
-                    </div>
-                    <div class="service-hero-badges">
+                    <div class="hero-checklist">
                         <span><i class="fas fa-check-circle"></i> Google Ads strategy</span>
                         <span><i class="fas fa-check-circle"></i> Landing page alignment</span>
                         <span><i class="fas fa-check-circle"></i> Ongoing optimization</span>
                     </div>
+                    <div class="hero-buttons hero-action-row">
+                        <a href="contact.html" class="btn btn-primary">Request PPC Consultation</a>
+                        <a href="#ppc-deliverables" class="btn btn-secondary">See Deliverables</a>
+                    </div>
                 </div>
-                <div class="service-hero-visual">
-                    <div class="service-visual-main">
-                        <img src="../assets/images/ppc-company-usa.jpg" alt="Paid advertising dashboard with budget, clicks, and conversion metrics" class="media-fill">
-                    </div>
-                    <div class="service-visual-card service-visual-card-top">
-                        <strong>Paid Traffic</strong>
-                        <p>Campaigns structured around search intent and conversion quality.</p>
-                    </div>
-                    <div class="service-visual-card service-visual-card-bottom">
-                        <strong>Cleaner Funnel</strong>
-                        <p>Better ad copy, keyword control, and landing page consistency.</p>
+                <div class="hero-visual hero-visual-rich">
+                    <div class="hero-minimal-panel">
+                        <span class="proof-label">Intent-Led PPC</span>
+                        <h3>Ads that match the landing page promise.</h3>
+                        <div class="hero-minimal-grid">
+                            <div class="hero-minimal-item">
+                                <strong>Targeting</strong>
+                                <span>Precise</span>
+                            </div>
+                            <div class="hero-minimal-item">
+                                <strong>Conversion</strong>
+                                <span>Aligned</span>
+                            </div>
+                            <div class="hero-minimal-item">
+                                <strong>Cost</strong>
+                                <span>Controlled</span>
+                            </div>
+                        </div>
+                        <div class="hero-minimal-note">
+                            <i class="fas fa-arrow-right"></i>
+                            <span>Ad intent and landing page match</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </header>
+    </section>
 
     <section class="service-anchor-nav">
         <div class="container">

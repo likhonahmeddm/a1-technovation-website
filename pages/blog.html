@@ -26,7 +26,7 @@
                         </span>
                     </a>
                 </div>
-                <ul class="nav-menu">
+                <ul class="nav-menu" id="site-nav-menu">
                     <li><a href="../index.html">Home</a></li>
                     <li><a href="about.html">About Us</a></li>
                     <li><a href="services.html">Services</a></li>
@@ -34,42 +34,53 @@
                     <li><a href="blog.html" class="active">Blog</a></li>
                     <li><a href="contact.html" class="btn-primary">Contact Us</a></li>
                 </ul>
-                <div class="hamburger">
+                <button class="hamburger" type="button" aria-expanded="false" aria-controls="site-nav-menu" aria-label="Toggle navigation menu">
                     <span></span>
                     <span></span>
                     <span></span>
-                </div>
+                </button>
             </div>
         </div>
     </nav>
 
-    <section class="page-header blog-page-header">
+    <section class="hero hero-home">
         <div class="container">
-            <div class="blog-hero-layout">
-                <div class="blog-hero-copy">
+            <div class="hero-layout">
+                <div class="hero-content">
                     <span class="section-tag hero-tag">Blog</span>
-                    <h1>Short insights on pages, SEO, and better response.</h1>
-                    <p>Clear, practical ideas you can use to improve structure, content flow, and conversion points.</p>
-                    <div class="blog-hero-chips">
-                        <span>Clear pages</span>
-                        <span>SEO structure</span>
-                        <span>Better CTAs</span>
+                    <h1>Insights for digital growth and better websites.</h1>
+                    <p>Practical knowledge on SEO, web design, content strategy, and digital marketing that actually works.</p>
+                    <div class="hero-checklist">
+                        <span><i class="fas fa-check-circle"></i> Real insights</span>
+                        <span><i class="fas fa-check-circle"></i> Actionable advice</span>
+                        <span><i class="fas fa-check-circle"></i> No fluff</span>
+                    </div>
+                    <div class="hero-buttons hero-action-row">
+                        <a href="#blog-section" class="btn btn-primary">Start Reading</a>
+                        <a href="services.html" class="btn btn-secondary">Our Services</a>
                     </div>
                 </div>
-                <div class="blog-hero-panel">
-                    <span class="proof-label">What You Get</span>
-                    <div class="blog-hero-points">
-                        <div class="blog-hero-point">
-                            <strong>Short</strong>
-                            <span>Fast reads with direct takeaways</span>
+                <div class="hero-visual hero-visual-rich">
+                    <div class="hero-minimal-panel">
+                        <span class="proof-label">What You'll Learn</span>
+                        <h3>SEO • Design • Marketing</h3>
+                        <div class="hero-minimal-grid">
+                            <div class="hero-minimal-item">
+                                <strong>SEO</strong>
+                                <span>Rank higher</span>
+                            </div>
+                            <div class="hero-minimal-item">
+                                <strong>Design</strong>
+                                <span>Convert better</span>
+                            </div>
+                            <div class="hero-minimal-item">
+                                <strong>Growth</strong>
+                                <span>Get results</span>
+                            </div>
                         </div>
-                        <div class="blog-hero-point">
-                            <strong>Useful</strong>
-                            <span>Focused on real website and campaign issues</span>
-                        </div>
-                        <div class="blog-hero-point">
-                            <strong>Actionable</strong>
-                            <span>Easy to apply to your own pages</span>
+                        <div class="hero-minimal-note">
+                            <i class="fas fa-arrow-right"></i>
+                            <span>Based on real client work and data</span>
                         </div>
                     </div>
                 </div>
@@ -81,17 +92,17 @@
         <div class="container">
             <div class="editorial-grid">
                 <div class="editorial-copy">
-                    <span class="section-tag">Featured</span>
-                    <h2>The best websites explain the offer fast and ask for action fast.</h2>
-                    <p>That is usually the difference between a site that looks nice and a site that gets leads.</p>
-                    <a href="contact.html" class="btn btn-primary">Apply This To My Website</a>
+                    <span class="section-tag">Latest Insight</span>
+                    <h2>The difference between websites that work and websites that don't.</h2>
+                    <p>It's not about looking pretty. It's about clear communication, proper structure, and guiding visitors to take action.</p>
+                    <a href="#blog-section" class="btn btn-primary">Read Our Latest Posts</a>
                 </div>
                 <div class="editorial-panel">
                     <img src="../assets/images/web design.jpg" alt="High-end agency style website design shown on a workspace display" class="editorial-panel-image media-fill">
                     <div class="editorial-panel-content">
-                        <span class="proof-label">Read Fast</span>
-                        <h3>3 min insight</h3>
-                        <p>Less theory. More practical improvement.</p>
+                        <span class="proof-label">Quick Reads</span>
+                        <h3>3-5 min articles</h3>
+                        <p>Focused on practical digital marketing knowledge.</p>
                     </div>
                 </div>
             </div>
@@ -110,7 +121,7 @@
                         <p class="blog-date"><i class="fas fa-calendar"></i> April 01, 2026</p>
                         <h3>How to make a homepage clearer in the first 5 seconds</h3>
                         <p>Sharper headline, better hierarchy, stronger CTA.</p>
-                        <a href="contact.html" class="read-more">Improve My Homepage &rarr;</a>
+                        <a href="#" class="read-more">Read More &rarr;</a>
                     </div>
                 </article>
                 <article class="blog-card">
@@ -122,7 +133,7 @@
                         <p class="blog-date"><i class="fas fa-calendar"></i> March 27, 2026</p>
                         <h3>Why service pages need more than keywords</h3>
                         <p>SEO works better when the page also builds trust and action.</p>
-                        <a href="contact.html" class="read-more">Fix My SEO Pages &rarr;</a>
+                        <a href="#" class="read-more">Read More &rarr;</a>
                     </div>
                 </article>
                 <article class="blog-card">
@@ -134,7 +145,7 @@
                         <p class="blog-date"><i class="fas fa-calendar"></i> March 20, 2026</p>
                         <h3>How content consistency makes brands easier to remember</h3>
                         <p>Repetition, structure, and visual consistency win over random posting.</p>
-                        <a href="contact.html" class="read-more">Build My Content System &rarr;</a>
+                        <a href="#" class="read-more">Read More &rarr;</a>
                     </div>
                 </article>
                 <article class="blog-card">
@@ -146,7 +157,7 @@
                         <p class="blog-date"><i class="fas fa-calendar"></i> March 11, 2026</p>
                         <h3>What makes a website feel ready to launch</h3>
                         <p>Not more pages. Better detail, clearer flow, and better mobile behavior.</p>
-                        <a href="contact.html" class="read-more">Launch My Website Better &rarr;</a>
+                        <a href="#" class="read-more">Read More &rarr;</a>
                     </div>
                 </article>
                 <article class="blog-card">
@@ -158,7 +169,7 @@
                         <p class="blog-date"><i class="fas fa-calendar"></i> March 05, 2026</p>
                         <h3>Why shorter website copy often converts better</h3>
                         <p>Visitors want clarity first, not long explanations.</p>
-                        <a href="contact.html" class="read-more">Tighten My Website Copy &rarr;</a>
+                        <a href="#" class="read-more">Read More &rarr;</a>
                     </div>
                 </article>
                 <article class="blog-card">
@@ -170,7 +181,7 @@
                         <p class="blog-date"><i class="fas fa-calendar"></i> February 25, 2026</p>
                         <h3>Why growth starts with better service pages</h3>
                         <p>Most businesses do not need more traffic first. They need clearer pages first.</p>
-                        <a href="contact.html" class="read-more">Upgrade My Service Pages &rarr;</a>
+                        <a href="#" class="read-more">Read More &rarr;</a>
                     </div>
                 </article>
             </div>
@@ -179,10 +190,10 @@
 
     <section class="cta">
         <div class="container">
-            <span class="section-tag cta-tag">Need Help?</span>
-            <h2>Want us to apply these ideas to your website?</h2>
-            <p>We can improve the structure, design, and CTA flow for you.</p>
-            <a href="contact.html" class="btn btn-primary">Get Website Review</a>
+            <span class="section-tag cta-tag">Stay Updated</span>
+            <h2>Want more digital marketing insights?</h2>
+            <p>Subscribe to get our latest articles on SEO, web design, and growth strategies delivered to your inbox.</p>
+            <a href="contact.html" class="btn btn-primary">Subscribe to Updates</a>
         </div>
     </section>
 
