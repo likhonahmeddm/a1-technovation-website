@@ -1504,8 +1504,26 @@
 }
 
 @media (max-width: 980px) {
+    .contact-page .contact-wrapper {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
     .contact-page .contact-section-intro {
         margin-bottom: 28px;
+    }
+
+    .contact-page .contact-info,
+    .contact-page .contact-form-wrapper,
+    .contact-page .contact-note-panel {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .contact-page .contact-form-wrapper,
+    .contact-page .contact-note-panel {
+        grid-column: auto;
+        grid-row: auto;
     }
 
     .contact-page .contact-form-meta,

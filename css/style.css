@@ -5692,12 +5692,19 @@ section h2 {
 
 .contact-page .contact-form-wrapper {
     display: block;
+    grid-column: 2;
+    grid-row: 1 / span 2;
 }
 
 .contact-page .contact-form-shell {
     display: grid;
     gap: 24px;
     padding: 32px;
+}
+
+.contact-page .contact-note-panel {
+    grid-column: 1;
+    grid-row: 2;
 }
 
 .contact-page .contact-form-header {
