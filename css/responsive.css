@@ -1,1543 +1,196 @@
-/* ============================================
-   RESPONSIVE DESIGN
-   ============================================ */
+/* =================================================================
+   A1 TECHNOVATION — Responsive Styles 2025
+================================================================= */
 
-@media (max-width: 1199px) {
-    .container {
-        max-width: 1040px;
-    }
-
-    .hero-minimal-grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-
-    .hero-home .hero-summary-points {
-        grid-template-columns: 1fr;
-    }
-
-    .services-grid-four {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .journey-strip,
-    .process-ribbon {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .testimonial-grid,
-    .proof-bar,
-    .about-values-grid,
-    .about-reasons-grid,
-    .case-grid,
-    .insight-grid,
-    .service-menu,
-    .portfolio-items {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .hero-layout,
-    .about-hero-layout,
-    .about-story-grid,
-    .about-capability-grid,
-    .service-hero-layout,
-    .blog-hero-layout,
-    .portfolio-hero-layout,
-    .contact-hero-layout,
-    .experience-layout,
-    .editorial-grid,
-    .story-grid,
-    .contact-band-grid,
-    .overview-grid,
-    .case-study-content,
-    .contact-wrapper {
-        gap: 32px;
-    }
-
-    .hero-home .hero-layout {
-        grid-template-columns: minmax(0, 1fr) minmax(300px, 0.82fr);
-        gap: 28px;
-    }
-
-    .hero-home .hero-content h1 {
-        font-size: clamp(2.85rem, 5vw, 4.4rem);
-    }
-
-    .hero-home .hero-content p {
-        max-width: 100%;
-    }
-
-    .hero-home .hero-buttons .btn {
-        min-width: 0;
-    }
-
-    .hero-home .hero-visual-rich {
-        width: 100%;
-        max-width: 500px;
-        justify-self: end;
-    }
-
-    .stats-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
+/* ── 1280px ──────────────────────────────────────────────────── */
+@media (max-width: 1280px) {
+  .hero-inner        { gap: 48px }
+  .hero-img-frame img{ height: 420px }
+  .about-split       { gap: 56px }
 }
 
-@media (max-width: 980px) {
-    .services-grid-four {
-        grid-template-columns: 1fr;
-    }
+/* ── 1024px (Tablet Landscape) ───────────────────────────────── */
+@media (max-width: 1024px) {
+  :root { --nav-h: 68px }
 
-    .utility-bar-inner {
-        flex-direction: column;
-        justify-content: center;
-        padding: 10px 0 12px;
-    }
+  .navbar-nav         { display: none }
+  .mobile-toggle      { display: flex }
+  .navbar-right .btn  { display: none }
 
-    .utility-list {
-        justify-content: center;
-    }
+  .hero-inner {
+    grid-template-columns: 1fr;
+    gap: 48px;
+    padding: 64px 0 80px;
+  }
+  .hero-content { align-items: center; text-align: center }
+  .hero-desc    { margin: 0 auto }
+  .hero-social-proof { justify-content: center }
+  .hero-stats   { justify-content: center }
+  .hero-visual  { justify-content: center; width: 100% }
+  .hero-img-wrap{ max-width: 540px }
+  .fc-1 { top: -16px; right: -8px }
+  .fc-2 { bottom: 32px; left: -16px }
+  .fc-3 { display: none }
 
-    .utility-action {
-        text-align: center;
-    }
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+  .stat-item { padding: 24px; background: rgba(255,255,255,.08); border-radius: 16px }
 
-    .hero-layout,
-    .about-hero-layout,
-    .about-story-grid,
-    .about-capability-grid,
-    .service-hero-layout,
-    .blog-hero-layout,
-    .portfolio-hero-layout,
-    .contact-hero-layout,
-    .experience-layout,
-    .editorial-grid,
-    .story-grid,
-    .founder-spotlight-grid,
-    .contact-band-grid,
-    .overview-grid,
-    .case-study-content,
-    .contact-wrapper {
-        grid-template-columns: 1fr;
-    }
+  .svc-grid { grid-template-columns: 1fr }
 
-    .hero-content,
-    .about-hero-copy,
-    .about-story-copy,
-    .experience-copy,
-    .service-hero-copy,
-    .blog-hero-copy,
-    .portfolio-hero-copy,
-    .contact-hero-copy,
-    .founder-spotlight-copy,
-    .editorial-copy {
-        max-width: none;
-    }
+  .about-split {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+  .about-img-wrap { max-width: 560px; margin: 0 auto }
+  .about-badge    { right: 0; bottom: -20px }
 
-    .hero-content,
-    .about-hero-copy,
-    .experience-copy,
-    .service-hero-copy,
-    .blog-hero-copy,
-    .portfolio-hero-copy,
-    .contact-hero-copy,
-    .founder-spotlight-copy {
-        text-align: center;
-    }
+  .results-grid      { grid-template-columns: repeat(2, 1fr) }
+  .testi-grid        { grid-template-columns: 1fr }
+  .testi-card.featured + .testi-card { grid-row: unset }
 
-    .about-hero-copy h1,
-    .about-story-copy h2,
-    .experience-copy h2,
-    .editorial-copy h2,
-    .founder-spotlight-copy h2,
-    .contact-band-grid h2,
-    .service-section h2,
-    .overview-text h2,
-    .blog-hero-copy h1,
-    .portfolio-hero-copy h1,
-    .contact-hero-copy h1 {
-        text-align: center;
-    }
+  .blog-grid         { grid-template-columns: repeat(2, 1fr) }
+  .port-grid         { grid-template-columns: repeat(2, 1fr) }
 
-    .hero-content p,
-    .about-hero-copy p,
-    .about-story-copy p,
-    .experience-copy > p,
-    .service-hero-copy p,
-    .blog-hero-copy p,
-    .portfolio-hero-copy p,
-    .contact-hero-copy p,
-    .founder-spotlight-copy p,
-    .editorial-copy p {
-        margin-left: auto;
-        margin-right: auto;
-    }
+  .process-grid { grid-template-columns: repeat(2, 1fr) }
+  .process-line { display: none }
 
-    .about-values-section .section-tag,
-    .about-reasons-section .section-tag,
-    .about-page .contact-band .section-tag,
-    .about-page .cta .section-tag {
-        display: table;
-        margin-left: auto;
-        margin-right: auto;
-        text-align: center;
-    }
+  .feat-grid         { grid-template-columns: repeat(2, 1fr) }
+  .pricing-grid      { grid-template-columns: 1fr }
 
-    .hero-buttons,
-    .hero-metrics,
-    .hero-checklist,
-    .about-hero-checklist,
-    .hero-trust-row,
-    .service-hero-actions,
-    .service-hero-badges,
-    .service-hero-contact,
-    .blog-hero-chips,
-    .portfolio-hero-chips,
-    .contact-hero-actions {
-        justify-content: center;
-    }
+  .footer-top {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+  .footer-brand { grid-column: 1 / -1; padding-right: 0 }
 
-    .hero-visual,
-    .about-hero-visual,
-    .hero-visual-rich,
-    .service-hero-visual,
-    .experience-screen,
-    .dual-image-stack {
-        min-height: auto;
-    }
-
-    .hero-panel-main,
-    .service-visual-main,
-    .service-visual-card,
-    .stack-image,
-    .screen-card,
-    .mini-stat {
-        position: static;
-        inset: auto;
-        max-width: none;
-    }
-
-    .hero-panel-main,
-    .service-visual-main,
-    .stack-image-large,
-    .stack-image-small {
-        margin-bottom: 18px;
-    }
-
-    .hero-panel-main {
-        padding: 24px;
-    }
-
-    .hero-home .hero-summary-card h3,
-    .hero-home .hero-content h1 {
-        max-width: none;
-    }
-
-    .hero-minimal-panel h3 {
-        max-width: none;
-    }
-
-    .service-visual-main {
-        min-height: 320px;
-    }
-
-    .services-page .service-hero-copy,
-    .service-detail-page .service-hero-copy,
-    .about-page .service-hero-copy,
-    .blog-page .service-hero-copy,
-    .portfolio-page .service-hero-copy,
-    .contact-page .service-hero-copy {
-        align-items: center;
-        order: 1;
-        width: 100%;
-        text-align: center;
-        gap: 0;
-        padding: 0 4px;
-    }
-
-    .services-page .breadcrumb-trail,
-    .service-detail-page .breadcrumb-trail,
-    .about-page .breadcrumb-trail,
-    .blog-page .breadcrumb-trail,
-    .portfolio-page .breadcrumb-trail,
-    .contact-page .breadcrumb-trail {
-        display: none;
-    }
-
-    .services-page .service-hero-copy .hero-tag,
-    .service-detail-page .service-hero-copy .hero-tag,
-    .about-page .service-hero-copy .hero-tag,
-    .blog-page .service-hero-copy .hero-tag,
-    .portfolio-page .service-hero-copy .hero-tag,
-    .contact-page .service-hero-copy .hero-tag {
-        display: table;
-        margin-left: auto;
-        margin-right: auto;
-        text-align: center;
-        min-width: 0;
-    }
-
-    .services-page .service-hero-copy h1,
-    .service-detail-page .service-hero-copy h1,
-    .about-page .service-hero-copy h1,
-    .blog-page .service-hero-copy h1,
-    .portfolio-page .service-hero-copy h1,
-    .contact-page .service-hero-copy h1 {
-        max-width: none;
-        width: 100%;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 16px;
-        text-align: center;
-    }
-
-    .services-page .service-hero-copy p,
-    .service-detail-page .service-hero-copy p,
-    .about-page .service-hero-copy p,
-    .blog-page .service-hero-copy p,
-    .portfolio-page .service-hero-copy p,
-    .contact-page .service-hero-copy p {
-        max-width: 30rem;
-        width: 100%;
-        margin-left: auto;
-        margin-right: auto;
-        text-align: center;
-        line-height: 1.7;
-    }
-
-    .services-page .service-hero-actions,
-    .services-page .service-hero-badges,
-    .services-page .service-hero-contact {
-        flex-direction: column;
-        align-items: stretch;
-        width: 100%;
-    }
-
-    .services-page .service-hero-actions .btn,
-    .services-page .service-hero-badges span,
-    .services-page .service-hero-contact-chip {
-        width: 100%;
-        justify-content: center;
-        text-align: center;
-        max-width: 420px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .services-page .service-hero-actions .btn-secondary {
-        display: none;
-    }
-
-    .services-page .service-hero-visual {
-        order: 2;
-        width: 100%;
-        margin-top: 14px;
-        display: block;
-    }
-
-    .services-page .service-hero-metrics {
-        order: 3;
-    }
-
-    .services-page .service-hero-frame {
-        min-height: 480px;
-        max-width: 640px;
-        width: 100%;
-        margin: 0 auto;
-    }
-
-    .services-page .service-hero-overlay {
-        left: 18px;
-        right: 18px;
-        bottom: 18px;
-    }
-
-    .services-page .service-hero-overlay h3 {
-        max-width: none;
-        text-align: center;
-    }
-
-    .services-page .service-hero-overlay p {
-        text-align: center;
-    }
-
-    .services-page .service-hero-mini-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .services-page .service-hero-metrics,
-    .services-page .service-menu,
-    .services-page .proof-bar,
-    .services-page .stats-grid,
-    .services-page .faq-grid,
-    .services-page .process-ribbon,
-    .services-page .editorial-grid.service-story-grid {
-        max-width: 560px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .services-page .service-anchor-nav {
-        display: none;
-    }
-
-    .services-page .service-menu-section,
-    .services-page .proof-bar-section,
-    .services-page .service-section,
-    .services-page .process-ribbon-section,
-    .services-page .stats,
-    .services-page .faq-section,
-    .services-page .cta {
-        text-align: center;
-    }
-
-    .services-page .service-menu-section .section-tag,
-    .services-page .proof-bar-section .section-tag,
-    .services-page .service-section .section-tag,
-    .services-page .process-ribbon-section .section-tag,
-    .services-page .stats .section-tag,
-    .services-page .faq-section .section-tag,
-    .services-page .cta .section-tag {
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .services-page .service-menu-section h2,
-    .services-page .service-menu-section .section-subtitle,
-    .services-page .proof-bar-section h2,
-    .services-page .service-section h2,
-    .services-page .process-ribbon-section h2,
-    .services-page .faq-section h2,
-    .services-page .cta h2,
-    .services-page .cta p,
-    .services-page .editorial-copy,
-    .services-page .editorial-copy h2,
-    .services-page .editorial-copy p {
-        text-align: center;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .services-page .service-menu-card,
-    .services-page .proof-card,
-    .services-page .stat-item,
-    .services-page .faq-card,
-    .services-page .ribbon-step,
-    .services-page .editorial-panel {
-        max-width: 560px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .services-page .service-menu-card,
-    .services-page .proof-card,
-    .services-page .stat-item,
-    .services-page .faq-card,
-    .services-page .ribbon-step {
-        text-align: center;
-    }
-
-    .services-page .service-menu-meta,
-    .services-page .service-card-points,
-    .services-page .editorial-copy .clean-list,
-    .services-page .editorial-panel-content .clean-list {
-        justify-content: center;
-    }
-
-    .services-page .service-menu-icon {
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .services-page .service-menu-card h3,
-    .services-page .service-menu-card p,
-    .services-page .text-link,
-    .services-page .editorial-panel-content,
-    .services-page .editorial-panel-content h3,
-    .services-page .editorial-panel-content p,
-    .services-page .editorial-panel-content .clean-list,
-    .services-page .faq-card h3,
-    .services-page .faq-card p {
-        text-align: center;
-    }
-
-    .services-page .service-card-points li,
-    .services-page .clean-list li {
-        justify-content: center;
-        text-align: center;
-    }
-
-    .founder-portrait-card {
-        min-height: 420px;
-    }
-
-    .service-visual-card {
-        margin-top: 14px;
-    }
-
-    .stack-image-large,
-    .stack-image-small {
-        width: 100%;
-        height: 260px;
-        border-width: 0;
-    }
-
-    .stack-image-small {
-        margin-top: 0;
-    }
-
-    .service-anchor-nav {
-        position: static;
-        top: auto;
-    }
-
-    .anchor-nav-list {
-        overflow-x: auto;
-        flex-wrap: nowrap;
-        padding-bottom: 4px;
-    }
-
-    .stats-grid,
-    .service-hero-metrics,
-    .about-values-grid,
-    .about-reasons-grid,
-    .faq-grid,
-    .related-services-grid,
-    .tools-grid,
-    .platforms-grid,
-    .services-list,
-    .proof-bar,
-    .case-grid,
-    .insight-grid,
-    .service-menu,
-    .testimonial-grid,
-    .journey-strip,
-    .process-ribbon,
-    .portfolio-items {
-        grid-template-columns: 1fr;
-    }
-
-    .hero-home {
-        padding: 96px 0 72px;
-    }
-
-    .hero-home .hero-layout {
-        grid-template-columns: 1fr;
-        gap: 24px;
-    }
-
-    .hero-home .hero-content {
-        text-align: left;
-        align-items: flex-start;
-    }
-
-    .hero-home .hero-content p {
-        margin-left: 0;
-        margin-right: 0;
-        max-width: 36rem;
-    }
-
-    .hero-home .hero-buttons,
-    .hero-home .hero-checklist,
-    .hero-home .hero-trust-row {
-        justify-content: flex-start;
-    }
-
-    .hero-home .hero-visual-rich {
-        max-width: 640px;
-        justify-self: center;
-    }
-
-    .hero-home .hero-minimal-panel,
-    .hero-home .hero-content {
-        width: 100%;
-    }
-
-    .hero-home .hero-content {
-        order: 1;
-    }
-
-    .hero-home .hero-visual {
-        order: 2;
-        width: 100%;
-        margin-top: 10px;
-    }
-
-    .journey-strip-section {
-        margin-top: -24px;
-    }
-
-    .service-card-media {
-        height: 200px;
-    }
-
-    .contact-band-list {
-        width: 100%;
-        max-width: 720px;
-        margin: 0 auto;
-    }
+  .contact-grid { grid-template-columns: 1fr; gap: 40px }
+  .form-grid    { grid-template-columns: 1fr }
+  .fg.full      { grid-column: 1/-1 }
 }
 
+/* ── 768px (Mobile / Tablet Portrait) ───────────────────────── */
 @media (max-width: 768px) {
-    body.menu-open {
-        overflow: hidden;
-    }
-
-    .services-grid-four,
-    .journey-strip,
-    .proof-bar,
-    .stats-grid,
-    .testimonial-grid,
-    .editorial-static-grid,
-    .hero-minimal-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .nav-wrapper {
-        padding: 12px 0;
-        gap: 12px;
-    }
-
-    .utility-bar {
-        display: none;
-    }
-
-    .hamburger {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        width: 48px;
-        height: 48px;
-        position: relative;
-        z-index: 5002;
-        padding: 0;
-        border-radius: 14px;
-        background: rgba(125, 211, 252, 0.12);
-        border: 1px solid rgba(125, 211, 252, 0.2);
-        box-shadow: 0 12px 28px rgba(4, 17, 31, 0.22);
-    }
-
-    .nav-menu {
-        display: flex;
-        position: absolute;
-        top: calc(100% + 1px);
-        left: 0;
-        right: 0;
-        bottom: auto;
-        width: 100%;
-        background:
-            linear-gradient(180deg, rgba(7, 14, 27, 0.98), rgba(5, 10, 20, 0.99));
-        backdrop-filter: blur(22px);
-        flex-direction: column;
-        gap: 0;
-        align-items: stretch;
-        padding: 16px 16px 28px;
-        max-height: calc(100vh - 74px);
-        overflow-y: auto;
-        border-top: 1px solid rgba(125, 211, 252, 0.1);
-        box-shadow: 0 22px 48px rgba(2, 8, 20, 0.38);
-        z-index: 9999;
-        opacity: 0;
-        visibility: hidden;
-        pointer-events: none;
-        transform: translateY(-12px);
-        transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s step-end;
-    }
-
-    .nav-menu.active {
-        opacity: 1;
-        visibility: visible;
-        pointer-events: auto;
-        transform: translateY(0);
-        transition: opacity 0.25s ease, transform 0.25s ease, visibility 0s;
-    }
-
-    .hamburger.active span:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);
-    }
-
-    .hamburger.active span:nth-child(2) {
-        opacity: 0;
-    }
-
-    .hamburger.active span:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg);
-    }
-
-    .nav-menu li {
-        width: 100%;
-        padding: 0;
-    }
-
-    .nav-menu a {
-        display: block;
-        padding: 16px 4px;
-        color: rgba(234, 244, 255, 0.9);
-        font-size: 18px;
-        font-weight: 700;
-        border-bottom: 1px solid rgba(125, 211, 252, 0.08);
-    }
-
-    .nav-menu a::after {
-        display: none;
-    }
-
-    .nav-menu a:hover,
-    .nav-menu a.active {
-        color: #8edfff;
-    }
-
-    .nav-menu .btn-primary {
-        margin-top: 18px;
-        text-align: center;
-        border-bottom: 0;
-        width: 100%;
-        justify-content: center;
-        padding: 15px 20px;
-    }
-
-    .hero-home {
-        padding: 88px 0 64px;
-    }
-
-    .hero-home::after {
-        width: 280px;
-        height: 280px;
-        opacity: 0.75;
-    }
-
-    .hero {
-        padding: 72px 0 56px;
-    }
-
-    .page-header,
-    .service-hero-header {
-        padding: 56px 0 44px;
-    }
-
-    section {
-        padding: 64px 0;
-    }
-
-    section h2 {
-        font-size: 34px;
-    }
-
-    .hero-content h1,
-    .page-header h1,
-    .service-hero-copy h1 {
-        font-size: 40px;
-    }
-
-    .hero-content p,
-    .page-header p,
-    .service-hero-copy p,
-    .section-subtitle {
-        font-size: 16px;
-    }
-
-    .hero-home .hero-summary-card,
-    .editorial-panel-content,
-    .editorial-static-grid,
-    .blog-hero-panel,
-    .portfolio-hero-panel,
-    .contact-hero-panel,
-    .contact-info,
-    .contact-form {
-        padding: 24px;
-    }
-
-    .about-hero-image-card {
-        min-height: 300px;
-    }
-
-    .about-story-panel-image,
-    .about-capability-team,
-    .story-card-media,
-    .story-card-profile .member-image {
-        height: 260px;
-        min-height: 260px;
-    }
-
-    .about-hero-mini-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .hero-minimal-panel {
-        padding: 24px;
-    }
-
-    .hero-home .hero-layout {
-        grid-template-columns: 1fr;
-        gap: 18px;
-    }
-
-    .hero-home .hero-content h1 {
-        font-size: clamp(2.45rem, 11vw, 3.3rem);
-        line-height: 1.04;
-        letter-spacing: -0.045em;
-    }
-
-    .hero-home .hero-tag {
-        margin-bottom: 16px;
-        align-self: flex-start;
-    }
-
-    .hero-home .hero-content p {
-        max-width: none;
-        font-size: 15px;
-        line-height: 1.7;
-    }
-
-    .hero-home .hero-visual-rich {
-        max-width: none;
-    }
-
-    .hero-home .hero-checklist,
-    .hero-home .hero-trust-row {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 10px;
-        width: 100%;
-        margin-top: 18px;
-        justify-items: center;
-    }
-
-    .hero-home .hero-checklist {
-        order: 2;
-    }
-
-    .hero-home .hero-trust-row {
-        order: 3;
-    }
-
-    .hero-home .hero-checklist span,
-    .hero-home .hero-trust-chip {
-        width: 100%;
-        max-width: 650px;
-        min-height: 52px;
-        justify-content: center;
-        text-align: center;
-        padding: 14px 16px;
-        border-radius: 18px;
-    }
-
-    .hero-home .hero-action-row {
-        margin-top: 20px;
-        gap: 12px;
-        order: 4;
-        width: 100%;
-        justify-content: center;
-    }
-
-    .hero-home .hero-buttons {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-    }
-
-    .hero-home .hero-buttons .btn {
-        display: flex;
-        width: min(100%, 420px);
-        max-width: 420px;
-        min-height: 54px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .hero-home .hero-buttons .btn-secondary {
-        display: none;
-    }
-
-    .hero-home .hero-visual {
-        margin-top: 14px;
-    }
-
-    .hero-minimal-panel {
-        padding: 22px;
-        border-radius: 24px;
-    }
-
-    .hero-minimal-panel h3 {
-        margin-bottom: 18px;
-        font-size: clamp(1.85rem, 8vw, 2.5rem);
-    }
-
-    .hero-minimal-grid {
-        gap: 10px;
-    }
-
-    .hero-minimal-item {
-        padding: 14px 10px;
-        border-radius: 18px;
-    }
-
-    .hero-minimal-item strong {
-        font-size: 12px;
-    }
-
-    .hero-minimal-item span {
-        font-size: 20px;
-    }
-
-    .hero-minimal-note {
-        width: 100%;
-        justify-content: center;
-        text-align: center;
-        border-radius: 18px;
-        padding: 14px 16px;
-    }
-
-    .journey-strip-section {
-        margin-top: 0;
-    }
-
-    .journey-strip {
-        padding: 14px;
-        border-radius: 24px;
-        gap: 14px;
-        max-width: 560px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .journey-step {
-        padding: 18px;
-        border-radius: 20px;
-        text-align: left;
-    }
-
-    .services-grid-four,
-    .proof-bar,
-    .stats-grid,
-    .testimonial-grid,
-    .contact-band-list,
-    .editorial-grid.service-story-grid {
-        max-width: 560px;
-        margin-left: auto;
-        margin-right: auto;
-        gap: 16px;
-    }
-
-    .services-overview,
-    .proof-bar-section,
-    .stats,
-    .testimonial-section,
-    .contact-band,
-    .cta {
-        text-align: center;
-    }
-
-    .services-overview .section-tag,
-    .proof-bar-section .section-tag,
-    .stats .section-tag,
-    .testimonial-section .section-tag,
-    .contact-band .section-tag,
-    .cta .section-tag {
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .services-overview h2,
-    .services-overview .section-subtitle,
-    .proof-bar-section h2,
-    .testimonial-section h2,
-    .contact-band h2,
-    .cta h2,
-    .cta p {
-        margin-left: auto;
-        margin-right: auto;
-        text-align: center;
-    }
-
-    .editorial-grid.service-story-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .editorial-copy,
-    .editorial-panel-visual,
-    .service-card,
-    .proof-card,
-    .stat-item,
-    .testimonial-card {
-        width: 100%;
-        max-width: 560px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .editorial-copy {
-        text-align: center;
-    }
-
-    .editorial-copy h2,
-    .editorial-copy p {
-        text-align: center;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .hero-proof-top {
-        grid-template-columns: 1fr;
-    }
-
-    .hero-buttons {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .hero-buttons .btn,
-    .service-hero-actions .btn,
-    .contact-hero-actions .btn {
-        width: 100%;
-        max-width: 320px;
-        text-align: center;
-    }
-
-    .hero-checklist,
-    .hero-trust-row,
-    .blog-hero-chips,
-    .portfolio-hero-chips {
-        justify-content: center;
-    }
-
-    .blog-hero-point,
-    .portfolio-hero-point,
-    .contact-hero-point {
-        text-align: center;
-    }
-
-    .about-reason-card {
-        flex-direction: column;
-    }
-
-    .logo-link,
-    .footer-brand {
-        gap: 10px;
-    }
-
-    .logo-mark {
-        width: 44px;
-        height: 44px;
-        border-radius: 14px;
-        font-size: 18px;
-    }
-
-    .logo-type strong {
-        font-size: 17px;
-    }
-
-    .logo-type small {
-        font-size: 9px;
-        letter-spacing: 0.1em;
-    }
-
-    .editorial-static-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .editorial-copy {
-        padding: 0;
-    }
-
-    .service-card {
-        padding: 24px;
-        border-radius: 24px;
-    }
-
-    .service-card-media {
-        height: 180px;
-        margin-bottom: 18px;
-    }
-
-    .service-card-top {
-        margin-bottom: 16px;
-    }
-
-    .service-card h3 {
-        font-size: 24px;
-    }
-
-    .proof-card,
-    .testimonial-card,
-    .stat-item {
-        padding: 22px;
-        border-radius: 22px;
-    }
-
-    .stat-item h3 {
-        font-size: 32px;
-    }
-
-    .contact-band {
-        padding: 56px 0;
-    }
-
-    .contact-band-grid {
-        gap: 18px;
-        max-width: 560px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .contact-band-list {
-        gap: 10px;
-    }
-
-    .contact-chip {
-        min-height: 52px;
-        justify-content: flex-start;
-        padding: 14px 16px;
-        border-radius: 18px;
-    }
-
-    .cta {
-        padding: 64px 0;
-    }
-
-    .cta .container {
-        padding: 24px 20px;
-        border-radius: 24px;
-    }
-
-    .cta h2 {
-        font-size: 30px;
-    }
-
-    .footer {
-        padding: 48px 0 18px;
-    }
-
-    .footer-content,
-    .footer-section {
-        text-align: left;
-    }
-
-    .footer-section .social-links {
-        justify-content: flex-start;
-    }
-
-    .footer-content {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-
-    .footer-section a:hover {
-        padding-left: 0;
-    }
+  .section    { padding: 72px 0 }
+  .section-sm { padding: 48px 0 }
+  .container  { padding: 0 20px }
+
+  h1 { font-size: clamp(2.25rem, 8vw, 3rem) }
+  h2 { font-size: clamp(1.75rem, 6vw, 2.25rem) }
+
+  .section-header     { margin-bottom: 48px }
+  .section-header p   { font-size: 1rem }
+
+  /* Hero */
+  .hero-chip  { font-size: .75rem }
+  .hero-title { letter-spacing: -.03em }
+  .hero-desc  { font-size: 1rem }
+  .hero-actions { gap: 12px }
+  .hero-social-proof { flex-direction: column; gap: 16px; align-items: center }
+  .hero-stats { gap: 24px }
+  .hs-num  { font-size: 1.625rem }
+
+  .fc-2 { display: none }
+
+  /* Clients */
+  .clients-logos { gap: 28px }
+  .client-logo   { font-size: .9375rem }
+
+  /* Stats */
+  .stats-band { padding: 64px 0 }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 24px }
+  .stat-num   { font-size: 2.25rem }
+
+  /* Process */
+  .process-grid { grid-template-columns: 1fr 1fr; gap: 32px }
+
+  /* Results */
+  .results-grid { grid-template-columns: 1fr }
+
+  /* Testimonials */
+  .testi-grid { grid-template-columns: 1fr }
+
+  /* Blog */
+  .blog-grid  { grid-template-columns: 1fr }
+
+  /* Portfolio */
+  .port-grid  { grid-template-columns: 1fr }
+
+  /* Feat */
+  .feat-grid  { grid-template-columns: 1fr }
+
+  /* Pricing */
+  .pricing-grid { grid-template-columns: 1fr }
+
+  /* About */
+  .about-img-frame img { height: 380px }
+  .about-badge { position:static; margin-top:24px; width:fit-content }
+  .about-split .about-img-wrap { display:flex; flex-direction:column }
+
+  /* Contact */
+  .form-card { padding: 28px 24px }
+
+  /* CTA */
+  .cta-inner h2 { font-size: clamp(1.75rem, 6vw, 2.25rem) }
+  .cta-buttons  { flex-direction: column; align-items: stretch }
+  .cta-trust    { gap: 16px }
+
+  /* Footer */
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .footer-brand { max-width: 100% }
+  .footer-bottom { flex-direction: column; text-align: center }
+  .f-bottom-links { justify-content: center }
+
+  /* Page hero */
+  .page-hero { padding: calc(var(--nav-h) + 56px) 0 56px }
+  .page-hero h1 { font-size: clamp(2rem, 7vw, 2.75rem) }
+
+  /* Scroll top */
+  .scroll-top { bottom: 20px; right: 20px }
+
+  /* Mobile menu */
+  .mobile-menu { padding: 88px 20px 32px }
+  .mobile-menu-link { font-size: 1.375rem }
 }
 
-@media (max-width: 640px) {
-    .hero-home .hero-content h1 {
-        font-size: clamp(2.15rem, 11.5vw, 2.85rem);
-    }
-
-    .hero-minimal-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .services-page .service-hero-visual {
-        display: none;
-    }
-
-    .services-page .service-hero-copy {
-        padding: 0 8px;
-    }
-
-    .services-page .service-hero-metrics {
-        gap: 14px;
-        margin-top: 28px;
-    }
-
-    .hero-minimal-panel,
-    .journey-strip,
-    .cta .container {
-        border-radius: 24px;
-    }
-
-    .hero-home .hero-visual {
-        margin-top: 12px;
-    }
-
-    .hero-checklist span,
-    .hero-trust-chip,
-    .contact-chip {
-        width: 100%;
-    }
-
-    .hero-trust-chip,
-    .contact-chip {
-        justify-content: flex-start;
-        text-align: left;
-    }
-
-    .service-card h3 {
-        font-size: 22px;
-    }
-}
-
+/* ── 480px (Small Mobile) ────────────────────────────────────── */
 @media (max-width: 480px) {
-    .container {
-        padding: 0 15px;
-    }
+  .container { padding: 0 16px }
 
-    .hero {
-        padding: 48px 0;
-    }
+  .hero-inner { padding: 48px 0 64px }
+  .hero-img-frame img { height: 300px }
+  .fc-1 { display: none }
+  .hero-actions .btn-lg { padding: 14px 24px; font-size: .9375rem }
 
-    .page-header,
-    .service-hero-header,
-    section {
-        padding-top: 48px;
-        padding-bottom: 48px;
-    }
+  .stats-grid { grid-template-columns: 1fr 1fr }
+  .stat-num   { font-size: 2rem }
 
-    .hero-content h1,
-    .page-header h1 {
-        font-size: 30px;
-        line-height: 1.15;
-    }
+  .process-grid { grid-template-columns: 1fr }
 
-    .service-hero-copy h1 {
-        font-size: 26px;
-        line-height: 1.08;
-        letter-spacing: -0.04em;
-    }
+  .form-grid { grid-template-columns: 1fr }
+  .f-bottom-links { flex-wrap: wrap; gap: 12px; justify-content: center }
 
-    .hero-content p,
-    .page-header p,
-    .service-hero-copy p,
-    .section-subtitle {
-        font-size: 15px;
-    }
+  .filter-bar .f-btn { font-size: .8125rem; padding: 8px 16px }
 
-    section h2,
-    .overview-text h2 {
-        font-size: 26px;
-    }
+  .testi-card { padding: 24px 20px }
+  .svc-card   { padding: 28px 24px }
+  .pricing-card { padding: 28px 24px }
+  .form-card  { padding: 24px 20px }
+  .result-body { padding: 20px }
 
-    .btn {
-        padding: 11px 22px;
-        font-size: 13px;
-    }
-
-    .service-hero-actions {
-        flex-direction: column;
-    }
-
-    .service-hero-actions .btn,
-    .service-hero-badges span,
-    .service-hero-contact-chip,
-    .blog-hero-chips span,
-    .anchor-nav-list a,
-    .portfolio-hero-chips span,
-    .portfolio-filters .filter-btn {
-        width: 100%;
-        justify-content: center;
-        text-align: center;
-    }
-
-    .services-page .service-hero-copy .hero-tag,
-    .services-page .service-hero-actions .btn,
-    .services-page .service-hero-badges span,
-    .services-page .service-hero-contact-chip,
-    .services-page .hero-metric-card,
-    .services-page .service-menu-card,
-    .services-page .proof-card,
-    .services-page .stat-item,
-    .services-page .faq-card,
-    .services-page .ribbon-step,
-    .services-page .editorial-panel,
-    .services-page .cta .btn {
-        max-width: 420px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .services-page .hero-metric-card {
-        text-align: center;
-    }
-
-    .services-page .service-menu-card,
-    .services-page .proof-card,
-    .services-page .stat-item,
-    .services-page .faq-card,
-    .services-page .ribbon-step,
-    .services-page .editorial-panel {
-        border-radius: 24px;
-    }
-
-    .service-card,
-    .proof-card,
-    .faq-card,
-    .related-service-card,
-    .testimonial-card,
-    .journey-step,
-    .service-item,
-    .tool-card,
-    .platform-card,
-    .ribbon-step,
-    .editorial-panel,
-    .service-menu-card,
-    .feature-card,
-    .contact-form {
-        padding: 20px;
-    }
-
-    .services-page .service-menu-media {
-        height: 190px;
-        margin: -20px -20px 18px;
-        border-radius: 20px 20px 0 0;
-    }
-
-    .services-page .service-menu-meta {
-        align-items: center;
-        justify-content: center;
-    }
-
-    .services-page .service-menu-icon {
-        width: 46px;
-        height: 46px;
-        border-radius: 16px;
-        font-size: 18px;
-    }
-
-    .services-page .service-hero-frame {
-        min-height: 380px;
-    }
-
-    .services-page .service-hero-copy {
-        padding: 0;
-    }
-
-    .services-page .service-hero-copy .hero-tag {
-        margin-bottom: 14px;
-    }
-
-    .services-page .service-hero-mini-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .services-page .service-hero-overlay {
-        left: 14px;
-        right: 14px;
-        bottom: 14px;
-        padding: 18px;
-    }
-
-    .services-page .service-hero-overlay h3 {
-        font-size: 1.7rem;
-    }
-
-    .services-page .service-hero-mini-card span {
-        font-size: 1.45rem;
-    }
-
-    .hero-panel-main,
-    .experience-screen,
-    .cta .container {
-        padding: 22px;
-    }
-
-    .hero-metric,
-    .service-visual-card {
-        max-width: 100%;
-    }
-
-    .hero-metrics {
-        gap: 12px;
-    }
-
-    .hero-metric {
-        width: 100%;
-    }
-
-    .hero-checklist span,
-    .hero-trust-chip {
-        width: 100%;
-        justify-content: center;
-    }
-
-    .hero-home .hero-buttons .btn,
-    .hero-home .hero-trust-chip {
-        max-width: none;
-    }
-
-    .hero-home {
-        padding: 88px 0 64px;
-    }
-
-    .hero-home .hero-content h1 {
-        font-size: 32px;
-        line-height: 1.05;
-    }
-
-    .hero-home .hero-content p {
-        font-size: 15px;
-        line-height: 1.65;
-    }
-
-    .hero-home .hero-tag {
-        width: 100%;
-        justify-content: center;
-        text-align: center;
-    }
-
-    .hero-minimal-panel,
-    .journey-strip {
-        padding: 20px;
-    }
-
-    .hero-minimal-item span {
-        font-size: 24px;
-    }
-
-    .journey-strip-section {
-        margin-top: -10px;
-    }
-
-    .proof-card,
-    .testimonial-card,
-    .stat-item,
-    .service-card {
-        padding: 20px;
-    }
-
-    .contact-chip {
-        padding: 14px 16px;
-    }
-
-    .footer-content {
-        gap: 22px;
-    }
-
-    .about-capability-card,
-    .about-value-card,
-    .about-reason-card {
-        padding: 20px;
-    }
-
-    .hero-minimal-note {
-        width: 100%;
-        justify-content: center;
-        text-align: center;
-    }
-
-    .panel-highlights,
-    .editorial-static-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .service-card-media,
-    .case-card-media,
-    .service-visual-main,
-    .stack-image-large,
-    .stack-image-small,
-    .editorial-panel-image,
-    .portfolio-image,
-    .contact-visual-card {
-        height: 220px;
-        min-height: 220px;
-    }
-
-    .service-visual-main {
-        min-height: 220px;
-    }
-
-    .service-card .icon {
-        font-size: 40px;
-    }
-
-    .hero-support-card,
-    .editorial-static-card {
-        min-height: auto;
-    }
-
-    .founder-portrait-card {
-        min-height: 320px;
-    }
-
-    .stats {
-        padding: 48px 0;
-    }
-
-    .stat-item h3 {
-        font-size: 28px;
-    }
-
-    .cta h2 {
-        font-size: 28px;
-    }
-
-    .blog-card h3,
-    .faq-card h3,
-    .related-service-card h3 {
-        font-size: 20px;
-    }
-
-    .social-links {
-        gap: 10px;
-    }
-
-    .social-links a,
-    .footer-section .social-links a {
-        width: 38px;
-        height: 38px;
-        font-size: 16px;
-    }
-
-    .feature-item,
-    .benefit-item,
-    .contact-item {
-        gap: 14px;
-    }
-
-    .benefit-item,
-    .contact-item {
-        flex-direction: column;
-        text-align: center;
-    }
-
-.key-benefits {
-        grid-template-columns: 1fr;
-    }
+  .btn-lg { padding: 16px 28px }
 }
 
-@media (max-width: 980px) {
-    .contact-page .contact-wrapper {
-        grid-template-columns: 1fr;
-        gap: 24px;
-    }
-
-    .contact-page .contact-section-intro {
-        margin-bottom: 28px;
-    }
-
-    .contact-page .contact-info,
-    .contact-page .contact-form-wrapper,
-    .contact-page .contact-note-panel {
-        width: 100%;
-        min-width: 0;
-    }
-
-    .contact-page .contact-form-wrapper,
-    .contact-page .contact-note-panel {
-        grid-column: auto;
-        grid-row: auto;
-    }
-
-    .contact-page .contact-form-meta,
-    .contact-page .contact-form {
-        grid-template-columns: 1fr;
-    }
-
-    .contact-page .form-actions {
-        flex-direction: column;
-        align-items: stretch;
-        text-align: center;
-    }
-
-    .contact-page .form-actions .btn {
-        width: 100%;
-    }
+/* ── Reduced Motion ──────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
+  }
+  .reveal, .reveal-l, .reveal-r, .reveal-s { opacity: 1; transform: none }
 }

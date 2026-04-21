@@ -1,592 +1,891 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Full-Stack Digital Marketing Agency in Bangladesh | A1 Technovation</title>
-    <meta name="description" content="A1 Technovation is a full-stack digital marketing agency in Bangladesh combining SEO, web development, PPC advertising, and social media marketing for scalable business growth.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/svg+xml" href="assets/images/logo-a1.svg">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        .home-hero-shell .hero-content h1 {
-            max-width: 14ch;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A1 Technovation is a full-service digital marketing agency in Dhaka, Bangladesh — delivering SEO, web design, PPC advertising, and social media strategies that grow businesses." />
+  <meta name="keywords" content="digital marketing agency Bangladesh, SEO services Dhaka, web design agency, PPC advertising, social media marketing" />
+  <meta property="og:title" content="A1 Technovation — Digital Marketing Agency" />
+  <meta property="og:description" content="We help ambitious businesses grow faster online with SEO, web design, PPC, and social media marketing." />
+  <meta property="og:type" content="website" />
+  <title>A1 Technovation — Digital Marketing Agency | Dhaka, Bangladesh</title>
 
-        .home-hero-shell .hero-content p {
-            max-width: 680px;
-        }
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://images.unsplash.com" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
 
-        .home-trust-line {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            margin-top: 22px;
-        }
-
-        .home-trust-line span {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            min-height: 46px;
-            padding: 10px 16px;
-            border-radius: 999px;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(125, 211, 252, 0.14);
-            color: #eaf6ff;
-            font-size: 14px;
-            font-weight: 600;
-            line-height: 1.35;
-        }
-
-        .home-trust-line i,
-        .home-hero-pill i,
-        .home-lead-note i,
-        .home-footer-note i {
-            color: var(--primary-color);
-        }
-
-        .home-hero-card {
-            padding: 34px;
-            border-radius: 32px;
-            background: linear-gradient(180deg, rgba(18, 30, 54, 0.96), rgba(9, 17, 31, 0.98));
-            border: 1px solid rgba(125, 211, 252, 0.14);
-            box-shadow: 0 28px 70px rgba(1, 8, 20, 0.36);
-        }
-
-        .home-hero-card h3 {
-            margin: 14px 0 18px;
-            max-width: 12ch;
-            font-size: clamp(2rem, 4vw, 3.2rem);
-            line-height: 1.02;
-            letter-spacing: -0.05em;
-            color: #f7fbff;
-        }
-
-        .home-hero-card p {
-            margin: 0;
-            color: rgba(232, 240, 255, 0.74);
-            line-height: 1.7;
-        }
-
-        .home-hero-pill-grid {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 12px;
-            margin: 24px 0 18px;
-        }
-
-        .home-hero-pill {
-            display: flex;
-            align-items: flex-start;
-            gap: 12px;
-            min-height: 100%;
-            padding: 18px 16px;
-            border-radius: 22px;
-            background: rgba(255, 255, 255, 0.04);
-            border: 1px solid rgba(125, 211, 252, 0.1);
-            color: #f2f7ff;
-        }
-
-        .home-hero-pill strong {
-            display: block;
-            margin-bottom: 6px;
-            color: #f7fbff;
-        }
-
-        .home-hero-pill span {
-            display: block;
-            color: rgba(232, 240, 255, 0.72);
-            line-height: 1.55;
-        }
-
-        .home-hero-note {
-            display: grid;
-            gap: 12px;
-            padding-top: 18px;
-            border-top: 1px solid rgba(125, 211, 252, 0.1);
-        }
-
-        .home-lead-note,
-        .home-footer-note {
-            display: inline-flex;
-            align-items: flex-start;
-            gap: 10px;
-            margin-top: 18px;
-            color: rgba(232, 240, 255, 0.74);
-            line-height: 1.7;
-        }
-
-        .home-process-heading {
-            margin-bottom: 24px;
-            text-align: center;
-        }
-
-        .home-process-heading h2,
-        .home-category-strip h2 {
-            color: #f7fbff;
-        }
-
-        .home-process-heading h2 {
-            margin-bottom: 0;
-        }
-
-        .home-category-strip .section-subtitle {
-            max-width: 720px;
-            margin: 0 auto 28px;
-            text-align: center;
-        }
-
-        .home-category-strip h2 {
-            margin-bottom: 12px;
-            text-align: center;
-        }
-
-        .home-category-strip .stat-item {
-            min-height: 160px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            text-align: left;
-        }
-
-        .home-lead-actions {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 14px;
-            align-items: center;
-        }
-
-        .home-lead-actions .btn {
-            min-width: 240px;
-            justify-content: center;
-        }
-
-        @media (max-width: 900px) {
-            .home-hero-pill-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .home-trust-line span,
-            .home-lead-actions .btn {
-                width: 100%;
-                justify-content: center;
-            }
-
-            .home-hero-card h3 {
-                max-width: none;
-            }
-        }
-    </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "A1 Technovation",
+    "description": "Full-service digital marketing agency specializing in SEO, web design, PPC, and social media.",
+    "url": "https://a1technovation.com",
+    "telephone": "+8801799976295",
+    "email": "contact@a1technovation.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "35/A Srijoni Road, Ibrahimpur",
+      "addressLocality": "Dhaka",
+      "addressRegion": "Dhaka",
+      "postalCode": "1206",
+      "addressCountry": "BD"
+    }
+  }
+  </script>
 </head>
 <body>
-    <div class="utility-bar">
-        <div class="container utility-bar-inner">
-            <div class="utility-list">
-                <span><i class="fas fa-location-dot"></i> Bangladesh Based</span>
-                <span><i class="fas fa-envelope"></i> contact@a1technovation.com</span>
-                <span><i class="fas fa-phone"></i> +8801799-976295</span>
-            </div>
-            <a href="https://wa.me/8801799976295" target="_blank" rel="noreferrer" class="utility-action">Let's Talk on WhatsApp</a>
+
+<!-- ═══════════════════════════════════════════════════════════
+     NAVBAR
+════════════════════════════════════════════════════════════ -->
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <div class="navbar-inner">
+      <!-- Logo -->
+      <a href="index.html" class="navbar-logo">
+        <div class="logo-mark">A1</div>
+        <div class="logo-text-wrap">
+          <span class="logo-name">A1 Technovation</span>
+          <span class="logo-tagline">Digital Growth Agency</span>
         </div>
+      </a>
+
+      <!-- Nav Links -->
+      <nav class="navbar-nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="pages/about.html" class="nav-link">About</a>
+
+        <div class="nav-item">
+          <a href="pages/services.html" class="nav-link">
+            Services <i class="fas fa-chevron-down" style="font-size:.7em;opacity:.7"></i>
+          </a>
+          <div class="dropdown">
+            <a href="pages/services-seo.html" class="dropdown-item">
+              <div class="dd-icon"><i class="fas fa-search"></i></div>
+              <div class="dd-body">
+                <span class="dd-title">SEO Services</span>
+                <span class="dd-desc">Rank higher, get found</span>
+              </div>
+            </a>
+            <a href="pages/services-web-dev.html" class="dropdown-item">
+              <div class="dd-icon"><i class="fas fa-code"></i></div>
+              <div class="dd-body">
+                <span class="dd-title">Web Design & Dev</span>
+                <span class="dd-desc">Convert visitors to clients</span>
+              </div>
+            </a>
+            <a href="pages/services-ppc-ads.html" class="dropdown-item">
+              <div class="dd-icon"><i class="fas fa-bullseye"></i></div>
+              <div class="dd-body">
+                <span class="dd-title">PPC Advertising</span>
+                <span class="dd-desc">Maximum ROI campaigns</span>
+              </div>
+            </a>
+            <a href="pages/services-social-media.html" class="dropdown-item">
+              <div class="dd-icon"><i class="fas fa-share-nodes"></i></div>
+              <div class="dd-body">
+                <span class="dd-title">Social Media</span>
+                <span class="dd-desc">Build your community</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <a href="pages/portfolio.html" class="nav-link">Work</a>
+        <a href="pages/blog.html" class="nav-link">Blog</a>
+        <a href="pages/contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Right actions -->
+      <div class="navbar-right">
+        <a href="https://wa.me/8801799976295" class="btn btn-primary btn-sm nav-cta" target="_blank" rel="noopener">
+          <i class="fab fa-whatsapp"></i> Free Consultation
+        </a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html"                   class="mobile-menu-link">Home <i class="fas fa-arrow-right" style="font-size:.75rem;opacity:.4"></i></a>
+  <a href="pages/about.html"             class="mobile-menu-link">About <i class="fas fa-arrow-right" style="font-size:.75rem;opacity:.4"></i></a>
+  <a href="pages/services.html"          class="mobile-menu-link">Services <i class="fas fa-arrow-right" style="font-size:.75rem;opacity:.4"></i></a>
+  <a href="pages/portfolio.html"         class="mobile-menu-link">Work <i class="fas fa-arrow-right" style="font-size:.75rem;opacity:.4"></i></a>
+  <a href="pages/blog.html"              class="mobile-menu-link">Blog <i class="fas fa-arrow-right" style="font-size:.75rem;opacity:.4"></i></a>
+  <a href="pages/contact.html"           class="mobile-menu-link">Contact <i class="fas fa-arrow-right" style="font-size:.75rem;opacity:.4"></i></a>
+  <div class="mobile-menu-footer">
+    <a href="https://wa.me/8801799976295" class="btn btn-primary btn-lg" target="_blank" rel="noopener" style="justify-content:center">
+      <i class="fab fa-whatsapp"></i> Start a Free Consultation
+    </a>
+    <p style="font-size:.875rem;color:rgba(255,255,255,.4);text-align:center">contact@a1technovation.com</p>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     HERO
+════════════════════════════════════════════════════════════ -->
+<section class="hero">
+  <div class="hero-bg">
+    <div class="hero-grid"></div>
+    <div class="hero-glow-1"></div>
+    <div class="hero-glow-2"></div>
+    <div class="hero-glow-3"></div>
+  </div>
+
+  <div class="container">
+    <div class="hero-inner">
+      <!-- Content -->
+      <div class="hero-content reveal-l">
+        <div class="hero-chip">
+          <span class="chip-dot"></span>
+          Trusted by 200+ businesses in Bangladesh &amp; beyond
+        </div>
+
+        <h1 class="hero-title">
+          <span class="line">We Grow Your</span>
+          <span class="line accent">Business Online</span>
+          <span class="line">— Measurably.</span>
+        </h1>
+
+        <p class="hero-desc">
+          From search rankings to paid campaigns, from your website to your social presence — A1 Technovation delivers end-to-end digital marketing that converts visitors into loyal customers.
+        </p>
+
+        <div class="hero-actions">
+          <a href="pages/contact.html" class="btn btn-primary btn-lg">
+            Get a Free Strategy Call <i class="fas fa-arrow-right"></i>
+          </a>
+          <a href="pages/portfolio.html" class="btn btn-ghost btn-lg">
+            See Our Work
+          </a>
+        </div>
+
+        <div class="hero-social-proof">
+          <div class="proof-avatars">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=60&q=80" alt="Client" />
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=60&q=80" alt="Client" />
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=60&q=80" alt="Client" />
+            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=60&q=80" alt="Client" />
+            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=60&q=80" alt="Client" />
+          </div>
+          <div class="proof-text">
+            <div class="proof-stars">★★★★★</div>
+            <span class="proof-label">5.0 · Rated by 120+ happy clients</span>
+          </div>
+          <div class="hero-stats">
+            <div class="hs-item">
+              <span class="hs-num" data-count="200" data-suffix="+">200+</span>
+              <span class="hs-lbl">Clients Served</span>
+            </div>
+            <div class="hs-item">
+              <span class="hs-num" data-count="450" data-suffix="%">450%</span>
+              <span class="hs-lbl">Avg. ROI Growth</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Visual -->
+      <div class="hero-visual reveal-r">
+        <div class="hero-img-wrap">
+          <div class="hero-img-frame">
+            <img
+              src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1200&q=80"
+              alt="A1 Technovation team working on digital marketing strategies"
+              loading="eager"
+            />
+            <div class="hero-img-overlay"></div>
+          </div>
+
+          <!-- Floating cards -->
+          <div class="fc fc-1">
+            <div class="fi fi-green"><i class="fas fa-arrow-trend-up"></i></div>
+            <div class="fc-body">
+              <span class="fc-lbl">Organic Traffic</span>
+              <span class="fc-val">+342%</span>
+              <span class="fc-sub up">↑ This month</span>
+            </div>
+          </div>
+
+          <div class="fc fc-2">
+            <div class="fi fi-blue"><i class="fas fa-bullseye"></i></div>
+            <div class="fc-body">
+              <span class="fc-lbl">Ad ROI</span>
+              <span class="fc-val">8.4× ROAS</span>
+              <span class="fc-sub blue">Google Ads</span>
+            </div>
+          </div>
+
+          <div class="fc fc-3">
+            <div class="fi fi-purple"><i class="fas fa-star"></i></div>
+            <div class="fc-body">
+              <span class="fc-lbl">Client Rating</span>
+              <span class="fc-val">5.0 / 5.0</span>
+              <span class="fc-sub up">120+ reviews</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     CLIENTS / TRUST BAR
+════════════════════════════════════════════════════════════ -->
+<section class="clients-bar">
+  <div class="container">
+    <p class="clients-label">Trusted by ambitious brands across industries</p>
+    <div class="clients-logos">
+      <span class="client-logo"><i class="fas fa-store"></i> RetailBD</span>
+      <span class="client-logo"><i class="fas fa-building"></i> MegaCorp</span>
+      <span class="client-logo"><i class="fas fa-hospital"></i> HealthPlus</span>
+      <span class="client-logo"><i class="fas fa-graduation-cap"></i> EduLink</span>
+      <span class="client-logo"><i class="fas fa-home"></i> ProRealty</span>
+      <span class="client-logo"><i class="fas fa-utensils"></i> FoodieHub</span>
+      <span class="client-logo"><i class="fas fa-tshirt"></i> TrendWear</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     SERVICES
+════════════════════════════════════════════════════════════ -->
+<section class="section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="label label-primary label-dot">What We Do</span>
+      <h2>Four Services. <span class="text-grad">One Growth Engine.</span></h2>
+      <p>We combine data, creativity, and deep market expertise to deliver digital marketing that doesn't just look good — it drives real business results.</p>
     </div>
 
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-wrapper">
-                <div class="logo">
-                    <a href="index.html" class="logo-link" aria-label="A1 Technovation home">
-                        <span class="logo-mark">A1</span>
-                        <span class="logo-type">
-                            <strong>A1 Technovation</strong>
-                            <small>Digital Growth Agency</small>
-                        </span>
-                    </a>
-                </div>
-                <ul class="nav-menu" id="site-nav-menu">
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="pages/about.html">About Us</a></li>
-                    <li><a href="pages/services.html">Services</a></li>
-                    <li><a href="pages/portfolio.html">Portfolio</a></li>
-                    <li><a href="pages/blog.html">Blog</a></li>
-                    <li><a href="pages/contact.html" class="btn-primary">Contact Us</a></li>
-                </ul>
-                <button class="hamburger" type="button" aria-expanded="false" aria-controls="site-nav-menu" aria-label="Toggle navigation menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
+    <div class="svc-grid">
+      <!-- SEO -->
+      <div class="svc-card reveal d1">
+        <div class="svc-bar"></div>
+        <div class="svc-icon si-blue"><i class="fas fa-search"></i></div>
+        <div>
+          <h3>Search Engine Optimization</h3>
+          <p style="margin-top:10px">Dominate Google search results and capture high-intent traffic that converts. Our technical SEO, content strategy, and link-building put you on page one — and keep you there.</p>
         </div>
-    </nav>
+        <img
+          src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80"
+          alt="SEO analytics dashboard showing organic traffic growth"
+          class="svc-img"
+          loading="lazy"
+        />
+        <div class="svc-list">
+          <div class="svc-li"><i class="fas fa-check"></i> Technical SEO Audit & Fixes</div>
+          <div class="svc-li"><i class="fas fa-check"></i> Keyword Research & Content Strategy</div>
+          <div class="svc-li"><i class="fas fa-check"></i> Authority Link Building</div>
+          <div class="svc-li"><i class="fas fa-check"></i> Monthly Ranking Reports</div>
+        </div>
+        <a href="pages/services-seo.html" class="svc-link">Explore SEO Services <i class="fas fa-arrow-right"></i></a>
+      </div>
 
-    <section class="hero hero-home home-hero-shell">
-        <div class="container">
-            <div class="hero-layout">
-                <div class="hero-content">
-                    <span class="section-tag hero-tag">Full-Stack Digital Marketing Agency in Bangladesh</span>
-                    <h1>Full-Stack Digital Marketing Agency in Bangladesh</h1>
-                    <p>We combine SEO, Web Development, PPC Advertising, and Social Media Marketing to build high-performing digital systems that generate traffic, leads, and revenue.</p>
-                    <div class="hero-buttons hero-action-row">
-                        <a href="pages/contact.html" class="btn btn-primary">Get Free Strategy Session</a>
-                        <a href="pages/portfolio.html" class="btn btn-secondary">View Case Studies</a>
-                    </div>
-                    <div class="home-trust-line">
-                        <span><i class="fas fa-check-circle"></i> SEO Experts</span>
-                        <span><i class="fas fa-check-circle"></i> Conversion-Focused</span>
-                        <span><i class="fas fa-check-circle"></i> Data-Driven</span>
-                        <span><i class="fas fa-check-circle"></i> ROI-Oriented</span>
-                    </div>
-                </div>
-                <div class="hero-visual hero-visual-rich">
-                    <div class="home-hero-card">
-                        <span class="proof-label">Growth System</span>
-                        <h3>Clear Strategy. Strong Presence. Real Results.</h3>
-                        <p>One connected team managing your search visibility, website performance, paid acquisition, and social momentum.</p>
-                        <div class="home-hero-pill-grid">
-                            <div class="home-hero-pill">
-                                <i class="fas fa-magnifying-glass-chart"></i>
-                                <div>
-                                    <strong>SEO That Ranks</strong>
-                                    <span>Keyword-led, technically sound visibility growth.</span>
-                                </div>
-                            </div>
-                            <div class="home-hero-pill">
-                                <i class="fas fa-laptop-code"></i>
-                                <div>
-                                    <strong>Websites That Convert</strong>
-                                    <span>Fast, structured pages built to turn attention into leads.</span>
-                                </div>
-                            </div>
-                            <div class="home-hero-pill">
-                                <i class="fas fa-bullhorn"></i>
-                                <div>
-                                    <strong>Ads That Scale</strong>
-                                    <span>PPC campaigns tuned for qualified traffic and measurable ROI.</span>
-                                </div>
-                            </div>
-                            <div class="home-hero-pill">
-                                <i class="fas fa-share-nodes"></i>
-                                <div>
-                                    <strong>Social That Engages</strong>
-                                    <span>Content and campaigns that build trust and brand recall.</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="home-hero-note">
-                            <span>Built for businesses that need one full-stack digital marketing system instead of disconnected tactics.</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <!-- Web Design -->
+      <div class="svc-card reveal d2">
+        <div class="svc-bar"></div>
+        <div class="svc-icon si-purple"><i class="fas fa-code"></i></div>
+        <div>
+          <h3>Web Design &amp; Development</h3>
+          <p style="margin-top:10px">Websites built to convert — blazing fast, beautifully designed, and engineered for results. We craft digital experiences that turn first-time visitors into paying customers.</p>
         </div>
-    </section>
+        <img
+          src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=800&q=80"
+          alt="Modern responsive website design on multiple devices"
+          class="svc-img"
+          loading="lazy"
+        />
+        <div class="svc-list">
+          <div class="svc-li"><i class="fas fa-check"></i> Custom Design & Branding</div>
+          <div class="svc-li"><i class="fas fa-check"></i> Mobile-First Development</div>
+          <div class="svc-li"><i class="fas fa-check"></i> E-commerce & CMS Integration</div>
+          <div class="svc-li"><i class="fas fa-check"></i> Speed & Performance Optimization</div>
+        </div>
+        <a href="pages/services-web-dev.html" class="svc-link">Explore Web Services <i class="fas fa-arrow-right"></i></a>
+      </div>
 
-    <section class="journey-strip-section">
-        <div class="container">
-            <div class="home-process-heading">
-                <span class="section-tag">Growth Process</span>
-                <h2>Our Full-Stack Digital Growth Process</h2>
-            </div>
-            <div class="journey-strip">
-                <div class="journey-step reveal-card">
-                    <small>01</small>
-                    <h3>Audit &amp; Research</h3>
-                    <p>We analyze your SEO, website, ads, and social presence to uncover growth opportunities.</p>
-                </div>
-                <div class="journey-step reveal-card">
-                    <small>02</small>
-                    <h3>Strategy Development</h3>
-                    <p>We create a unified digital marketing strategy combining SEO, web, PPC, and social.</p>
-                </div>
-                <div class="journey-step reveal-card">
-                    <small>03</small>
-                    <h3>Execution &amp; Launch</h3>
-                    <p>We design, develop, and launch optimized campaigns and platforms.</p>
-                </div>
-                <div class="journey-step reveal-card">
-                    <small>04</small>
-                    <h3>Optimization &amp; Scaling</h3>
-                    <p>We continuously improve performance to maximize ROI and business growth.</p>
-                </div>
-            </div>
+      <!-- PPC -->
+      <div class="svc-card reveal d1">
+        <div class="svc-bar"></div>
+        <div class="svc-icon si-orange"><i class="fas fa-bullseye"></i></div>
+        <div>
+          <h3>PPC &amp; Paid Advertising</h3>
+          <p style="margin-top:10px">Stop paying for clicks that don't convert. Our PPC specialists build laser-targeted campaigns on Google and Meta that generate qualified leads and maximize your return on every dollar spent.</p>
         </div>
-    </section>
+        <img
+          src="https://images.unsplash.com/photo-1553729459-efe14ef6055d?auto=format&fit=crop&w=800&q=80"
+          alt="PPC advertising dashboard showing campaign performance metrics"
+          class="svc-img"
+          loading="lazy"
+        />
+        <div class="svc-list">
+          <div class="svc-li"><i class="fas fa-check"></i> Google Search & Display Ads</div>
+          <div class="svc-li"><i class="fas fa-check"></i> Facebook & Instagram Ads</div>
+          <div class="svc-li"><i class="fas fa-check"></i> Retargeting Campaigns</div>
+          <div class="svc-li"><i class="fas fa-check"></i> Conversion Rate Optimization</div>
+        </div>
+        <a href="pages/services-ppc-ads.html" class="svc-link">Explore PPC Services <i class="fas fa-arrow-right"></i></a>
+      </div>
 
-    <section class="services-overview">
-        <div class="container">
-            <span class="section-tag">Core Services</span>
-            <h2>Complete Digital Marketing Services Under One Roof</h2>
-            <p class="section-subtitle">We do not just offer services. We build integrated systems that drive consistent growth across SEO, web, paid media, and social.</p>
-            <div class="services-grid services-grid-four">
-                <div class="service-card reveal-card">
-                    <div class="service-card-media">
-                        <img src="assets/images/SEO BG.jpg" alt="SEO reporting and keyword research dashboard" class="media-fill">
-                    </div>
-                    <div class="service-card-top">
-                        <span class="emoji-badge"><i class="fas fa-magnifying-glass"></i></span>
-                        <div class="icon">
-                            <i class="fas fa-arrow-trend-up"></i>
-                        </div>
-                    </div>
-                    <h3>SEO Services</h3>
-                    <p>Rank higher on Google, drive organic traffic, and build long-term authority with advanced SEO strategies.</p>
-                    <a href="pages/services-seo.html">Get SEO Services &rarr;</a>
-                </div>
-                <div class="service-card reveal-card">
-                    <div class="service-card-media">
-                        <img src="assets/images/web design.jpg" alt="Modern website design layout on a desktop screen" class="media-fill">
-                    </div>
-                    <div class="service-card-top">
-                        <span class="emoji-badge"><i class="fas fa-laptop-code"></i></span>
-                        <div class="icon">
-                            <i class="fas fa-layer-group"></i>
-                        </div>
-                    </div>
-                    <h3>Web Design &amp; Development</h3>
-                    <p>Conversion-focused, fast, and SEO-friendly websites designed to turn visitors into customers.</p>
-                    <a href="pages/services-web-dev.html">Build Your Website &rarr;</a>
-                </div>
-                <div class="service-card reveal-card">
-                    <div class="service-card-media">
-                        <img src="assets/images/ppc-agency-usa.jpg" alt="Paid media dashboard showing campaign performance and ad metrics" class="media-fill">
-                    </div>
-                    <div class="service-card-top">
-                        <span class="emoji-badge"><i class="fas fa-bullhorn"></i></span>
-                        <div class="icon">
-                            <i class="fas fa-rectangle-ad"></i>
-                        </div>
-                    </div>
-                    <h3>PPC Advertising</h3>
-                    <p>Launch and scale high-performing paid campaigns that generate instant traffic and qualified leads.</p>
-                    <a href="pages/services-ppc-ads.html">Start PPC Campaign &rarr;</a>
-                </div>
-                <div class="service-card reveal-card">
-                    <div class="service-card-media">
-                        <img src="assets/images/social media marketing - rectangle image.jpg" alt="Social media campaign planning visuals across devices" class="media-fill">
-                    </div>
-                    <div class="service-card-top">
-                        <span class="emoji-badge"><i class="fas fa-share-nodes"></i></span>
-                        <div class="icon">
-                            <i class="fas fa-comments"></i>
-                        </div>
-                    </div>
-                    <h3>Social Media Marketing</h3>
-                    <p>Build brand awareness, increase engagement, and grow your audience across all major platforms.</p>
-                    <a href="pages/services-social-media.html">Grow Your Brand &rarr;</a>
-                </div>
-            </div>
+      <!-- Social Media -->
+      <div class="svc-card reveal d2">
+        <div class="svc-bar"></div>
+        <div class="svc-icon si-green"><i class="fas fa-share-nodes"></i></div>
+        <div>
+          <h3>Social Media Marketing</h3>
+          <p style="margin-top:10px">Build a community that buys. We create compelling content, manage your social channels, and run data-driven campaigns that grow your following and drive real business outcomes.</p>
         </div>
-    </section>
+        <img
+          src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=800&q=80"
+          alt="Social media marketing content creation and analytics"
+          class="svc-img"
+          loading="lazy"
+        />
+        <div class="svc-list">
+          <div class="svc-li"><i class="fas fa-check"></i> Content Creation & Scheduling</div>
+          <div class="svc-li"><i class="fas fa-check"></i> Community Management</div>
+          <div class="svc-li"><i class="fas fa-check"></i> Influencer Collaboration</div>
+          <div class="svc-li"><i class="fas fa-check"></i> Analytics & Growth Reports</div>
+        </div>
+        <a href="pages/services-social-media.html" class="svc-link">Explore Social Media <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <section class="editorial-spotlight-section">
-        <div class="container">
-            <div class="editorial-grid service-story-grid">
-                <div class="editorial-copy">
-                    <span class="section-tag">Performance Strategy</span>
-                    <h2>Better Strategy = Better Results</h2>
-                    <p>Success in digital marketing comes from combining the right channels. We align SEO, website structure, paid ads, and social media into one powerful growth system.</p>
-                    <ul class="clean-list">
-                        <li>SEO for long-term traffic growth</li>
-                        <li>Web design optimized for conversions</li>
-                        <li>PPC campaigns for instant results</li>
-                        <li>Social media for brand visibility and engagement</li>
-                    </ul>
-                </div>
-                <div class="editorial-panel editorial-panel-visual reveal-card">
-                    <div class="editorial-static-grid">
-                        <div class="editorial-static-card">
-                            <i class="fas fa-chart-line"></i>
-                            <h4>Channel alignment</h4>
-                        </div>
-                        <div class="editorial-static-card">
-                            <i class="fas fa-bullseye"></i>
-                            <h4>Measured growth</h4>
-                        </div>
-                    </div>
-                    <div class="editorial-panel-content">
-                        <span class="proof-label">What We Improve</span>
-                        <h3>Performance across the full funnel</h3>
-                        <ul class="clean-list">
-                            <li>Search Engine Rankings</li>
-                            <li>Website Conversion Rates</li>
-                            <li>Ad Performance &amp; ROI</li>
-                            <li>Social Media Engagement</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <section class="proof-bar-section">
-        <div class="container">
-            <span class="section-tag">Feature Strip</span>
-            <h2>Built for Performance Across Every Channel</h2>
-            <div class="proof-bar">
-                <div class="proof-card reveal-card">
-                    <span class="proof-label">SEO Optimization</span>
-                    <h3>Search-first execution</h3>
-                    <p>Rank your website with keyword-focused, technically optimized SEO built for sustainable visibility.</p>
-                </div>
-                <div class="proof-card reveal-card">
-                    <span class="proof-label">Conversion-Focused Web Design</span>
-                    <h3>Websites built to sell</h3>
-                    <p>Clean, modern websites created to maximize leads, trust, and sales performance.</p>
-                </div>
-                <div class="proof-card reveal-card">
-                    <span class="proof-label">High-ROI PPC Campaigns</span>
-                    <h3>Paid media that scales</h3>
-                    <p>Data-driven ads designed to deliver qualified clicks, efficient spend, and strong return on investment.</p>
-                </div>
-                <div class="proof-card reveal-card">
-                    <span class="proof-label">Strategic Social Growth</span>
-                    <h3>Brand visibility that compounds</h3>
-                    <p>Content and campaigns that grow audience loyalty, engagement, and trust across key platforms.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- ═══════════════════════════════════════════════════════════
+     STATS BAND
+════════════════════════════════════════════════════════════ -->
+<section class="stats-band">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item reveal d1">
+        <div class="stat-num" data-count="200" data-suffix="+">200+</div>
+        <div class="stat-lbl">Clients Served</div>
+        <div class="stat-sub">Across 12+ industries</div>
+      </div>
+      <div class="stat-item reveal d2">
+        <div class="stat-num" data-count="450" data-suffix="%">450%</div>
+        <div class="stat-lbl">Avg. Traffic Growth</div>
+        <div class="stat-sub">Within the first 6 months</div>
+      </div>
+      <div class="stat-item reveal d3">
+        <div class="stat-num" data-count="8" data-suffix=".4×">8.4×</div>
+        <div class="stat-lbl">Average ROAS</div>
+        <div class="stat-sub">On paid ad campaigns</div>
+      </div>
+      <div class="stat-item reveal d4">
+        <div class="stat-num" data-count="5" data-suffix=".0">5.0</div>
+        <div class="stat-lbl">Client Rating</div>
+        <div class="stat-sub">Based on 120+ reviews</div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <section class="stats home-category-strip">
-        <div class="container">
-            <span class="section-tag stats-tag">Growth Categories</span>
-            <h2>SEO | Web Development | PPC Ads | Social Media</h2>
-            <p class="section-subtitle">A complete full-stack digital marketing solution designed for sustainable growth.</p>
-            <div class="stats-grid">
-                <div class="stat-item reveal-card">
-                    <h3>SEO</h3>
-                    <p>Build search visibility, authority, and inbound traffic with SEO services Bangladesh businesses can scale with.</p>
-                </div>
-                <div class="stat-item reveal-card">
-                    <h3>WEB DEVELOPMENT</h3>
-                    <p>Partner with a web design and development company focused on speed, structure, and conversion clarity.</p>
-                </div>
-                <div class="stat-item reveal-card">
-                    <h3>PPC ADS</h3>
-                    <p>Work with a PPC advertising agency that turns budget into qualified traffic and measurable lead flow.</p>
-                </div>
-                <div class="stat-item reveal-card">
-                    <h3>SOCIAL MEDIA</h3>
-                    <p>Use social media marketing services to strengthen presence, engagement, and repeat brand exposure.</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <section class="testimonial-section">
-        <div class="container">
-            <span class="section-tag">Strong Digital Foundation</span>
-            <h2>Strong Digital Foundation Drives Real Growth</h2>
-            <div class="testimonial-grid">
-                <article class="testimonial-card reveal-card">
-                    <div class="testimonial-icon"><i class="fas fa-screwdriver-wrench"></i></div>
-                    <h3>Fix the Foundation First</h3>
-                    <p>We optimize your website and SEO before scaling traffic so performance starts from a stronger base.</p>
-                </article>
-                <article class="testimonial-card reveal-card">
-                    <div class="testimonial-icon"><i class="fas fa-crosshairs"></i></div>
-                    <h3>Align Traffic with Intent</h3>
-                    <p>We match the right audience with the right message across organic search, paid ads, and social channels.</p>
-                </article>
-                <article class="testimonial-card reveal-card">
-                    <div class="testimonial-icon"><i class="fas fa-layer-group"></i></div>
-                    <h3>Simplify for Better Conversion</h3>
-                    <p>Clear structure, strong messaging, and focused CTAs make it easier for visitors to take action.</p>
-                </article>
-            </div>
-        </div>
-    </section>
+<!-- ═══════════════════════════════════════════════════════════
+     HOW WE WORK
+════════════════════════════════════════════════════════════ -->
+<section class="section section-gray">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="label label-primary label-dot">Our Process</span>
+      <h2>From Zero to <span class="text-grad">Growth Machine</span></h2>
+      <p>A proven 4-step framework that takes your business from where it is today to where you want it to be — systematically, measurably, and predictably.</p>
+    </div>
 
-    <section class="contact-band">
-        <div class="container">
-            <div class="contact-band-grid">
-                <div>
-                    <span class="section-tag">Lead Section</span>
-                    <h2>Need a Complete Digital Marketing Solution?</h2>
-                    <p>Let us build a powerful system combining SEO, website, ads, and social to grow your business faster.</p>
-                    <div class="home-lead-note">
-                        <i class="fas fa-circle-check"></i>
-                        <span>One strategy, one team, and one growth-focused execution process.</span>
-                    </div>
-                </div>
-                <div class="contact-band-list home-lead-actions">
-                    <a href="pages/contact.html" class="btn btn-primary">Get Free Digital Strategy</a>
-                    <a href="https://wa.me/8801799976295" class="contact-chip" target="_blank" rel="noreferrer"><i class="fab fa-whatsapp"></i> WhatsApp the Team</a>
-                    <a href="mailto:contact@a1technovation.com" class="contact-chip"><i class="fas fa-envelope"></i> contact@a1technovation.com</a>
-                </div>
-            </div>
+    <div class="process-wrap">
+      <div class="process-line"></div>
+      <div class="process-grid">
+        <div class="process-step reveal d1">
+          <div class="step-icon-wrap active">
+            <i class="fas fa-magnifying-glass-chart"></i>
+          </div>
+          <h5>Deep Audit</h5>
+          <p>We analyse your current digital footprint, competitors, and market opportunities to find the biggest growth levers.</p>
         </div>
-    </section>
+        <div class="process-step reveal d2">
+          <div class="step-icon-wrap">
+            <i class="fas fa-compass-drafting"></i>
+          </div>
+          <h5>Custom Strategy</h5>
+          <p>We build a tailored roadmap with clear milestones, KPIs, and channel priorities specific to your goals and budget.</p>
+        </div>
+        <div class="process-step reveal d3">
+          <div class="step-icon-wrap">
+            <i class="fas fa-rocket"></i>
+          </div>
+          <h5>Precision Execution</h5>
+          <p>Our specialists deploy campaigns, create content, and launch optimisations with speed, quality, and attention to detail.</p>
+        </div>
+        <div class="process-step reveal d4">
+          <div class="step-icon-wrap">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <h5>Optimise &amp; Scale</h5>
+          <p>We continuously test, learn, and double down on what works — turning good results into exceptional, compounding growth.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <section class="cta">
-        <div class="container">
-            <h2>Ready to Grow with a Full-Stack Digital Marketing Agency?</h2>
-            <p>Work with a results-driven team that delivers SEO rankings, high-converting websites, profitable ads, and a strong social presence.</p>
-            <a href="pages/contact.html" class="btn btn-primary">Request Free Audit Now</a>
-        </div>
-    </section>
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <div class="footer-brand">
-                        <span class="logo-mark">A1</span>
-                        <div class="logo-type">
-                            <strong>A1 Technovation</strong>
-                            <small>Digital Growth Agency</small>
-                        </div>
-                    </div>
-                    <p>A1 Technovation is a full-stack digital marketing company in Bangladesh helping businesses grow with SEO, web development, PPC advertising, and social media marketing.</p>
-                    <div class="home-footer-note">
-                        <i class="fas fa-circle-check"></i>
-                        <span>Driving traffic, generating leads, and increasing revenue for businesses in Bangladesh and worldwide.</span>
-                    </div>
-                    <div class="social-links">
-                        <a href="https://a1technovation.com" target="_blank" rel="noreferrer"><i class="fas fa-globe"></i></a>
-                        <a href="https://www.instagram.com/a1technovation/" target="_blank" rel="noreferrer"><i class="fab fa-instagram"></i></a>
-                        <a href="mailto:contact@a1technovation.com"><i class="fas fa-envelope"></i></a>
-                        <a href="tel:+8801799976295"><i class="fas fa-phone"></i></a>
-                    </div>
-                </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="pages/about.html">About Us</a></li>
-                        <li><a href="pages/services.html">Services</a></li>
-                        <li><a href="pages/portfolio.html">Portfolio</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Services</h4>
-                    <ul>
-                        <li><a href="pages/services-seo.html">SEO Services</a></li>
-                        <li><a href="pages/services-web-dev.html">Web Design & Development</a></li>
-                        <li><a href="pages/services-social-media.html">Social Media Marketing</a></li>
-                        <li><a href="pages/services-ppc-ads.html">PPC Advertising</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Contact Info</h4>
-                    <p><i class="fas fa-map-marker-alt"></i> 35/A Srijoni Road, Ibrahimpur, Dhaka Cantonment, Dhaka 1206, Bangladesh</p>
-                    <p><i class="fas fa-phone"></i> +8801799-976295</p>
-                    <p><i class="fas fa-envelope"></i> contact@a1technovation.com</p>
-                    <p><i class="fab fa-instagram"></i> @a1technovation</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 A1 Technovation. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
 
-    <script src="js/main.js"></script>
+<!-- ═══════════════════════════════════════════════════════════
+     RESULTS / CASE STUDIES
+════════════════════════════════════════════════════════════ -->
+<section class="section section-dark">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="label label-light label-dot">Real Results</span>
+      <h2>Campaigns That <span class="text-grad">Moved the Needle</span></h2>
+      <p>Numbers don't lie. Here's what we've achieved for businesses just like yours.</p>
+    </div>
+
+    <div class="results-grid">
+      <div class="result-card reveal d1">
+        <img
+          src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80"
+          alt="E-commerce SEO growth case study"
+          class="result-img"
+          loading="lazy"
+        />
+        <div class="result-body">
+          <div class="result-tags">
+            <span class="result-tag">SEO</span>
+            <span class="result-tag">E-commerce</span>
+          </div>
+          <h4>RetailBD: 5x Organic Traffic in 8 Months</h4>
+          <p>Local fashion retailer went from invisible to dominating category keywords, generating 3,200+ new monthly organic visitors.</p>
+          <div class="result-metrics">
+            <div class="r-metric"><span class="r-val g">+520%</span><span class="r-lbl">Organic Traffic</span></div>
+            <div class="r-metric"><span class="r-val b">Pos. 1</span><span class="r-lbl">Keyword Rankings</span></div>
+            <div class="r-metric"><span class="r-val y">+180%</span><span class="r-lbl">Online Revenue</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="result-card reveal d2">
+        <img
+          src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80"
+          alt="SaaS company web redesign result"
+          class="result-img"
+          loading="lazy"
+        />
+        <div class="result-body">
+          <div class="result-tags">
+            <span class="result-tag">Web Design</span>
+            <span class="result-tag">CRO</span>
+          </div>
+          <h4>EduLink: Website Redesign Doubles Enrolments</h4>
+          <p>Complete website overhaul with conversion-focused UX resulted in dramatically lower bounce rates and more qualified leads.</p>
+          <div class="result-metrics">
+            <div class="r-metric"><span class="r-val g">+210%</span><span class="r-lbl">Lead Conversions</span></div>
+            <div class="r-metric"><span class="r-val b">-62%</span><span class="r-lbl">Bounce Rate</span></div>
+            <div class="r-metric"><span class="r-val y">2.3s</span><span class="r-lbl">Load Time</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="result-card reveal d3">
+        <img
+          src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=800&q=80"
+          alt="PPC advertising ROI case study"
+          class="result-img"
+          loading="lazy"
+        />
+        <div class="result-body">
+          <div class="result-tags">
+            <span class="result-tag">PPC</span>
+            <span class="result-tag">Lead Gen</span>
+          </div>
+          <h4>HealthPlus: 9× ROAS on Google Ads Campaign</h4>
+          <p>Precision-targeted paid search campaigns turned a ৳50,000/month ad spend into ৳450,000+ in attributable patient bookings.</p>
+          <div class="result-metrics">
+            <div class="r-metric"><span class="r-val g">9×</span><span class="r-lbl">Return on Ad Spend</span></div>
+            <div class="r-metric"><span class="r-val b">-41%</span><span class="r-lbl">Cost Per Lead</span></div>
+            <div class="r-metric"><span class="r-val y">+340%</span><span class="r-lbl">Qualified Leads</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align:center;margin-top:48px" class="reveal">
+      <a href="pages/portfolio.html" class="btn btn-ghost btn-lg">
+        View All Case Studies <i class="fas fa-arrow-right"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     ABOUT SPLIT
+════════════════════════════════════════════════════════════ -->
+<section class="section">
+  <div class="container">
+    <div class="about-split">
+      <div class="about-img-wrap reveal-l">
+        <div class="about-img-frame">
+          <img
+            src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1000&q=80"
+            alt="A1 Technovation team collaborating on digital strategy"
+            loading="lazy"
+          />
+        </div>
+        <div class="about-badge">
+          <div class="about-badge-num" data-count="5" data-suffix="+">5+</div>
+          <div class="about-badge-lbl">Years of Proven Excellence</div>
+        </div>
+      </div>
+
+      <div class="about-content reveal-r">
+        <span class="label label-primary label-dot">Who We Are</span>
+        <h2>Built on Results, <span class="text-grad">Driven by Data</span></h2>
+        <p style="font-size:1.0625rem;line-height:1.78">
+          A1 Technovation was founded with a single mission: make world-class digital marketing accessible to ambitious businesses in Bangladesh and beyond. We're not just a service provider — we're your growth partner.
+        </p>
+        <p style="margin-top:-8px">
+          Led by Likhon Ahmed, our team of strategists, designers, developers, and performance marketers brings deep expertise across every digital channel. We obsess over your results because your success is our success.
+        </p>
+
+        <div class="about-vals">
+          <div class="val-row">
+            <div class="val-icon-w"><i class="fas fa-chart-bar"></i></div>
+            <div class="val-text">
+              <h5>Data-First Decision Making</h5>
+              <p>Every strategy is grounded in analytics. We track, measure, and optimise relentlessly so your marketing budget is always working its hardest.</p>
+            </div>
+          </div>
+          <div class="val-row">
+            <div class="val-icon-w"><i class="fas fa-handshake"></i></div>
+            <div class="val-text">
+              <h5>Transparent Partnerships</h5>
+              <p>No jargon, no hidden fees, no vague promises. We provide clear reporting and honest communication every step of the way.</p>
+            </div>
+          </div>
+          <div class="val-row">
+            <div class="val-icon-w"><i class="fas fa-bolt"></i></div>
+            <div class="val-text">
+              <h5>Speed Without Sacrificing Quality</h5>
+              <p>We move fast because growth doesn't wait. Rigorous quality checks ensure you never compromise results for speed.</p>
+            </div>
+          </div>
+        </div>
+
+        <a href="pages/about.html" class="btn btn-primary" style="width:fit-content">
+          Meet the Team <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     TESTIMONIALS
+════════════════════════════════════════════════════════════ -->
+<section class="section section-gray">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="label label-primary label-dot">Client Voices</span>
+      <h2>Don't Take Our <span class="text-grad">Word for It</span></h2>
+      <p>Hear directly from the business owners and marketing leads who've experienced the A1 difference.</p>
+    </div>
+
+    <div class="testi-grid">
+      <div class="testi-card reveal d1">
+        <div class="t-stars">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          <i class="fas fa-star"></i><i class="fas fa-star"></i>
+        </div>
+        <div class="t-quote">"</div>
+        <p class="testi-body">A1 Technovation transformed our online presence completely. Within 6 months, our organic traffic tripled and our leads from the website more than doubled. The team is professional, responsive, and genuinely invested in our growth.</p>
+        <hr class="t-hr" />
+        <div class="testi-author">
+          <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&q=80" alt="Rahim Chowdhury" class="t-avatar" loading="lazy" />
+          <div>
+            <div class="a-name">Rahim Chowdhury</div>
+            <div class="a-role">CEO, RetailBD Fashion</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi-card featured reveal d2">
+        <div class="t-stars">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          <i class="fas fa-star"></i><i class="fas fa-star"></i>
+        </div>
+        <div class="t-quote">"</div>
+        <p class="testi-body">The new website they built for us is simply stunning — and it performs incredibly. Our conversion rate went from 1.2% to 4.8% in the first three months. The ROI on this project has been extraordinary. I recommend A1 to every business owner I know.</p>
+        <hr class="t-hr" />
+        <div class="testi-author">
+          <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=100&q=80" alt="Dr. Nadia Islam" class="t-avatar" loading="lazy" />
+          <div>
+            <div class="a-name">Dr. Nadia Islam</div>
+            <div class="a-role">Founder, HealthPlus Clinics</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi-card reveal d3">
+        <div class="t-stars">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          <i class="fas fa-star"></i><i class="fas fa-star"></i>
+        </div>
+        <div class="t-quote">"</div>
+        <p class="testi-body">We hired A1 for Google Ads management and the results blew us away. They took our ad spend from burning money to achieving 9× ROAS. Their team explains everything clearly and the monthly reports are actually insightful — not just vanity metrics.</p>
+        <hr class="t-hr" />
+        <div class="testi-author">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80" alt="Tariq Hassan" class="t-avatar" loading="lazy" />
+          <div>
+            <div class="a-name">Tariq Hassan</div>
+            <div class="a-role">Marketing Director, EduLink</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     BLOG / INSIGHTS
+════════════════════════════════════════════════════════════ -->
+<section class="section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="label label-primary label-dot">Latest Insights</span>
+      <h2>Marketing Intelligence <span class="text-grad">You Can Act On</span></h2>
+      <p>Tactical guides, industry analysis, and growth playbooks — free from our team to yours.</p>
+    </div>
+
+    <div class="blog-grid">
+      <div class="blog-card reveal d1">
+        <div class="blog-img-box">
+          <img
+            src="https://images.unsplash.com/photo-1432888622747-4480d319751c?auto=format&fit=crop&w=800&q=80"
+            alt="SEO strategy guide 2025"
+            class="blog-img"
+            loading="lazy"
+          />
+        </div>
+        <div class="blog-body">
+          <div class="blog-meta">
+            <span class="b-cat">SEO</span>
+            <span class="b-dot">●</span>
+            <span class="b-date">Jan 15, 2025</span>
+          </div>
+          <h4>The Complete SEO Guide for Bangladeshi Businesses in 2025</h4>
+          <p>How to dominate local and national search results with proven tactics adapted for the Bangladeshi market and search behaviour patterns.</p>
+          <div class="blog-footer">
+            <div class="b-author">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=60&q=80" alt="Likhon Ahmed" class="b-author-img" />
+              Likhon Ahmed
+            </div>
+            <span class="b-read"><i class="fas fa-clock"></i> 8 min read</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="blog-card reveal d2">
+        <div class="blog-img-box">
+          <img
+            src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=800&q=80"
+            alt="Facebook ads strategy guide"
+            class="blog-img"
+            loading="lazy"
+          />
+        </div>
+        <div class="blog-body">
+          <div class="blog-meta">
+            <span class="b-cat">Paid Ads</span>
+            <span class="b-dot">●</span>
+            <span class="b-date">Jan 8, 2025</span>
+          </div>
+          <h4>How to Run Facebook Ads That Actually Convert in 2025</h4>
+          <p>Step-by-step walkthrough of audience targeting, creative strategy, and bidding techniques that separate profitable campaigns from wasted spend.</p>
+          <div class="blog-footer">
+            <div class="b-author">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=60&q=80" alt="Likhon Ahmed" class="b-author-img" />
+              Likhon Ahmed
+            </div>
+            <span class="b-read"><i class="fas fa-clock"></i> 6 min read</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="blog-card reveal d3">
+        <div class="blog-img-box">
+          <img
+            src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80"
+            alt="Website conversion rate optimization"
+            class="blog-img"
+            loading="lazy"
+          />
+        </div>
+        <div class="blog-body">
+          <div class="blog-meta">
+            <span class="b-cat">Web Design</span>
+            <span class="b-dot">●</span>
+            <span class="b-date">Dec 28, 2024</span>
+          </div>
+          <h4>10 Website Changes That Will Double Your Conversion Rate</h4>
+          <p>Practical UX and design improvements that eliminate friction, build trust, and turn more visitors into leads and sales — without more traffic.</p>
+          <div class="blog-footer">
+            <div class="b-author">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=60&q=80" alt="Likhon Ahmed" class="b-author-img" />
+              Likhon Ahmed
+            </div>
+            <span class="b-read"><i class="fas fa-clock"></i> 7 min read</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align:center;margin-top:48px" class="reveal">
+      <a href="pages/blog.html" class="btn btn-outline">
+        Read All Articles <i class="fas fa-arrow-right"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     CTA
+════════════════════════════════════════════════════════════ -->
+<section class="cta-wrap">
+  <div class="cta-glow"></div>
+  <div class="container">
+    <div class="cta-inner reveal">
+      <span class="label label-light label-dot">Ready to Grow?</span>
+      <h2>Let's Build Your <span class="text-grad-hero">Growth Machine</span></h2>
+      <p>Book a free 30-minute strategy call and discover exactly how we'd grow your business online — no pressure, no obligation.</p>
+      <div class="cta-buttons">
+        <a href="pages/contact.html" class="btn btn-primary btn-lg">
+          Book Free Strategy Call <i class="fas fa-arrow-right"></i>
+        </a>
+        <a href="https://wa.me/8801799976295" class="btn btn-ghost btn-lg" target="_blank" rel="noopener">
+          <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+        </a>
+      </div>
+      <div class="cta-trust">
+        <div class="cta-trust-item"><i class="fas fa-check-circle"></i> No contracts required</div>
+        <div class="cta-trust-item"><i class="fas fa-check-circle"></i> Results in 30 days or your money back</div>
+        <div class="cta-trust-item"><i class="fas fa-check-circle"></i> Dedicated account manager</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════════════════════ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <!-- Brand -->
+      <div class="footer-brand">
+        <a href="index.html" class="footer-logo">
+          <div class="logo-mark">A1</div>
+          <span class="footer-logo-name">A1 Technovation</span>
+        </a>
+        <p>Bangladesh's fastest-growing digital marketing agency. We help ambitious businesses achieve extraordinary online growth through data-driven SEO, high-converting web design, performance advertising, and social media excellence.</p>
+        <div class="footer-socials">
+          <a href="#" class="f-social" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="f-social" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="f-social" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="f-social" aria-label="Twitter / X"><i class="fab fa-x-twitter"></i></a>
+          <a href="https://wa.me/8801799976295" class="f-social" aria-label="WhatsApp" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+
+      <!-- Services -->
+      <div class="footer-col">
+        <h6>Services</h6>
+        <div class="footer-links">
+          <a href="pages/services-seo.html"          class="f-link"><i class="fas fa-chevron-right" style="font-size:.625rem"></i> SEO Services</a>
+          <a href="pages/services-web-dev.html"      class="f-link"><i class="fas fa-chevron-right" style="font-size:.625rem"></i> Web Design & Dev</a>
+          <a href="pages/services-ppc-ads.html"      class="f-link"><i class="fas fa-chevron-right" style="font-size:.625rem"></i> PPC Advertising</a>
+          <a href="pages/services-social-media.html" class="f-link"><i class="fas fa-chevron-right" style="font-size:.625rem"></i> Social Media</a>
+          <a href="pages/services.html"              class="f-link"><i class="fas fa-chevron-right" style="font-size:.625rem"></i> All Services</a>
+        </div>
+      </div>
+
+      <!-- Company -->
+      <div class="footer-col">
+        <h6>Company</h6>
+        <div class="footer-links">
+          <a href="pages/about.html"     class="f-link"><i class="fas fa-chevron-right" style="font-size:.625rem"></i> About Us</a>
+          <a href="pages/portfolio.html" class="f-link"><i class="fas fa-chevron-right" style="font-size:.625rem"></i> Our Work</a>
+          <a href="pages/blog.html"      class="f-link"><i class="fas fa-chevron-right" style="font-size:.625rem"></i> Blog & Insights</a>
+          <a href="pages/contact.html"   class="f-link"><i class="fas fa-chevron-right" style="font-size:.625rem"></i> Contact Us</a>
+          <a href="pages/contact.html"   class="f-link"><i class="fas fa-chevron-right" style="font-size:.625rem"></i> Free Consultation</a>
+        </div>
+      </div>
+
+      <!-- Contact -->
+      <div class="footer-col">
+        <h6>Get in Touch</h6>
+        <div class="f-contact-item">
+          <i class="fas fa-location-dot"></i>
+          <span>35/A Srijoni Road, Ibrahimpur<br>Dhaka Cantonment, Dhaka 1206, Bangladesh</span>
+        </div>
+        <div class="f-contact-item">
+          <i class="fas fa-phone"></i>
+          <a href="tel:+8801799976295">+880 1799-976295</a>
+        </div>
+        <div class="f-contact-item">
+          <i class="fas fa-envelope"></i>
+          <a href="mailto:contact@a1technovation.com">contact@a1technovation.com</a>
+        </div>
+        <div class="f-contact-item">
+          <i class="fas fa-clock"></i>
+          <span>Mon–Fri: 9 AM – 7 PM BST<br>Sat: 10 AM – 4 PM BST</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="f-copy">© 2025 A1 Technovation. All rights reserved.</p>
+      <div class="f-bottom-links">
+        <a href="#" class="f-bl">Privacy Policy</a>
+        <a href="#" class="f-bl">Terms of Service</a>
+        <a href="#" class="f-bl">Cookie Policy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Scroll to Top -->
+<button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+  <i class="fas fa-arrow-up"></i>
+</button>
+
+<script src="js/main.js"></script>
+<script>
+  document.getElementById('mobileToggle').addEventListener('click', function() {
+    document.getElementById('mobileMenu').classList.toggle('open');
+    this.classList.toggle('open');
+    document.body.style.overflow = document.getElementById('mobileMenu').classList.contains('open') ? 'hidden' : '';
+  });
+</script>
 </body>
 </html>
