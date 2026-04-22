@@ -137,12 +137,39 @@ document.addEventListener('DOMContentLoaded', () => {
       const orig = btn.innerHTML;
       btn.innerHTML = '<i class="fas fa-circle-notch fa-spin"></i> Sending…';
       btn.disabled = true;
-      setTimeout(() => {
+
+      const formData = new FormData(form);
+      const data = {
+        name: form.querySelector('#name').value,
+        email: form.querySelector('#email').value,
+        phone: form.querySelector('#phone').value || 'Not provided',
+        company: form.querySelector('#company').value || 'Not provided',
+        service: form.querySelector('#service').value,
+        budget: form.querySelector('#budget').value || 'Not specified',
+        message: form.querySelector('#message').value,
+        timestamp: new Date().toISOString()
+      };
+
+      fetch('https://formspree.io/f/meevrprq', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      })
+      .then(response => {
         btn.innerHTML = orig;
         btn.disabled = false;
-        form.reset();
-        toast('success', 'Message sent! We\'ll be in touch within 24 hours.');
-      }, 1800);
+        if (response.ok) {
+          form.reset();
+          toast('success', 'Message sent! We\'ll be in touch within 24 hours.');
+        } else {
+          toast('error', 'Failed to send. Please email info.a1technovation@gmail.com');
+        }
+      })
+      .catch(err => {
+        btn.innerHTML = orig;
+        btn.disabled = false;
+        toast('error', 'Failed to send. Email us at info.a1technovation@gmail.com');
+      });
     });
   }
 
