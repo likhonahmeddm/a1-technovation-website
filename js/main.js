@@ -8,6 +8,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const navbar = document.querySelector('.navbar');
   const mobileToggle = document.querySelector('.mobile-toggle');
   const mobileMenu   = document.querySelector('.mobile-menu');
+  const desktopServicesItem = document.querySelector('.navbar .nav-item');
+  const desktopServicesLink = desktopServicesItem?.querySelector('.nav-link[href$="services.html"]');
+  const mobileServicesGroup = document.querySelector('.mobile-menu-group');
+  const mobileServicesLink = mobileServicesGroup?.querySelector('.mobile-menu-link[href$="services.html"]');
 
   if (navbar) {
     const onScroll = () => {
@@ -18,20 +22,56 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   if (mobileToggle && mobileMenu) {
-    const open  = () => { mobileMenu.classList.add('open'); mobileToggle.classList.add('open'); document.body.style.overflow = 'hidden' };
-    const close = () => { mobileMenu.classList.remove('open'); mobileToggle.classList.remove('open'); document.body.style.overflow = '' };
+    const open = () => {
+      mobileMenu.classList.add('open');
+      mobileToggle.classList.add('open');
+      mobileToggle.setAttribute('aria-expanded', 'true');
+      mobileToggle.setAttribute('aria-label', 'Close menu');
+      mobileMenu.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('menu-open');
+    };
+    const close = () => {
+      mobileMenu.classList.remove('open');
+      mobileToggle.classList.remove('open');
+      mobileToggle.setAttribute('aria-expanded', 'false');
+      mobileToggle.setAttribute('aria-label', 'Open menu');
+      mobileMenu.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('menu-open');
+    };
 
     mobileToggle.addEventListener('click', () => mobileMenu.classList.contains('open') ? close() : open());
     mobileMenu.querySelectorAll('.mobile-menu-link').forEach(l => l.addEventListener('click', close));
+    mobileMenu.querySelectorAll('.mobile-submenu-link').forEach(l => l.addEventListener('click', close));
     document.addEventListener('keydown', e => e.key === 'Escape' && close());
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 1024) close();
+    });
+    close();
   }
 
   /* Active nav link */
-  const navLinks = document.querySelectorAll('.nav-link, .mobile-menu-link');
+  const navLinks = document.querySelectorAll('.nav-link, .mobile-menu-link, .mobile-submenu-link');
   const page = location.pathname.split('/').pop() || 'index.html';
+  const isServiceSection = page === 'services.html' || page.startsWith('services-');
   navLinks.forEach(l => {
     const href = (l.getAttribute('href') || '').split('/').pop();
-    if (href === page || (page === 'index.html' && href === '')) l.classList.add('active');
+    if (href === page || (page === 'index.html' && href === '')) {
+      l.classList.add('active');
+      l.setAttribute('aria-current', 'page');
+    }
+  });
+  if (isServiceSection) {
+    desktopServicesItem?.classList.add('current');
+    desktopServicesLink?.classList.add('active');
+    desktopServicesLink?.setAttribute('aria-current', 'page');
+    mobileServicesGroup?.classList.add('current');
+    mobileServicesLink?.classList.add('active');
+    mobileServicesLink?.setAttribute('aria-current', 'page');
+  }
+
+  /* Footer year */
+  document.querySelectorAll('.f-copy').forEach(el => {
+    el.textContent = `© ${new Date().getFullYear()} A1 Technovation. All rights reserved.`;
   });
 
   /* ── SCROLL-TO-TOP ───────────────────────────────────────────── */
@@ -112,6 +152,19 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ── CONTACT FORM ───────────────────────────────────────────── */
   const form = document.querySelector('#contact-form');
   if (form) {
+    const formAlert = document.getElementById('contactFormAlert');
+    const setFormAlert = (type, message) => {
+      if (!formAlert) return;
+      formAlert.hidden = !message;
+      formAlert.className = `form-alert ${type}`;
+      formAlert.textContent = message;
+    };
+    const clearFormAlert = () => {
+      if (!formAlert) return;
+      formAlert.hidden = true;
+      formAlert.className = 'form-alert';
+      formAlert.textContent = '';
+    };
     const showErr = (id, msg) => {
       const el = document.getElementById(id + '-err');
       if (el) { el.textContent = msg; el.style.display = msg ? 'block' : 'none' }
@@ -130,46 +183,71 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!msg || msg.length < 10)         { showErr('message', 'Message must be at least 10 characters.'); ok = false } else showErr('message', '');
       return ok;
     };
-    form.addEventListener('submit', e => {
+    const params = new URLSearchParams(window.location.search);
+    const fallbackStatus = params.get('form_status');
+    const fallbackMessage = params.get('form_message');
+    if (fallbackStatus && fallbackMessage) {
+      setFormAlert(fallbackStatus === 'success' ? 'success' : 'error', fallbackMessage);
+      const cleanUrl = `${window.location.pathname}${window.location.hash}`;
+      window.history.replaceState({}, document.title, cleanUrl);
+    }
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
+      clearFormAlert();
       if (!validate()) return;
       const btn = form.querySelector('[type="submit"]');
       const orig = btn.innerHTML;
       btn.innerHTML = '<i class="fas fa-circle-notch fa-spin"></i> Sending…';
       btn.disabled = true;
-
+      const pageUrlInput = form.querySelector('[name="page_url"]');
+      if (pageUrlInput) pageUrlInput.value = window.location.href;
       const formData = new FormData(form);
-      const data = {
-        name: form.querySelector('#name').value,
-        email: form.querySelector('#email').value,
-        phone: form.querySelector('#phone').value || 'Not provided',
-        company: form.querySelector('#company').value || 'Not provided',
-        service: form.querySelector('#service').value,
-        budget: form.querySelector('#budget').value || 'Not specified',
-        message: form.querySelector('#message').value,
-        timestamp: new Date().toISOString()
-      };
+      formData.set('page_url', window.location.href);
 
-      fetch('https://formspree.io/f/meevrprq', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data)
-      })
-      .then(response => {
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          headers: { 'Accept': 'application/json' },
+          body: formData
+        });
+
+        let result = null;
+        try {
+          result = await response.json();
+        } catch (_) {}
+
         btn.innerHTML = orig;
         btn.disabled = false;
+
         if (response.ok) {
+          const successMessage = "Thanks for your message! We'll get back to you within 24 hours.";
           form.reset();
-          toast('success', 'Message sent! We\'ll be in touch within 24 hours.');
-        } else {
-          toast('error', 'Failed to send. Please email info.a1technovation@gmail.com');
+          clearFormAlert();
+          setFormAlert('success', successMessage);
+          toast('success', successMessage);
+          return;
         }
-      })
-      .catch(err => {
+
+        if (Array.isArray(result?.errors)) {
+          result.errors.forEach(({ field, message }) => {
+            if (field && ['name', 'email', 'website', 'service', 'message'].includes(field)) {
+              showErr(field, message || 'Please review this field.');
+            }
+          });
+        }
+
+        const errorMessage =
+          result?.errors?.map(err => err.message).filter(Boolean).join(' ') ||
+          result?.message ||
+          'Something went wrong. Please email us at info.a1technovation@gmail.com';
+
+        setFormAlert('error', errorMessage);
+        toast('error', errorMessage);
+      } catch (err) {
         btn.innerHTML = orig;
         btn.disabled = false;
-        toast('error', 'Failed to send. Email us at info.a1technovation@gmail.com');
-      });
+        form.submit();
+      }
     });
   }
 

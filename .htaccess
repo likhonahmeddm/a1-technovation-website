@@ -1,0 +1,36 @@
+Options -Indexes
+ErrorDocument 404 /404.html
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteRule ^(config|database|docs)/ - [F,L]
+  RewriteRule ^php/(bootstrap|SmtpMailer)\.php$ - [F,L]
+  RewriteRule ^blog/?$ /blog.php [L,QSA]
+  RewriteRule ^blog/([^/]+)/?$ /blog-post.php?slug=$1 [L,QSA]
+  RewriteRule ^page/([^/]+)/?$ /public-page.php?slug=$1 [L,QSA]
+  RewriteRule ^services/([^/]+)/?$ /public-page.php?slug=$1 [L,QSA]
+  RewriteRule ^landing/([^/]+)/?$ /public-page.php?slug=$1 [L,QSA]
+</IfModule>
+
+<FilesMatch "^(\.env|composer\.(json|lock)|README\.md)$">
+  Require all denied
+</FilesMatch>
+
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+</IfModule>
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/css "access plus 7 days"
+  ExpiresByType application/javascript "access plus 7 days"
+  ExpiresByType image/avif "access plus 30 days"
+  ExpiresByType image/jpeg "access plus 30 days"
+  ExpiresByType image/png "access plus 30 days"
+  ExpiresByType image/webp "access plus 30 days"
+  ExpiresByType image/svg+xml "access plus 30 days"
+  ExpiresByType image/x-icon "access plus 30 days"
+</IfModule>
