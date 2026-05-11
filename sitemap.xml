@@ -2,134 +2,422 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://a1technovation.com/</loc>
-    <lastmod>2026-04-23</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-05-10</lastmod>
+    <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://a1technovation.com/pages/about.html</loc>
+    <loc>https://a1technovation.com/pages/about</loc>
     <lastmod>2026-04-23</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://a1technovation.com/pages/services.html</loc>
+    <loc>https://a1technovation.com/pages/services</loc>
     <lastmod>2026-04-26</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://a1technovation.com/pages/services-seo.html</loc>
-    <lastmod>2026-04-26</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://a1technovation.com/pages/services-seo</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://a1technovation.com/pages/services-local-seo.html</loc>
-    <lastmod>2026-04-26</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://a1technovation.com/ecommerce-seo-services/</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://a1technovation.com/best-seo-expert-in-bangladesh/</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://a1technovation.com/seo-services-bangladesh/</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://a1technovation.com/seo-services-saudi-arabia/</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://a1technovation.com/seo-services-usa/</loc>
+    <lastmod>2026-05-05</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://a1technovation.com/seo-services-uae/</loc>
+    <lastmod>2026-05-05</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://a1technovation.com/seo-services-uk/</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://a1technovation.com/seo-services-canada/</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://a1technovation.com/seo-services-australia/</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://a1technovation.com/seo-services-toronto/</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://a1technovation.com/seo-services-vancouver/</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://a1technovation.com/seo-services-montreal/</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://a1technovation.com/seo-services-calgary/</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://a1technovation.com/seo-services-sydney/</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://a1technovation.com/seo-services-melbourne/</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://a1technovation.com/seo-services-brisbane/</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://a1technovation.com/seo-services-perth/</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://a1technovation.com/seo-services-london/</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://a1technovation.com/seo-services-manchester/</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://a1technovation.com/seo-services-birmingham/</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://a1technovation.com/seo-services-glasgow/</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://a1technovation.com/seo-services-dubai/</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://a1technovation.com/seo-services-abu-dhabi/</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://a1technovation.com/seo-services-sharjah/</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://a1technovation.com/seo-services-ajman/</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://a1technovation.com/seo-services-new-york/</loc>
+    <lastmod>2026-05-05</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://a1technovation.com/seo-services-los-angeles/</loc>
+    <lastmod>2026-05-05</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://a1technovation.com/seo-services-houston/</loc>
+    <lastmod>2026-05-05</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://a1technovation.com/seo-services-chicago/</loc>
+    <lastmod>2026-05-05</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://a1technovation.com/seo-services-san-francisco/</loc>
+    <lastmod>2026-05-05</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://a1technovation.com/seo-services-dallas/</loc>
+    <lastmod>2026-05-05</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://a1technovation.com/seo-services-miami/</loc>
+    <lastmod>2026-05-05</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://a1technovation.com/seo-services-phoenix/</loc>
+    <lastmod>2026-05-05</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://a1technovation.com/seo-services-atlanta/</loc>
+    <lastmod>2026-05-05</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://a1technovation.com/seo-services-austin/</loc>
+    <lastmod>2026-05-05</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://a1technovation.com/seo-services-seattle/</loc>
+    <lastmod>2026-05-05</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://a1technovation.com/seo-services-las-vegas/</loc>
+    <lastmod>2026-05-05</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://a1technovation.com/pages/services-local-seo</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://a1technovation.com/pages/services-car-rental-seo.html</loc>
+    <loc>https://a1technovation.com/aeo-optimization-services/</loc>
+    <lastmod>2026-05-05</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://a1technovation.com/geo-optimization-services/</loc>
+    <lastmod>2026-05-05</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://a1technovation.com/pages/services-car-rental-seo</loc>
     <lastmod>2026-04-26</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://a1technovation.com/pages/services-limousine-business-seo.html</loc>
+    <loc>https://a1technovation.com/pages/services-limousine-business-seo</loc>
     <lastmod>2026-04-26</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://a1technovation.com/pages/services-car-repair-seo.html</loc>
+    <loc>https://a1technovation.com/pages/services-car-repair-seo</loc>
     <lastmod>2026-04-26</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://a1technovation.com/pages/services-car-dealership-seo.html</loc>
+    <loc>https://a1technovation.com/pages/services-car-dealership-seo</loc>
     <lastmod>2026-04-26</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://a1technovation.com/pages/services-tree-service-seo.html</loc>
+    <loc>https://a1technovation.com/pages/services-tree-service-seo</loc>
     <lastmod>2026-04-26</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://a1technovation.com/pages/services-roofing-service-seo.html</loc>
+    <loc>https://a1technovation.com/pages/services-roofing-service-seo</loc>
     <lastmod>2026-04-26</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://a1technovation.com/pages/services-cleaning-service-seo.html</loc>
-    <lastmod>2026-04-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://a1technovation.com/pages/services-lawyer-seo.html</loc>
-    <lastmod>2026-04-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://a1technovation.com/pages/services-small-business-seo.html</loc>
-    <lastmod>2026-04-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://a1technovation.com/pages/services-web-dev.html</loc>
-    <lastmod>2026-04-26</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://a1technovation.com/seo-services-for-hvac-companies/</loc>
+    <lastmod>2026-05-08</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://a1technovation.com/pages/services-ppc-ads.html</loc>
+    <loc>https://a1technovation.com/pages/services-cleaning-service-seo</loc>
     <lastmod>2026-04-26</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://a1technovation.com/pages/services-lawyer-seo</loc>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://a1technovation.com/pages/services-small-business-seo</loc>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://a1technovation.com/pages/services-web-dev</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://a1technovation.com/pages/services-social-media.html</loc>
-    <lastmod>2026-04-26</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://a1technovation.com/pages/services-ppc-ads</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://a1technovation.com/pages/portfolio.html</loc>
+    <loc>https://a1technovation.com/pages/ppc-facebook-strategy</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://a1technovation.com/pages/ppc-instagram-strategy</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://a1technovation.com/pages/ppc-linkedin-strategy</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://a1technovation.com/pages/ppc-tiktok-strategy</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://a1technovation.com/pages/ppc-youtube-strategy</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://a1technovation.com/pages/ppc-x-twitter-strategy</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://a1technovation.com/pages/services-social-media</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://a1technovation.com/pages/portfolio</loc>
     <lastmod>2026-04-23</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://a1technovation.com/pages/blog.html</loc>
+    <loc>https://a1technovation.com/pages/blog</loc>
     <lastmod>2026-04-23</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://a1technovation.com/pages/contact.html</loc>
+    <loc>https://a1technovation.com/pages/tools</loc>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://a1technovation.com/sitemap</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://a1technovation.com/pages/contact</loc>
     <lastmod>2026-04-23</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://a1technovation.com/pages/privacy.html</loc>
+    <loc>https://a1technovation.com/pages/privacy</loc>
     <lastmod>2026-04-23</lastmod>
-    <changefreq>yearly</changefreq>
+    <changefreq>daily</changefreq>
     <priority>0.4</priority>
   </url>
   <url>
-    <loc>https://a1technovation.com/pages/terms.html</loc>
+    <loc>https://a1technovation.com/pages/terms</loc>
     <lastmod>2026-04-23</lastmod>
-    <changefreq>yearly</changefreq>
+    <changefreq>daily</changefreq>
     <priority>0.4</priority>
   </url>
 </urlset>
