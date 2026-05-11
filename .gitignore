@@ -1,3 +1,7 @@
 tmp/
 output/
+.claude/
+config/contact-form.php
+node_modules/
+.tmp-*.ps1
 

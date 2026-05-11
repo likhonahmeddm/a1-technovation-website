@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZLZWHYFJBW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZLZWHYFJBW');
+  </script>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Free tools built by A1 Technovation - SEO utilities, marketing calculators, and automation helpers to grow your business faster." />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:site_name" content="A1 Technovation" />
+  <meta property="og:title" content="Free Tools by A1 Technovation - SEO & Marketing Utilities" />
+  <meta property="og:description" content="Explore free tools built by A1 Technovation. From SEO audits to keyword research - practical utilities that help your business grow." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://a1technovation.com/pages/tools" />
+  <meta property="og:image" content="https://a1technovation.com/assets/images/A1Technovation-Light-Background.png" />
+  <meta property="og:image:alt" content="Free Tools - A1 Technovation" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Free Tools by A1 Technovation - SEO & Marketing Utilities" />
+  <meta name="twitter:description" content="Explore free tools built by A1 Technovation. Practical utilities that help your business grow." />
+  <meta name="twitter:image" content="https://a1technovation.com/assets/images/A1Technovation-Light-Background.png" />
+  <title>Free Tools by A1 Technovation - SEO & Marketing Utilities</title>
+  <link rel="canonical" href="https://a1technovation.com/pages/tools" />
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png" />
+  <link rel="apple-touch-icon" href="../assets/images/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="../css/style.css?v=20260505" /><link rel="stylesheet" href="../css/responsive.css?v=20260505" />
+  <style>
+    /* Tools page */
+    .tools-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 28px;
+      margin-top: 48px;
+    }
+    .tool-card {
+      background: var(--c-50);
+      border: 1px solid var(--c-200);
+      border-radius: var(--r-2xl);
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      transition: var(--tr);
+    }
+    .tool-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--sh-lg);
+      border-color: var(--c-primary);
+    }
+    .tool-card-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .tool-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: var(--r-lg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.375rem;
+      flex-shrink: 0;
+    }
+    .tool-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      justify-content: flex-end;
+    }
+    .tool-tag {
+      font-size: .6875rem;
+      font-weight: 600;
+      letter-spacing: .04em;
+      padding: 3px 10px;
+      border-radius: var(--r-full);
+      text-transform: uppercase;
+    }
+    .tool-tag-cat {
+      background: rgba(79,70,229,.1);
+      color: var(--c-primary);
+    }
+    .tool-tag-free {
+      background: rgba(16,185,129,.12);
+      color: #059669;
+    }
+    .tool-tag-new {
+      background: rgba(244,63,94,.12);
+      color: #e11d48;
+    }
+    .tool-tag-beta {
+      background: rgba(245,158,11,.12);
+      color: #d97706;
+    }
+    .tool-card h3 {
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: var(--c-900);
+      margin: 0;
+      line-height: 1.35;
+    }
+    .tool-card p {
+      font-size: .9375rem;
+      color: var(--c-600);
+      line-height: 1.65;
+      margin: 0;
+      flex: 1;
+    }
+    .tool-features {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .tool-features li {
+      font-size: .875rem;
+      color: var(--c-600);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .tool-features li i {
+      color: var(--c-success);
+      font-size: .75rem;
+      flex-shrink: 0;
+    }
+    .tool-card-footer {
+      margin-top: 4px;
+      padding-top: 20px;
+      border-top: 1px solid var(--c-200);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .tool-card-footer .btn {
+      flex: 1;
+      justify-content: center;
+    }
+
+    /* Filter tabs */
+    .tools-filter {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      margin-top: 32px;
+    }
+    .filter-btn {
+      padding: 8px 20px;
+      border-radius: var(--r-full);
+      font-size: .875rem;
+      font-weight: 600;
+      border: 1.5px solid var(--c-200);
+      background: transparent;
+      color: var(--c-600);
+      cursor: pointer;
+      transition: var(--tr-fast);
+      font-family: var(--f-body);
+    }
+    .filter-btn:hover,
+    .filter-btn.active {
+      background: var(--c-primary);
+      border-color: var(--c-primary);
+      color: #fff;
+    }
+
+    /* Stats strip */
+    .tools-stats {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      padding: 40px 0 0;
+    }
+    .tools-stat-item {
+      text-align: center;
+    }
+    .tools-stat-item strong {
+      display: block;
+      font-size: 2rem;
+      font-weight: 800;
+      background: var(--g-primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1.1;
+    }
+    .tools-stat-item span {
+      font-size: .875rem;
+      color: var(--c-500);
+      margin-top: 4px;
+      display: block;
+    }
+
+    /* Featured tool card - full width */
+    .tool-card-featured {
+      grid-column: 1 / -1;
+      background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%);
+      border: 1px solid rgba(129,140,248,.25);
+      border-radius: var(--r-2xl);
+      padding: 40px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .tool-card-featured::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 20% 50%, rgba(79,70,229,.18) 0%, transparent 60%),
+                  radial-gradient(ellipse at 80% 20%, rgba(168,85,247,.12) 0%, transparent 50%);
+      pointer-events: none;
+    }
+    .tool-card-featured .feat-left { position: relative; }
+    .feat-product-head {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 18px;
+    }
+    .tool-card-featured .feat-right {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .tool-card-featured h3 {
+      font-size: 1.75rem;
+      font-weight: 800;
+      color: #fff;
+      margin: 0;
+      line-height: 1.25;
+    }
+    .tool-card-featured p {
+      font-size: .9375rem;
+      color: rgba(255,255,255,.65);
+      line-height: 1.7;
+      margin: 0;
+    }
+    .tool-card-featured .tool-features li { color: rgba(255,255,255,.7); }
+    .tool-card-featured .tool-features li i { color: #818cf8; }
+    .tool-card-featured .tool-card-footer {
+      border-top: 1px solid rgba(255,255,255,.1);
+      margin-top: 8px;
+      padding-top: 20px;
+    }
+    .feat-product-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(129,140,248,.15);
+      border: 1px solid rgba(129,140,248,.3);
+      border-radius: var(--r-full);
+      padding: 6px 14px;
+      font-size: .75rem;
+      font-weight: 700;
+      letter-spacing: .06em;
+      color: #a5b4fc;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .feat-product-badge i { font-size: .625rem; }
+    .feat-divider {
+      width: 1px;
+      background: rgba(255,255,255,.1);
+      align-self: stretch;
+    }
+    .feat-stat-row {
+      display: flex;
+      gap: 28px;
+      flex-wrap: wrap;
+    }
+    .feat-stat { text-align: center; }
+    .feat-stat strong {
+      display: block;
+      font-size: 1.375rem;
+      font-weight: 800;
+      color: #818cf8;
+    }
+    .feat-stat span {
+      font-size: .75rem;
+      color: rgba(255,255,255,.45);
+    }
+
+    @media (max-width: 768px) {
+      .tool-card-featured {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        padding: 28px;
+      }
+      .feat-divider { display: none; }
+      .tool-card-featured .tool-card-footer {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .tool-card-featured .tool-card-footer .btn {
+        width: 100%;
+      }
+      .feat-stat-row {
+        gap: 18px;
+        justify-content: space-between;
+      }
+      .feat-stat {
+        flex: 1 1 calc(50% - 9px);
+        min-width: 140px;
+      }
+    }
+    @media (max-width: 640px) {
+      .tools-grid { grid-template-columns: 1fr; }
+      .tools-stats { gap: 24px; }
+      .tool-card-featured {
+        padding: 22px 18px;
+        border-radius: 28px;
+      }
+      .tool-card-featured h3 {
+        font-size: 1.5rem;
+      }
+      .feat-product-head {
+        align-items: flex-start !important;
+        gap: 12px;
+      }
+      .feat-product-badge {
+        font-size: .6875rem;
+        padding: 6px 12px;
+      }
+      .tool-card-featured .tool-features li {
+        align-items: flex-start;
+      }
+      .feat-stat-row {
+        gap: 14px;
+      }
+      .feat-stat {
+        flex: 1 1 100%;
+        min-width: 0;
+      }
+      .feat-stat strong {
+        font-size: 1.5rem;
+      }
+    }
+    @media (max-width: 480px) {
+      .tool-card-featured {
+        padding: 20px 16px;
+      }
+      .tool-card-featured p {
+        font-size: .9rem;
+      }
+      .tool-card-featured .tool-card-footer {
+        gap: 10px;
+      }
+      .tool-card-featured .tool-card-footer .btn {
+        min-height: 52px;
+      }
+    }
+  </style>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://a1technovation.com/pages/tools","url":"https://a1technovation.com/pages/tools","name":"Free Tools by A1 Technovation - SEO & Marketing Utilities","isPartOf":{"@id":"https://a1technovation.com/#website"},"breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://a1technovation.com"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://a1technovation.com/pages/tools"}]}}]}
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "@id": "https://a1technovation.com/pages/tools#software-tools",
+    "name": "A1 Technovation Software Tools",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@type": "SoftwareApplication",
+          "@id": "https://a1technovation.com/pages/tools#a1-mail-dynamics",
+          "name": "A1 Mail Dynamics",
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "Desktop",
+          "description": "Local-first AI outreach desktop app for email outreach workflows.",
+          "publisher": {"@id": "https://a1technovation.com/#organization"},
+          "offers": {
+            "@type": "Offer",
+            "price": "20",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock",
+            "url": "https://a1technovation.com/pages/tools"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@type": "SoftwareApplication",
+          "@id": "https://a1technovation.com/pages/tools#a1-crm",
+          "name": "A1 CRM",
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "Desktop",
+          "description": "Offline-first agency CRM for client management, task tracking, billing, reporting, and AI-powered content planning.",
+          "publisher": {"@id": "https://a1technovation.com/#organization"},
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock",
+            "url": "https://drive.google.com/file/d/1bymzvVLGUZm4Ex7wXajwJCnUq8JsZRh5/view"
+          }
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Sitewide Supplemental Schema -->
+  <script type="application/ld+json">
+{
+    "@context":  "https://schema.org",
+    "@graph":  [
+                   {
+                       "@type":  [
+                                     "Organization",
+                                     "ProfessionalService"
+                                 ],
+                       "@id":  "https://a1technovation.com/#organization",
+                       "name":  "A1 Technovation",
+                       "url":  "https://a1technovation.com",
+                       "logo":  {
+                                    "@type":  "ImageObject",
+                                    "url":  "https://a1technovation.com/assets/images/A1Technovation-Light-Background.png"
+                                },
+                       "image":  "https://a1technovation.com/assets/images/A1Technovation-Light-Background.png",
+                       "description":  "A1 Technovation is a full-service digital marketing agency providing SEO, AEO, GEO, local SEO, ecommerce SEO, web design, PPC, and social media marketing for clients worldwide.",
+                       "foundingDate":  "2018",
+                       "founder":  {
+                                       "@type":  "Person",
+                                       "@id":  "https://a1technovation.com/#likhon-ahmed",
+                                       "name":  "Likhon Ahmed",
+                                       "jobTitle":  "Founder and CEO",
+                                       "url":  "https://a1technovation.com/pages/about"
+                                   },
+                       "email":  "info.a1technovation@gmail.com",
+                       "telephone":  "+8801799976295",
+                       "address":  {
+                                       "@type":  "PostalAddress",
+                                       "streetAddress":  "35/A Srijoni Road, Ibrahimpur, Dhaka Cantonment",
+                                       "addressLocality":  "Dhaka",
+                                       "postalCode":  "1206",
+                                       "addressCountry":  "BD"
+                                   },
+                       "areaServed":  [
+                                          "Worldwide",
+                                          "United States",
+                                          "United Kingdom",
+                                          "United Arab Emirates",
+                                          "Saudi Arabia",
+                                          "Canada",
+                                          "Australia",
+                                          "Bangladesh"
+                                      ],
+                       "sameAs":  [
+                                      "https://www.facebook.com/a1technovation/",
+                                      "https://www.instagram.com/a1technovation/",
+                                      "https://www.linkedin.com/company/92598277/"
+                                  ],
+                       "contactPoint":  [
+                                            {
+                                                "@type":  "ContactPoint",
+                                                "telephone":  "+8801799976295",
+                                                "contactType":  "customer service",
+                                                "email":  "info.a1technovation@gmail.com",
+                                                "availableLanguage":  [
+                                                                          "English",
+                                                                          "Bengali"
+                                                                      ]
+                                            }
+                                        ],
+                       "priceRange":  "$"
+                   },
+                   {
+                       "@type":  "WebSite",
+                       "@id":  "https://a1technovation.com/#website",
+                       "url":  "https://a1technovation.com/",
+                       "name":  "A1 Technovation",
+                       "publisher":  {
+                                         "@id":  "https://a1technovation.com/#organization"
+                                     },
+                       "inLanguage":  "en-US"
+                   },
+                   {
+                       "@type":  "CollectionPage",
+                       "@id":  "https://a1technovation.com/pages/tools#webpage",
+                       "url":  "https://a1technovation.com/pages/tools",
+                       "name":  "Free Tools by A1 Technovation - SEO \u0026 Marketing Utilities",
+                       "headline":  "Tools We Built for You",
+                       "description":  "Free tools built by A1 Technovation - SEO utilities, marketing calculators, and automation helpers to grow your business faster.",
+                       "isPartOf":  {
+                                        "@id":  "https://a1technovation.com/#website"
+                                    },
+                       "about":  {
+                                     "@id":  "https://a1technovation.com/#organization"
+                                 },
+                       "publisher":  {
+                                         "@id":  "https://a1technovation.com/#organization"
+                                     },
+                       "primaryImageOfPage":  {
+                                                  "@type":  "ImageObject",
+                                                  "url":  "https://a1technovation.com/assets/images/A1Technovation-Light-Background.png"
+                                              },
+                       "inLanguage":  "en-US"
+                   },
+                   {
+                       "@type":  "BreadcrumbList",
+                       "@id":  "https://a1technovation.com/pages/tools#breadcrumb",
+                       "itemListElement":  [
+                                               {
+                                                   "@type":  "ListItem",
+                                                   "position":  1,
+                                                   "name":  "Home",
+                                                   "item":  "https://a1technovation.com/"
+                                               },
+                                               {
+                                                   "@type":  "ListItem",
+                                                   "position":  2,
+                                                   "name":  "Free Tools by A1 Technovation - SEO \u0026 Marketing Utilities",
+                                                   "item":  "https://a1technovation.com/pages/tools"
+                                               }
+                                           ]
+                   }
+               ]
+}
+  </script>
+  <!-- /Sitewide Supplemental Schema -->
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="container"><div class="navbar-inner">
+    <a href="/" class="navbar-logo" aria-label="A1 Technovation home"><span class="logo-mark"><img src="../assets/images/A1Technovation-Dark-Background.png" alt="A1 Technovation" class="logo-brand logo-brand-dark" /><img src="../assets/images/A1Technovation-Light-Background.png" alt="A1 Technovation" class="logo-brand logo-brand-light" /></span></a>
+    <nav class="navbar-nav">
+      <a href="/" class="nav-link">Home</a><a href="/pages/about" class="nav-link">About</a>
+      <div class="nav-item megamenu-item"><a href="/pages/services" class="nav-link">Services <i class="fas fa-chevron-down" style="font-size:.7em;opacity:.7"></i></a>
+        <div class="megamenu">
+          <div class="megamenu-inner">
+            <div class="mm-col mm-col-main">
+              <p class="mm-col-head">Core Services</p>
+              <a href="/pages/services-seo" class="mm-service"><div class="mm-icon"><i class="fas fa-search"></i></div><div class="mm-body"><span class="mm-title">SEO Services</span><span class="mm-desc">Rank higher, get found</span></div></a>
+              <a href="/pages/services-web-dev" class="mm-service"><div class="mm-icon"><i class="fas fa-code"></i></div><div class="mm-body"><span class="mm-title">Web Design &amp; Dev</span><span class="mm-desc">Convert visitors to clients</span></div></a>
+              <a href="/pages/services-ppc-ads" class="mm-service"><div class="mm-icon"><i class="fas fa-bullseye"></i></div><div class="mm-body"><span class="mm-title">PPC Advertising</span><span class="mm-desc">Maximum ROI campaigns</span></div></a>
+              <a href="/pages/services-social-media" class="mm-service"><div class="mm-icon"><i class="fas fa-share-nodes"></i></div><div class="mm-body"><span class="mm-title">Social Media</span><span class="mm-desc">Build your community</span></div></a>
+            </div>
+            <div class="mm-col mm-col-links">
+              <p class="mm-col-head">SEO Specialties</p>
+              <a href="/pages/services-local-seo" class="mm-link">Local SEO Services</a>
+              <a href="/seo-services-usa/" class="mm-link">SEO Services USA</a>
+              <a href="/pages/services-car-rental-seo" class="mm-link">Car Rental SEO</a>
+              <a href="/pages/services-limousine-business-seo" class="mm-link">Limousine Business SEO</a>
+              <a href="/pages/services-car-repair-seo" class="mm-link">Car Repair SEO</a>
+              <a href="/pages/services-car-dealership-seo" class="mm-link">Car Dealership SEO</a>
+              <a href="/pages/services-tree-service-seo" class="mm-link">Tree Service SEO</a>
+              <a href="/pages/services-lawyer-seo" class="mm-link">Lawyer SEO</a>
+              <a href="/pages/services-small-business-seo" class="mm-link">Small Business SEO</a>
+            </div>
+            <div class="mm-col mm-col-feature">
+              <div class="mm-feature-card">
+                <div class="mm-feature-badge">Free Audit</div>
+                <h4 class="mm-feature-title">Grow Your Business Online</h4>
+                <p class="mm-feature-body">Get a free 30-minute strategy session &mdash; no strings attached.</p>
+                <a href="https://wa.me/8801799976295" class="btn btn-primary btn-sm" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> Free Consultation</a>
+                <a href="/pages/services" class="mm-feature-link">View all services &rarr;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="/pages/portfolio" class="nav-link">Work</a><a href="/pages/blog" class="nav-link">Blog</a><a href="/pages/tools" class="nav-link active">Tools</a><a href="/pages/contact" class="nav-link">Contact</a>
+    </nav>
+    <div class="navbar-right">
+      <a href="/pages/contact" class="btn btn-primary btn-sm nav-cta">Get a Free Quote <i class="fas fa-arrow-right"></i></a>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Open menu" aria-controls="mobileMenu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div></div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="/" class="mobile-menu-link">Home</a><a href="/pages/about" class="mobile-menu-link">About</a>
+  <div class="mobile-menu-group"><a href="/pages/services" class="mobile-menu-link">Services</a><div class="mobile-submenu"><a href="/pages/services-seo" class="mobile-submenu-link">SEO Services</a><a href="/seo-services-usa/" class="mobile-submenu-link">SEO Services USA</a><div class="mobile-submenu-nested"><a href="/pages/services-local-seo" class="mobile-submenu-link mobile-submenu-sublink">Local SEO Services</a><a href="/pages/services-car-rental-seo" class="mobile-submenu-link mobile-submenu-sublink">Car Rental SEO Service</a><a href="/pages/services-limousine-business-seo" class="mobile-submenu-link mobile-submenu-sublink">Limousine Business SEO Service</a><a href="/pages/services-car-repair-seo" class="mobile-submenu-link mobile-submenu-sublink">Car Repair SEO Service</a><a href="/pages/services-car-dealership-seo" class="mobile-submenu-link mobile-submenu-sublink">Car Dealership SEO Service</a><a href="/pages/services-tree-service-seo" class="mobile-submenu-link mobile-submenu-sublink">Tree Service SEO</a><a href="/pages/services-lawyer-seo" class="mobile-submenu-link mobile-submenu-sublink">Lawyer SEO Service</a><a href="/pages/services-small-business-seo" class="mobile-submenu-link mobile-submenu-sublink">Small Business SEO Service</a></div><a href="/pages/services-web-dev" class="mobile-submenu-link">Web Design &amp; Development</a><a href="/pages/services-ppc-ads" class="mobile-submenu-link">PPC Advertising</a><a href="/pages/services-social-media" class="mobile-submenu-link">Social Media Marketing</a></div></div>
+  <a href="/pages/portfolio" class="mobile-menu-link">Work</a>
+  <a href="/pages/blog" class="mobile-menu-link">Blog</a>
+  <a href="/pages/tools" class="mobile-menu-link">Tools</a>
+  <a href="/pages/contact" class="mobile-menu-link">Contact</a>
+  <div class="mobile-menu-footer"><a href="/pages/contact" class="btn btn-primary btn-lg" style="justify-content:center">Get a Free Quote <i class="fas fa-arrow-right"></i></a><p class="mobile-menu-note">Tools built by A1 Technovation - free to use.</p></div>
+</div>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="hero-bg"><div class="hero-grid"></div><div class="hero-glow-1"></div><div class="hero-glow-2"></div></div>
+  <div class="container"><div class="page-hero-inner">
+    <div class="breadcrumb"><a href="/">Home</a><i class="fas fa-chevron-right"></i><span>Tools</span></div>
+    <span class="label label-light label-dot">Built by A1 Technovation</span>
+    <h1>Tools We <span class="text-grad-hero">Built for You</span></h1>
+    <p>Practical, free tools crafted by our team to help you audit, optimise, and grow - no account required, no strings attached.</p>
+    <div class="hero-badges">
+      <span class="badge badge-green"><i class="fas fa-check-circle"></i> 100% Free to use</span>
+      <span class="badge badge-blue"><i class="fas fa-bolt"></i> No sign-up needed</span>
+      <span class="badge badge-purple"><i class="fas fa-wrench"></i> Built in-house</span>
+    </div>
+    <div class="tools-stats">
+      <div class="tools-stat-item"><strong>11+</strong><span>Tools available</span></div>
+      <div class="tools-stat-item"><strong>5K+</strong><span>Monthly users</span></div>
+      <div class="tools-stat-item"><strong>Free</strong><span>Always free</span></div>
+    </div>
+  </div></div>
+</section>
+
+<!-- TOOLS GRID -->
+<section class="section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="label label-primary label-dot">Our Toolkit</span>
+      <h2>All Tools, <span class="text-grad">One Place</span></h2>
+      <p>Everything from SEO audits to marketing calculators - handcrafted by our team and free for everyone to use.</p>
+    </div>
+
+    <div class="tools-filter">
+      <button class="filter-btn active" data-filter="all">All Tools</button>
+      <button class="filter-btn" data-filter="email">Email &amp; Outreach</button>
+      <button class="filter-btn" data-filter="seo">SEO</button>
+      <button class="filter-btn" data-filter="agency">Agency Ops</button>
+      <button class="filter-btn" data-filter="content">Content</button>
+      <button class="filter-btn" data-filter="ppc">PPC &amp; Ads</button>
+      <button class="filter-btn" data-filter="web">Web</button>
+    </div>
+
+    <!-- TOOLS GRID - update each card with real tool info -->
+    <div class="tools-grid" id="toolsGrid">
+
+      <!-- A1 Mail Dynamics - Featured -->
+      <div class="tool-card tool-card-featured reveal" data-category="email">
+        <div class="feat-left">
+          <div class="feat-product-badge"><i class="fas fa-circle" style="color:#22c55e;font-size:.5rem"></i> Now Available</div>
+          <div class="feat-product-head">
+            <div class="tool-icon" style="background:rgba(129,140,248,.15);color:#818cf8;width:56px;height:56px;font-size:1.5rem;flex-shrink:0;"><i class="fas fa-paper-plane"></i></div>
+            <div>
+              <h3>A1 Mail Dynamics</h3>
+              <p style="font-size:.8125rem;margin-top:4px;color:rgba(255,255,255,.45);">Local-first AI outreach desktop app</p>
+            </div>
+          </div>
+          <p>Make cold email campaigns faster, smarter, and easier. Upload your lead list, generate personalised emails with OpenAI, Claude, or Ollama, review every draft, and send using your own SMTP - all from one simple desktop app.</p>
+          <div class="tool-card-footer" style="margin-top:24px;">
+            <a href="https://wa.me/8801799976295?text=Hi%20A1%20Technovation%2C%20I%20want%20to%20request%20a%20free%20trial%20for%20A1%20Mail%20Dynamics." class="btn btn-primary" target="_blank" rel="noopener">Request for Free Trial <i class="fas fa-arrow-right"></i></a>
+            <a href="https://wa.me/8801799976295?text=Hi%20A1%20Technovation%2C%20I%20want%20to%20buy%20A1%20Mail%20Dynamics.%20Please%20share%20the%20next%20steps." class="btn btn-ghost" style="color:rgba(255,255,255,.7);border-color:rgba(255,255,255,.15);" target="_blank" rel="noopener">Buy Now</a>
+          </div>
+          <p style="margin-top:14px;font-size:.95rem;color:rgba(255,255,255,.72);">US$20 for 1 year. Fully personal, no data sharing, no limits. Just use your API and go fly.</p>
+        </div>
+        <div class="feat-right">
+          <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:8px;">
+            <span class="tool-tag" style="background:rgba(34,197,94,.15);color:#4ade80;">Desktop App</span>
+            <span class="tool-tag" style="background:rgba(251,191,36,.16);color:#fcd34d;">US$20 / Year</span>
+            <span class="tool-tag tool-tag-new">New</span>
+            <span class="tool-tag" style="background:rgba(129,140,248,.15);color:#a5b4fc;">AI Powered</span>
+          </div>
+          <ul class="tool-features" style="gap:10px;">
+            <li><i class="fas fa-check-circle"></i> Upload lead lists and manage contacts in one place</li>
+            <li><i class="fas fa-check-circle"></i> Generate personalised emails with OpenAI, Claude, or Ollama</li>
+            <li><i class="fas fa-check-circle"></i> Review and edit every draft before sending</li>
+            <li><i class="fas fa-check-circle"></i> Send via your own SMTP - full delivery control</li>
+            <li><i class="fas fa-check-circle"></i> Monitor replies and track campaign performance</li>
+            <li><i class="fas fa-check-circle"></i> Prepare smart AI-powered follow-ups automatically</li>
+          </ul>
+          <div class="feat-stat-row" style="margin-top:20px;padding-top:20px;border-top:1px solid rgba(255,255,255,.1);">
+            <div class="feat-stat"><strong>3</strong><span>AI providers</span></div>
+            <div class="feat-stat"><strong>SMTP</strong><span>Your own server</span></div>
+            <div class="feat-stat"><strong>Local</strong><span>Data stays yours</span></div>
+            <div class="feat-stat"><strong>No Limits</strong><span>Use your API</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- A1 CRM - Free Agency CRM -->
+      <div class="tool-card tool-card-featured reveal d1" data-category="agency">
+        <div class="feat-left">
+          <div class="feat-product-badge"><i class="fas fa-circle" style="color:#22c55e;font-size:.5rem"></i> Free for All</div>
+          <div class="feat-product-head">
+            <div class="tool-icon" style="background:rgba(20,184,166,.15);color:#2dd4bf;width:56px;height:56px;font-size:1.5rem;flex-shrink:0;"><i class="fas fa-users-gear"></i></div>
+            <div>
+              <h3>A1 CRM</h3>
+              <p style="font-size:.8125rem;margin-top:4px;color:rgba(255,255,255,.45);">Client management, tasks, billing, reporting, and AI-powered content planning</p>
+            </div>
+          </div>
+          <p>A1 CRM is an all-in-one desktop CRM for agencies to manage clients, tasks, pipeline, billing, reports, and AI-assisted marketing workflows in one local-first workspace.</p>
+          <div class="tool-card-footer" style="margin-top:24px;">
+            <a href="https://drive.google.com/file/d/1bymzvVLGUZm4Ex7wXajwJCnUq8JsZRh5/view" class="btn btn-primary" target="_blank" rel="noopener"><i class="fas fa-download"></i> Download A1 CRM</a>
+          </div>
+          <p style="margin-top:14px;font-size:.95rem;color:rgba(255,255,255,.72);">Free for everyone. Built for agencies that want local data control, smoother operations, and one place to manage daily work.</p>
+        </div>
+        <div class="feat-right">
+          <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:8px;">
+            <span class="tool-tag" style="background:rgba(34,197,94,.15);color:#4ade80;">Free</span>
+            <span class="tool-tag" style="background:rgba(20,184,166,.15);color:#5eead4;">Desktop App</span>
+            <span class="tool-tag tool-tag-new">New</span>
+            <span class="tool-tag" style="background:rgba(129,140,248,.15);color:#a5b4fc;">AI Powered</span>
+          </div>
+          <ul class="tool-features" style="gap:10px;">
+            <li><i class="fas fa-check-circle"></i> Centralized client records with contacts, social accounts, notes, and website login records</li>
+            <li><i class="fas fa-check-circle"></i> Sales pipeline with deal stages and proposal-to-invoice workflow</li>
+            <li><i class="fas fa-check-circle"></i> Task, activity, and time tracking with screenshot capture</li>
+            <li><i class="fas fa-check-circle"></i> Invoices, proposals, expenses, and exportable client reports</li>
+            <li><i class="fas fa-check-circle"></i> AI writer for posts, captions, emails, and long-term content plans</li>
+            <li><i class="fas fa-check-circle"></i> Content calendar with A1 SEO Dynamics marketing workflow support</li>
+            <li><i class="fas fa-check-circle"></i> White-label settings for agency branding, invoices, and business details</li>
+          </ul>
+          <div class="feat-stat-row" style="margin-top:20px;padding-top:20px;border-top:1px solid rgba(255,255,255,.1);">
+            <div class="feat-stat"><strong>Local</strong><span>Offline-first data</span></div>
+            <div class="feat-stat"><strong>Free</strong><span>For everyone</span></div>
+            <div class="feat-stat"><strong>CRM</strong><span>Clients and tasks</span></div>
+            <div class="feat-stat"><strong>AI</strong><span>Content planning</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tool 1 -->
+      <div class="tool-card reveal d1" data-category="seo">
+        <div class="tool-card-top">
+          <div class="tool-icon" style="background:rgba(79,70,229,.1);color:#4f46e5"><i class="fas fa-magnifying-glass-chart"></i></div>
+          <div class="tool-badges">
+            <span class="tool-tag tool-tag-free">Free</span>
+            <span class="tool-tag tool-tag-cat">SEO</span>
+          </div>
+        </div>
+        <h3>SEO Site Auditor</h3>
+        <p>Instantly scan any website for critical SEO issues - broken links, missing meta tags, slow pages, and more - and get a prioritised fix list.</p>
+        <ul class="tool-features">
+          <li><i class="fas fa-check-circle"></i> On-page SEO analysis</li>
+          <li><i class="fas fa-check-circle"></i> Crawl error detection</li>
+          <li><i class="fas fa-check-circle"></i> Core Web Vitals check</li>
+        </ul>
+        <div class="tool-card-footer">
+          <a href="/pages/services-seo" class="btn btn-primary">Explore SEO Service <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- Tool 2 -->
+      <div class="tool-card reveal d2" data-category="seo">
+        <div class="tool-card-top">
+          <div class="tool-icon" style="background:rgba(6,182,212,.1);color:#0891b2"><i class="fas fa-key"></i></div>
+          <div class="tool-badges">
+            <span class="tool-tag tool-tag-free">Free</span>
+            <span class="tool-tag tool-tag-cat">SEO</span>
+            <span class="tool-tag tool-tag-new">New</span>
+          </div>
+        </div>
+        <h3>Keyword Difficulty Checker</h3>
+        <p>Find out how hard it is to rank for any keyword before you invest time and budget. Get difficulty score, search volume estimate, and SERP snapshot.</p>
+        <ul class="tool-features">
+          <li><i class="fas fa-check-circle"></i> Difficulty score (0-100)</li>
+          <li><i class="fas fa-check-circle"></i> Estimated search volume</li>
+          <li><i class="fas fa-check-circle"></i> Top 10 SERP overview</li>
+        </ul>
+        <div class="tool-card-footer">
+          <a href="/pages/services-seo" class="btn btn-primary">Explore SEO Service <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- Tool 3 -->
+      <div class="tool-card reveal d3" data-category="web">
+        <div class="tool-card-top">
+          <div class="tool-icon" style="background:rgba(16,185,129,.1);color:#059669"><i class="fas fa-gauge-high"></i></div>
+          <div class="tool-badges">
+            <span class="tool-tag tool-tag-free">Free</span>
+            <span class="tool-tag tool-tag-cat">Web</span>
+          </div>
+        </div>
+        <h3>Website Speed Tester</h3>
+        <p>Test your website's load time and performance from multiple locations worldwide. See exactly what is slowing your site down and how to fix it.</p>
+        <ul class="tool-features">
+          <li><i class="fas fa-check-circle"></i> Global speed testing</li>
+          <li><i class="fas fa-check-circle"></i> Waterfall breakdown</li>
+          <li><i class="fas fa-check-circle"></i> Performance improvement tips</li>
+        </ul>
+        <div class="tool-card-footer">
+          <a href="/pages/services-web-dev" class="btn btn-primary">Explore Web Service <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- Tool 4 -->
+      <div class="tool-card reveal d1" data-category="content">
+        <div class="tool-card-top">
+          <div class="tool-icon" style="background:rgba(168,85,247,.1);color:#9333ea"><i class="fas fa-pen-nib"></i></div>
+          <div class="tool-badges">
+            <span class="tool-tag tool-tag-free">Free</span>
+            <span class="tool-tag tool-tag-cat">Content</span>
+          </div>
+        </div>
+        <h3>Meta Tag Generator</h3>
+        <p>Generate perfectly structured title tags, meta descriptions, and Open Graph tags for any page in seconds. Preview how your page looks in Google search results.</p>
+        <ul class="tool-features">
+          <li><i class="fas fa-check-circle"></i> Live Google SERP preview</li>
+          <li><i class="fas fa-check-circle"></i> OG &amp; Twitter card output</li>
+          <li><i class="fas fa-check-circle"></i> Character count validator</li>
+        </ul>
+        <div class="tool-card-footer">
+          <a href="/pages/services-seo" class="btn btn-primary">Explore SEO Service <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- Tool 5 -->
+      <div class="tool-card reveal d2" data-category="ppc">
+        <div class="tool-card-top">
+          <div class="tool-icon" style="background:rgba(244,63,94,.1);color:#e11d48"><i class="fas fa-calculator"></i></div>
+          <div class="tool-badges">
+            <span class="tool-tag tool-tag-free">Free</span>
+            <span class="tool-tag tool-tag-cat">PPC &amp; Ads</span>
+          </div>
+        </div>
+        <h3>Google Ads ROI Calculator</h3>
+        <p>Input your budget, average CPC, and conversion rate to instantly forecast your expected clicks, leads, and return on ad spend before you launch a campaign.</p>
+        <ul class="tool-features">
+          <li><i class="fas fa-check-circle"></i> ROAS &amp; CPA projections</li>
+          <li><i class="fas fa-check-circle"></i> Budget optimiser</li>
+          <li><i class="fas fa-check-circle"></i> Downloadable report</li>
+        </ul>
+        <div class="tool-card-footer">
+          <a href="/pages/services-ppc-ads" class="btn btn-primary">Explore PPC Service <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- Tool 6 -->
+      <div class="tool-card reveal d3" data-category="seo">
+        <div class="tool-card-top">
+          <div class="tool-icon" style="background:rgba(245,158,11,.1);color:#d97706"><i class="fas fa-link"></i></div>
+          <div class="tool-badges">
+            <span class="tool-tag tool-tag-free">Free</span>
+            <span class="tool-tag tool-tag-cat">SEO</span>
+            <span class="tool-tag tool-tag-beta">Beta</span>
+          </div>
+        </div>
+        <h3>Backlink Checker</h3>
+        <p>Analyse the backlink profile of any domain - see who links to them, anchor text distribution, domain authority estimates, and toxic link warnings.</p>
+        <ul class="tool-features">
+          <li><i class="fas fa-check-circle"></i> Referring domain overview</li>
+          <li><i class="fas fa-check-circle"></i> Anchor text breakdown</li>
+          <li><i class="fas fa-check-circle"></i> Toxic link flagging</li>
+        </ul>
+        <div class="tool-card-footer">
+          <a href="/pages/services-seo" class="btn btn-primary">Explore SEO Service <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- Tool 7 -->
+      <div class="tool-card reveal d1" data-category="content">
+        <div class="tool-card-top">
+          <div class="tool-icon" style="background:rgba(59,130,246,.1);color:#2563eb"><i class="fas fa-file-lines"></i></div>
+          <div class="tool-badges">
+            <span class="tool-tag tool-tag-free">Free</span>
+            <span class="tool-tag tool-tag-cat">Content</span>
+          </div>
+        </div>
+        <h3>Blog Title Generator</h3>
+        <p>Enter a topic and get 10 click-worthy, SEO-optimised blog titles instantly. Powered by proven headline formulas used by top-ranking content worldwide.</p>
+        <ul class="tool-features">
+          <li><i class="fas fa-check-circle"></i> 10 title variations per query</li>
+          <li><i class="fas fa-check-circle"></i> SEO &amp; CTR score per title</li>
+          <li><i class="fas fa-check-circle"></i> One-click copy</li>
+        </ul>
+        <div class="tool-card-footer">
+          <a href="/pages/blog" class="btn btn-primary">Explore Blog Ideas <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- Tool 8 -->
+      <div class="tool-card reveal d2" data-category="web">
+        <div class="tool-card-top">
+          <div class="tool-icon" style="background:rgba(16,185,129,.1);color:#059669"><i class="fas fa-mobile-screen"></i></div>
+          <div class="tool-badges">
+            <span class="tool-tag tool-tag-free">Free</span>
+            <span class="tool-tag tool-tag-cat">Web</span>
+            <span class="tool-tag tool-tag-new">New</span>
+          </div>
+        </div>
+        <h3>Mobile Friendliness Checker</h3>
+        <p>Check whether your website passes Google's mobile-friendly test, see a mobile preview, and get a precise list of issues hurting your mobile rankings.</p>
+        <ul class="tool-features">
+          <li><i class="fas fa-check-circle"></i> Google mobile-ready score</li>
+          <li><i class="fas fa-check-circle"></i> Live mobile preview</li>
+          <li><i class="fas fa-check-circle"></i> Fix-it checklist</li>
+        </ul>
+        <div class="tool-card-footer">
+          <a href="/pages/services-web-dev" class="btn btn-primary">Explore Web Service <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+    </div>
+    <!-- End tools grid -->
+
+  </div>
+</section>
+
+<!-- REQUEST A TOOL -->
+<section class="section section-gray">
+  <div class="container">
+    <div class="featured-panel reveal">
+      <div class="featured-panel-media" style="display:flex;flex-direction:column;gap:16px;">
+        <div style="background:linear-gradient(135deg,#4f46e5 0%,#7c3aed 55%,#a855f7 100%);border-radius:var(--r-2xl);padding:48px 40px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;min-height:240px;text-align:center;">
+          <div style="width:72px;height:72px;background:rgba(255,255,255,.15);border-radius:var(--r-xl);display:flex;align-items:center;justify-content:center;font-size:2rem;color:#fff">
+            <i class="fas fa-screwdriver-wrench"></i>
+          </div>
+          <h3 style="color:#fff;font-size:1.5rem;margin:0">More tools <br/>coming soon</h3>
+          <p style="color:rgba(255,255,255,.75);margin:0;font-size:.9375rem">We ship a new tool every few weeks based on what our community needs most.</p>
+        </div>
+        <img src="../assets/images/young-successful-developer-sitting-at-workplace-wi-2026-01-06-00-43-26-utc.webp" alt="Developer at work - A1 Technovation tools" loading="lazy" style="width:100%;border-radius:var(--r-2xl);object-fit:cover;flex:1;min-height:200px;" />
+      </div>
+      <div class="featured-panel-copy">
+        <span class="label label-primary label-dot">Have an Idea?</span>
+        <h2>Tell Us What Tool <span class="text-grad">You Need Next</span></h2>
+        <p>Our team is constantly building new utilities based on real problems our clients and community face. If there's a tool you wish existed - tell us. We may build it next.</p>
+        <ul class="info-list">
+          <li>We prioritise tools that save real time and eliminate guesswork from marketing decisions</li>
+          <li>Every tool is tested internally with client campaigns before it goes public</li>
+          <li>All tools remain free - this is our way of giving back to the community</li>
+        </ul>
+        <div style="margin-top:28px;display:flex;gap:12px;flex-wrap:wrap;">
+          <a href="/pages/contact" class="btn btn-primary">Request a Tool <i class="fas fa-arrow-right"></i></a>
+          <a href="/pages/about" class="btn btn-ghost">About Our Team</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-wrap"><div class="cta-glow"></div><div class="container"><div class="cta-inner reveal">
+  <span class="label label-light label-dot">Work With Us</span>
+  <h2>Need More Than a Tool? <span class="text-grad-hero">Let's Build a Strategy.</span></h2>
+  <p>Our tools give you insights - our team turns those insights into results. Book a free consultation and let's look at your numbers together.</p>
+  <div class="cta-buttons"><a href="/pages/contact" class="btn btn-primary btn-lg">Request for Free Trial <i class="fas fa-arrow-right"></i></a><a href="/pages/services" class="btn btn-ghost btn-lg">Explore Services</a></div>
+</div></div></section>
+
+<footer class="footer"><div class="container">
+  <div class="footer-top">
+    <div class="footer-brand"><a href="/" class="footer-logo" aria-label="A1 Technovation home"><img src="../assets/images/A1Technovation-Dark-Background.png" alt="A1 Technovation" class="footer-logo-image" /></a><p>Bangladesh's fastest-growing digital marketing agency.</p><div class="footer-socials"><a href="https://www.facebook.com/a1technovation/" class="f-social" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a><a href="https://www.instagram.com/a1technovation/?hl=en" class="f-social" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a><a href="https://www.linkedin.com/company/92598277/" class="f-social" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a><a href="https://wa.me/8801799976295" class="f-social" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a><a href="https://t.me/likhonahmedseo" class="f-social" target="_blank" rel="noopener"><i class="fab fa-telegram"></i></a></div></div>
+    <div class="footer-col"><h6>Services</h6><div class="footer-links"><a href="/pages/services-seo" class="f-link"><i class="fas fa-chevron-right" style="font-size:.625rem"></i> SEO Services</a><a href="/seo-services-usa/" class="f-link"><i class="fas fa-chevron-right" style="font-size:.625rem"></i> SEO Services USA</a><a href="/pages/services-web-dev" class="f-link"><i class="fas fa-chevron-right" style="font-size:.625rem"></i> Web Design</a><a href="/pages/services-ppc-ads" class="f-link"><i class="fas fa-chevron-right" style="font-size:.625rem"></i> PPC Ads</a><a href="/pages/services-social-media" class="f-link"><i class="fas fa-chevron-right" style="font-size:.625rem"></i> Social Media</a></div></div>
+    <div class="footer-col"><h6>Company</h6><div class="footer-links"><a href="/pages/about" class="f-link"><i class="fas fa-chevron-right" style="font-size:.625rem"></i> About Us</a><a href="/pages/portfolio" class="f-link"><i class="fas fa-chevron-right" style="font-size:.625rem"></i> Our Work</a><a href="/pages/blog" class="f-link"><i class="fas fa-chevron-right" style="font-size:.625rem"></i> Blog</a><a href="/pages/tools" class="f-link"><i class="fas fa-chevron-right" style="font-size:.625rem"></i> Tools</a><a href="/pages/contact" class="f-link"><i class="fas fa-chevron-right" style="font-size:.625rem"></i> Contact</a></div></div>
+    <div class="footer-col"><h6>Contact</h6><div class="f-contact-item"><i class="fas fa-phone"></i><a href="tel:+8801799976295">+880 1799-976295</a></div><div class="f-contact-item"><i class="fas fa-envelope"></i><a href="mailto:info.a1technovation@gmail.com">info.a1technovation@gmail.com</a></div></div>
+  </div>
+  <div class="footer-bottom"><p class="f-copy">&copy; 2025 A1 Technovation. All rights reserved.</p><div class="f-bottom-links"><a href="/pages/privacy" class="f-bl">Privacy Policy</a><a href="/pages/terms" class="f-bl">Terms and Conditions</a></div></div>
+</div></footer>
+<button class="scroll-top" id="scrollTop" aria-label="Scroll to top"><i class="fas fa-arrow-up"></i></button>
+<script src="../js/main.js?v=20260429"></script>
+<script>
+  /* Filter tabs */
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const toolCards  = document.querySelectorAll('#toolsGrid .tool-card');
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const filter = btn.dataset.filter;
+      toolCards.forEach(card => {
+        const show = filter === 'all' || card.dataset.category === filter;
+        card.style.display = show ? '' : 'none';
+      });
+    });
+  });
+</script>
+</body>
+</html>
+
+

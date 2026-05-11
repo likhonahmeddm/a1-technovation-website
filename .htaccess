@@ -1,0 +1,63 @@
+Options -Indexes
+ErrorDocument 404 /404.html
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  RewriteCond %{THE_REQUEST} \s/+index\.html[\s?] [NC]
+  RewriteRule ^index\.html$ https://a1technovation.com/ [R=301,L]
+
+  RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[\s?] [NC]
+  RewriteRule ^(.+)\.html$ https://a1technovation.com/$1 [R=301,L,NE]
+
+  RewriteCond %{HTTP_HOST} ^www\.a1technovation\.com$ [NC,OR]
+  RewriteCond %{HTTPS} !=on
+  RewriteRule ^ https://a1technovation.com%{REQUEST_URI} [R=301,L,NE]
+
+  RewriteRule ^(config|database|docs)/ - [F,L]
+  RewriteRule ^php/(bootstrap|SmtpMailer)\.php$ - [F,L]
+  RewriteRule ^404/?$ /404.html [L,QSA]
+
+  RewriteRule ^aeo-optimization-services/?$ /pages/services-aeo-optimization.html [L,QSA,NC]
+  RewriteRule ^geo-optimization-services/?$ /pages/services-geo-optimization.html [L,QSA,NC]
+  RewriteRule ^ecommerce-seo-services/?$ /pages/ecommerce-seo-services.html [L,QSA,NC]
+  RewriteRule ^best-seo-expert-in-bangladesh/?$ /pages/best-seo-expert-in-bangladesh.html [L,QSA,NC]
+  RewriteCond %{DOCUMENT_ROOT}/pages/$1.html -f
+  RewriteRule ^(seo-services-[a-z-]+)/?$ /pages/$1.html [L,QSA,NC]
+  RewriteRule ^blog/?$ /blog.php [L,QSA]
+  RewriteRule ^blog/([^/]+)/?$ /blog-post.php?slug=$1 [L,QSA]
+  RewriteRule ^page/([^/]+)/?$ /public-page.php?slug=$1 [L,QSA]
+  RewriteRule ^services/([^/]+)/?$ /public-page.php?slug=$1 [L,QSA]
+  RewriteRule ^landing/([^/]+)/?$ /public-page.php?slug=$1 [L,QSA]
+
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+  RewriteRule ^(.+?)/?$ /$1.html [L,QSA]
+
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule . - [R=404,L]
+</IfModule>
+
+<FilesMatch "^(\.env|composer\.(json|lock)|README\.md)$">
+  Require all denied
+</FilesMatch>
+
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+</IfModule>
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/css "access plus 7 days"
+  ExpiresByType application/javascript "access plus 7 days"
+  ExpiresByType image/avif "access plus 30 days"
+  ExpiresByType image/jpeg "access plus 30 days"
+  ExpiresByType image/png "access plus 30 days"
+  ExpiresByType image/webp "access plus 30 days"
+  ExpiresByType image/svg+xml "access plus 30 days"
+  ExpiresByType image/x-icon "access plus 30 days"
+</IfModule>
