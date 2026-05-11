@@ -22,7 +22,7 @@ function trim_value(mixed $value, int $maxLength = 0): string
     return $text;
 }
 
-function finish_request(?array $config, bool $wantsJson, string $status, string $message, int $httpStatus = 200): never
+function finish_request(?array $config, bool $wantsJson, string $status, string $message, int $httpStatus = 200, array $errors = []): never
 {
     if ($wantsJson) {
         http_response_code($httpStatus);
@@ -30,6 +30,7 @@ function finish_request(?array $config, bool $wantsJson, string $status, string 
         echo json_encode([
             'status' => $status,
             'message' => $message,
+            'errors' => $errors,
         ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
         exit;
     }
@@ -70,25 +71,37 @@ function store_contact_submission(array $config, array $lead): bool
         ]
     );
 
-    $statement = $pdo->prepare(
-        'INSERT INTO contact_submissions
-        (full_name, email, phone, company, service_interest, budget_range, message, source_page, ip_address, user_agent)
-        VALUES
-        (:full_name, :email, :phone, :company, :service_interest, :budget_range, :message, :source_page, :ip_address, :user_agent)'
+    $availableColumns = array_flip($pdo->query('SHOW COLUMNS FROM contact_submissions')->fetchAll(PDO::FETCH_COLUMN));
+    $values = [
+        'full_name' => $lead['name'],
+        'email' => $lead['email'],
+        'phone' => $lead['phone'] !== '' ? $lead['phone'] : null,
+        'company' => $lead['company'] !== '' ? $lead['company'] : null,
+        'service_interest' => $lead['service_label'],
+        'budget_range' => $lead['budget'] !== '' ? $lead['budget'] : null,
+        'message' => $lead['message'],
+        'source_page' => $lead['page_url'] !== '' ? $lead['page_url'] : null,
+        'ip_address' => $lead['ip_address'] !== '' ? $lead['ip_address'] : null,
+        'remote_address' => $lead['remote_address'] !== '' ? $lead['remote_address'] : null,
+        'forwarded_for' => $lead['forwarded_for'] !== '' ? $lead['forwarded_for'] : null,
+        'country_code' => $lead['country_code'] !== '' ? $lead['country_code'] : null,
+        'country_name' => $lead['country_name'] !== '' ? $lead['country_name'] : null,
+        'user_agent' => $lead['user_agent'] !== '' ? $lead['user_agent'] : null,
+    ];
+    $values = array_filter(
+        $values,
+        static fn (string $column): bool => isset($availableColumns[$column]),
+        ARRAY_FILTER_USE_KEY
     );
+    $columns = array_keys($values);
+    $placeholders = array_map(static fn (string $column): string => ':' . $column, $columns);
+    $statement = $pdo->prepare(sprintf(
+        'INSERT INTO contact_submissions (%s) VALUES (%s)',
+        implode(', ', $columns),
+        implode(', ', $placeholders)
+    ));
 
-    $statement->execute([
-        ':full_name' => $lead['name'],
-        ':email' => $lead['email'],
-        ':phone' => $lead['phone'] !== '' ? $lead['phone'] : null,
-        ':company' => $lead['company'] !== '' ? $lead['company'] : null,
-        ':service_interest' => $lead['service_label'],
-        ':budget_range' => $lead['budget'] !== '' ? $lead['budget'] : null,
-        ':message' => $lead['message'],
-        ':source_page' => $lead['page_url'] !== '' ? $lead['page_url'] : null,
-        ':ip_address' => $lead['ip_address'] !== '' ? $lead['ip_address'] : null,
-        ':user_agent' => $lead['user_agent'] !== '' ? $lead['user_agent'] : null,
-    ]);
+    $statement->execute(array_combine($placeholders, array_values($values)));
 
     return true;
 }
@@ -178,6 +191,10 @@ function build_contact_email_messages(array $config, array $lead): array
         <p><strong>Website:</strong> ' . htmlspecialchars($lead['website'] ?: 'Not provided') . '</p>
         <p><strong>Service:</strong> ' . htmlspecialchars($lead['service_label']) . '</p>
         <p><strong>Budget:</strong> ' . htmlspecialchars($lead['budget'] ?: 'Not specified') . '</p>
+        <p><strong>IP Address:</strong> ' . htmlspecialchars($lead['ip_address'] ?: 'Unavailable') . '</p>
+        <p><strong>Country:</strong> ' . htmlspecialchars($lead['country_name'] ?: 'Unavailable') . ($lead['country_code'] !== '' ? ' (' . htmlspecialchars($lead['country_code']) . ')' : '') . '</p>
+        <p><strong>Remote Address:</strong> ' . htmlspecialchars($lead['remote_address'] ?: 'Unavailable') . '</p>
+        <p><strong>Forwarded For:</strong> ' . htmlspecialchars($lead['forwarded_for'] ?: 'Unavailable') . '</p>
         <p><strong>Source Page:</strong> ' . htmlspecialchars($lead['page_url'] ?: 'Unknown') . '</p>
         <p><strong>Message:</strong></p>
         <p>' . nl2br(htmlspecialchars($lead['message'])) . '</p>
@@ -191,6 +208,10 @@ function build_contact_email_messages(array $config, array $lead): array
         "Website: " . ($lead['website'] ?: 'Not provided') . "\n" .
         "Service: {$lead['service_label']}\n" .
         "Budget: " . ($lead['budget'] ?: 'Not specified') . "\n" .
+        "IP Address: " . ($lead['ip_address'] ?: 'Unavailable') . "\n" .
+        "Country: " . ($lead['country_name'] ?: 'Unavailable') . ($lead['country_code'] !== '' ? " ({$lead['country_code']})" : '') . "\n" .
+        "Remote Address: " . ($lead['remote_address'] ?: 'Unavailable') . "\n" .
+        "Forwarded For: " . ($lead['forwarded_for'] ?: 'Unavailable') . "\n" .
         "Source Page: " . ($lead['page_url'] ?: 'Unknown') . "\n\n" .
         "Message:\n{$lead['message']}";
     $messages = [[
@@ -287,6 +308,7 @@ try {
     finish_request(null, $wantsJson, 'error', 'The contact form is not configured yet. Please complete the server setup.', 500);
 }
 
+$ipDetails = contact_form_request_ip_details();
 $lead = [
     'name' => trim_value($_POST['name'] ?? '', 150),
     'email' => trim_value($_POST['email'] ?? '', 190),
@@ -297,8 +319,14 @@ $lead = [
     'budget' => trim_value($_POST['budget'] ?? '', 80),
     'message' => trim_value($_POST['message'] ?? '', 5000),
     'contact_reference_code' => trim_value($_POST['contact_reference_code'] ?? '', 255),
+    'captcha_token' => trim_value($_POST['captcha_token'] ?? '', 80),
+    'captcha_answer' => trim_value($_POST['captcha_answer'] ?? '', 20),
     'page_url' => trim_value($_POST['page_url'] ?? '', 255),
-    'ip_address' => trim_value($_SERVER['REMOTE_ADDR'] ?? '', 45),
+    'ip_address' => trim_value($ipDetails['ip_address'] ?? '', 45),
+    'remote_address' => trim_value($ipDetails['remote_address'] ?? '', 45),
+    'forwarded_for' => trim_value($ipDetails['forwarded_for'] ?? '', 255),
+    'country_code' => trim_value($ipDetails['country_code'] ?? '', 2),
+    'country_name' => trim_value($ipDetails['country_name'] ?? '', 80),
     'user_agent' => trim_value($_SERVER['HTTP_USER_AGENT'] ?? '', 255),
 ];
 $lead['service_label'] = contact_form_service_label($lead['service']);
@@ -308,19 +336,49 @@ if ($lead['contact_reference_code'] !== '') {
 }
 
 if ($lead['name'] === '' || strlen($lead['name']) < 2) {
-    finish_request($config, $wantsJson, 'error', 'Please enter your full name.', 422);
+    finish_request($config, $wantsJson, 'error', 'Please enter your full name.', 422, [
+        ['field' => 'name', 'message' => 'Please enter your full name.'],
+    ]);
 }
 
 if ($lead['email'] === '' || !filter_var($lead['email'], FILTER_VALIDATE_EMAIL)) {
-    finish_request($config, $wantsJson, 'error', 'Please enter a valid email address.', 422);
+    finish_request($config, $wantsJson, 'error', 'Please enter a valid email address.', 422, [
+        ['field' => 'email', 'message' => 'Enter a valid email address.'],
+    ]);
 }
 
-if ($lead['service'] === '') {
-    finish_request($config, $wantsJson, 'error', 'Please select a service.', 422);
+$allowedServices = ['seo', 'web', 'ppc', 'social', 'full', 'other'];
+if ($lead['service'] === '' || !in_array($lead['service'], $allowedServices, true)) {
+    finish_request($config, $wantsJson, 'error', 'Please select a service.', 422, [
+        ['field' => 'service', 'message' => 'Please select a service.'],
+    ]);
 }
 
 if ($lead['message'] === '' || strlen($lead['message']) < 10) {
-    finish_request($config, $wantsJson, 'error', 'Please tell us a bit more about your project goals.', 422);
+    finish_request($config, $wantsJson, 'error', 'Please tell us a bit more about your project goals.', 422, [
+        ['field' => 'message', 'message' => 'Message must be at least 10 characters.'],
+    ]);
+}
+
+$antiSpamValidation = contact_form_validate_antispam($config, $lead);
+
+if (!$antiSpamValidation['valid']) {
+    finish_request(
+        $config,
+        $wantsJson,
+        'error',
+        $antiSpamValidation['message'] ?: 'Please review your details before sending.',
+        422,
+        $antiSpamValidation['errors'] ?? []
+    );
+}
+
+$captchaValidation = contact_form_validate_captcha_answer($config, $lead['captcha_token'], $lead['captcha_answer']);
+
+if (!$captchaValidation['valid']) {
+    finish_request($config, $wantsJson, 'error', $captchaValidation['message'], 422, [
+        ['field' => 'captcha_answer', 'message' => $captchaValidation['message']],
+    ]);
 }
 
 $stored = false;

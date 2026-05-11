@@ -53,10 +53,22 @@ function cms_table_exists(string $table): bool
         return false;
     }
 
-    $statement = $pdo->prepare('SHOW TABLES LIKE :table_name');
-    $statement->execute(['table_name' => $table]);
+    $database = cms_config('database', []);
+    $databaseName = (string) ($database['name'] ?? '');
 
-    return (bool) $statement->fetchColumn();
+    if ($databaseName === '') {
+        return false;
+    }
+
+    $statement = $pdo->prepare(
+        'SELECT COUNT(*) FROM information_schema.tables WHERE table_schema = :table_schema AND table_name = :table_name'
+    );
+    $statement->execute([
+        'table_schema' => $databaseName,
+        'table_name' => $table,
+    ]);
+
+    return (int) $statement->fetchColumn() > 0;
 }
 
 function cms_run_schema(): void

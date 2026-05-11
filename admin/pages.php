@@ -210,8 +210,12 @@ require __DIR__ . '/includes/header.php';
       </div>
 
       <div class="field">
-        <label for="custom_html">Page-level custom HTML</label>
-        <textarea id="custom_html" name="custom_html" style="min-height:180px"><?= cms_e((string) $editingPage['custom_html']) ?></textarea>
+        <label for="custom_html">Page-level custom HTML <span class="field-optional">(optional)</span></label>
+        <p class="helper-text" style="margin-top:-4px">Injected after the widget builder output. Use for embeds, custom sections, or anything not covered by a widget.</p>
+        <div class="code-editor-wrap">
+          <div class="code-editor-bar"><i class="fas fa-code"></i> HTML</div>
+          <textarea id="custom_html" name="custom_html" data-codemirror="html"><?= cms_e((string) $editingPage['custom_html']) ?></textarea>
+        </div>
       </div>
 
       <div class="form-grid two-col">
@@ -232,18 +236,27 @@ require __DIR__ . '/includes/header.php';
 
       <div class="form-grid two-col">
         <div class="field">
-          <label for="schema_json">Schema JSON</label>
-          <textarea id="schema_json" name="schema_json" style="min-height:180px"><?= cms_e((string) $editingPage['schema_json']) ?></textarea>
+          <label for="schema_json">Schema JSON-LD</label>
+          <div class="code-editor-wrap">
+            <div class="code-editor-bar"><i class="fas fa-brackets-curly"></i> JSON</div>
+            <textarea id="schema_json" name="schema_json" data-codemirror="json"><?= cms_e((string) $editingPage['schema_json']) ?></textarea>
+          </div>
         </div>
         <div class="field">
           <label for="custom_css">Custom CSS</label>
-          <textarea id="custom_css" name="custom_css" style="min-height:180px"><?= cms_e((string) $editingPage['custom_css']) ?></textarea>
+          <div class="code-editor-wrap">
+            <div class="code-editor-bar"><i class="fas fa-paint-brush"></i> CSS</div>
+            <textarea id="custom_css" name="custom_css" data-codemirror="css"><?= cms_e((string) $editingPage['custom_css']) ?></textarea>
+          </div>
         </div>
       </div>
 
       <div class="field">
-        <label for="custom_js">Custom JS</label>
-        <textarea id="custom_js" name="custom_js" style="min-height:180px"><?= cms_e((string) $editingPage['custom_js']) ?></textarea>
+        <label for="custom_js">Custom JavaScript</label>
+        <div class="code-editor-wrap">
+          <div class="code-editor-bar"><i class="fas fa-terminal"></i> JavaScript</div>
+          <textarea id="custom_js" name="custom_js" data-codemirror="js"><?= cms_e((string) $editingPage['custom_js']) ?></textarea>
+        </div>
       </div>
 
       <div class="inline-actions">

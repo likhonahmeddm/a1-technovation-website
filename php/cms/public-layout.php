@@ -6,24 +6,24 @@ function cms_public_nav(string $active = 'blog'): void
     $settings = cms_site_settings();
     $dynamicServicePages = cms_nav_service_pages();
     $home = cms_url('');
-    $about = cms_url('pages/about.html');
-    $services = cms_url('pages/services.html');
-    $seo = cms_url('pages/services-seo.html');
-    $localSeo = cms_url('pages/services-local-seo.html');
-    $carRentalSeo = cms_url('pages/services-car-rental-seo.html');
-    $limoSeo = cms_url('pages/services-limousine-business-seo.html');
-    $carRepairSeo = cms_url('pages/services-car-repair-seo.html');
-    $carDealershipSeo = cms_url('pages/services-car-dealership-seo.html');
-    $treeSeo = cms_url('pages/services-tree-service-seo.html');
-    $lawyerSeo = cms_url('pages/services-lawyer-seo.html');
-    $smallBusinessSeo = cms_url('pages/services-small-business-seo.html');
-    $webDev = cms_url('pages/services-web-dev.html');
-    $ppc = cms_url('pages/services-ppc-ads.html');
-    $social = cms_url('pages/services-social-media.html');
-    $portfolio = cms_url('pages/portfolio.html');
+    $about = cms_url('pages/about');
+    $services = cms_url('pages/services');
+    $seo = cms_url('pages/services-seo');
+    $localSeo = cms_url('pages/services-local-seo');
+    $carRentalSeo = cms_url('pages/services-car-rental-seo');
+    $limoSeo = cms_url('pages/services-limousine-business-seo');
+    $carRepairSeo = cms_url('pages/services-car-repair-seo');
+    $carDealershipSeo = cms_url('pages/services-car-dealership-seo');
+    $treeSeo = cms_url('pages/services-tree-service-seo');
+    $lawyerSeo = cms_url('pages/services-lawyer-seo');
+    $smallBusinessSeo = cms_url('pages/services-small-business-seo');
+    $webDev = cms_url('pages/services-web-dev');
+    $ppc = cms_url('pages/services-ppc-ads');
+    $social = cms_url('pages/services-social-media');
+    $portfolio = cms_url('pages/portfolio');
     $blog = cms_blog_index_url();
-    $tools = cms_url('pages/tools.html');
-    $contact = cms_url('pages/contact.html');
+    $tools = cms_url('pages/tools');
+    $contact = cms_url('pages/contact');
     $whatsApp = (string) ($settings['primary_cta_url'] ?? 'https://wa.me/8801799976295');
     $ctaLabel = (string) ($settings['primary_cta_label'] ?? 'Free Consultation');
 
@@ -83,11 +83,11 @@ function cms_public_footer(): void
 <footer class="footer"><div class="container">
   <div class="footer-top">
     <div class="footer-brand"><a href="<?= cms_e(cms_url('')) ?>" class="footer-logo" aria-label="A1 Technovation home"><img src="<?= cms_e(cms_url('assets/images/A1Technovation-Dark-Background.png')) ?>" alt="A1 Technovation" class="footer-logo-image" /></a><p><?= cms_e((string) ($settings['footer_text'] ?? "Bangladesh's fastest-growing digital marketing agency.")) ?></p><div class="footer-socials"><a href="https://www.facebook.com/a1technovation/" class="f-social" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a><a href="https://www.instagram.com/a1technovation/?hl=en" class="f-social" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a><a href="https://www.linkedin.com/company/92598277/" class="f-social" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a><a href="<?= cms_e((string) ($settings['whatsapp_url'] ?? 'https://wa.me/8801799976295')) ?>" class="f-social" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a><a href="https://t.me/likhonahmedseo" class="f-social" target="_blank" rel="noopener"><i class="fab fa-telegram"></i></a></div></div>
-    <div class="footer-col"><h6>Services</h6><div class="footer-links"><a href="<?= cms_e(cms_url('pages/services-seo.html')) ?>" class="f-link"><i class="fas fa-chevron-right" style="font-size:.625rem"></i> SEO Services</a><a href="<?= cms_e(cms_url('pages/services-web-dev.html')) ?>" class="f-link"><i class="fas fa-chevron-right" style="font-size:.625rem"></i> Web Design</a><a href="<?= cms_e(cms_url('pages/services-ppc-ads.html')) ?>" class="f-link"><i class="fas fa-chevron-right" style="font-size:.625rem"></i> PPC Ads</a><a href="<?= cms_e(cms_url('pages/services-social-media.html')) ?>" class="f-link"><i class="fas fa-chevron-right" style="font-size:.625rem"></i> Social Media</a></div></div>
-    <div class="footer-col"><h6>Company</h6><div class="footer-links"><a href="<?= cms_e(cms_url('pages/about.html')) ?>" class="f-link"><i class="fas fa-chevron-right" style="font-size:.625rem"></i> About Us</a><a href="<?= cms_e(cms_url('pages/portfolio.html')) ?>" class="f-link"><i class="fas fa-chevron-right" style="font-size:.625rem"></i> Our Work</a><a href="<?= cms_e(cms_blog_index_url()) ?>" class="f-link"><i class="fas fa-chevron-right" style="font-size:.625rem"></i> Blog</a><a href="<?= cms_e(cms_url('pages/contact.html')) ?>" class="f-link"><i class="fas fa-chevron-right" style="font-size:.625rem"></i> Contact</a></div></div>
+    <div class="footer-col"><h6>Services</h6><div class="footer-links"><a href="<?= cms_e(cms_url('pages/services-seo')) ?>" class="f-link"><i class="fas fa-chevron-right" style="font-size:.625rem"></i> SEO Services</a><a href="<?= cms_e(cms_url('pages/services-web-dev')) ?>" class="f-link"><i class="fas fa-chevron-right" style="font-size:.625rem"></i> Web Design</a><a href="<?= cms_e(cms_url('pages/services-ppc-ads')) ?>" class="f-link"><i class="fas fa-chevron-right" style="font-size:.625rem"></i> PPC Ads</a><a href="<?= cms_e(cms_url('pages/services-social-media')) ?>" class="f-link"><i class="fas fa-chevron-right" style="font-size:.625rem"></i> Social Media</a></div></div>
+    <div class="footer-col"><h6>Company</h6><div class="footer-links"><a href="<?= cms_e(cms_url('pages/about')) ?>" class="f-link"><i class="fas fa-chevron-right" style="font-size:.625rem"></i> About Us</a><a href="<?= cms_e(cms_url('pages/portfolio')) ?>" class="f-link"><i class="fas fa-chevron-right" style="font-size:.625rem"></i> Our Work</a><a href="<?= cms_e(cms_blog_index_url()) ?>" class="f-link"><i class="fas fa-chevron-right" style="font-size:.625rem"></i> Blog</a><a href="<?= cms_e(cms_url('pages/contact')) ?>" class="f-link"><i class="fas fa-chevron-right" style="font-size:.625rem"></i> Contact</a></div></div>
     <div class="footer-col"><h6>Contact</h6><div class="f-contact-item"><i class="fas fa-phone"></i><a href="tel:<?= cms_e((string) ($settings['phone'] ?? '+880 1799-976295')) ?>"><?= cms_e((string) ($settings['phone'] ?? '+880 1799-976295')) ?></a></div><div class="f-contact-item"><i class="fas fa-envelope"></i><a href="mailto:<?= cms_e((string) ($settings['email'] ?? 'info.a1technovation@gmail.com')) ?>"><?= cms_e((string) ($settings['email'] ?? 'info.a1technovation@gmail.com')) ?></a></div></div>
   </div>
-  <div class="footer-bottom"><p class="f-copy">© <?= date('Y') ?> A1 Technovation. All rights reserved.</p><div class="f-bottom-links"><a href="<?= cms_e(cms_url('pages/privacy.html')) ?>" class="f-bl">Privacy Policy</a><a href="<?= cms_e(cms_url('pages/terms.html')) ?>" class="f-bl">Terms and Conditions</a></div></div>
+  <div class="footer-bottom"><p class="f-copy">© <?= date('Y') ?> A1 Technovation. All rights reserved.</p><div class="f-bottom-links"><a href="<?= cms_e(cms_url('pages/privacy')) ?>" class="f-bl">Privacy Policy</a><a href="<?= cms_e(cms_url('pages/terms')) ?>" class="f-bl">Terms and Conditions</a></div></div>
 </div></footer>
 <button class="scroll-top" id="scrollTop" aria-label="Scroll to top"><i class="fas fa-arrow-up"></i></button>
 <script src="<?= cms_e(cms_url('js/main.js?v=20260504')) ?>"></script>

@@ -20,7 +20,10 @@ try {
 if (cms_is_post() && $dbError === '') {
     try {
         cms_require_csrf();
-        cms_run_schema();
+
+        if (!cms_table_exists('admin_users')) {
+            cms_run_schema();
+        }
 
         if (cms_setup_required()) {
             cms_create_admin(
@@ -28,9 +31,15 @@ if (cms_is_post() && $dbError === '') {
                 (string) cms_post('email'),
                 (string) cms_post('password')
             );
+        } elseif (cms_admin_exists_by_email((string) cms_post('email'))) {
+            cms_flash_set('success', 'The CMS is already installed. Please sign in with your admin account.');
+            cms_redirect('admin/login.php');
         }
 
-        cms_login((string) cms_post('email'), (string) cms_post('password'));
+        if (!cms_login((string) cms_post('email'), (string) cms_post('password'))) {
+            throw new RuntimeException('The admin account exists, but the password did not match. Try signing in from the login page.');
+        }
+
         cms_flash_set('success', 'The CMS is ready and the admin account has been created.');
         cms_redirect('admin/dashboard.php');
     } catch (Throwable $exception) {

@@ -12,11 +12,11 @@ return [
         'ckeditor_cdn' => 'https://cdn.ckeditor.com/ckeditor5/41.4.2/classic/ckeditor.js',
     ],
     'database' => [
-        'host' => '127.0.0.1',
+        'host' => 'localhost',
         'port' => 3306,
-        'name' => 'a1technovation',
-        'username' => 'db_user',
-        'password' => 'change-me',
+        'name' => 'atechnov_a1technovation',
+        'username' => 'atechnov_a1technovation',
+        'password' => '$12samantaC$',
         'charset' => 'utf8mb4',
     ],
 ];

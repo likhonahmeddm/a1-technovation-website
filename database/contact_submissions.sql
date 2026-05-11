@@ -9,11 +9,17 @@ CREATE TABLE IF NOT EXISTS `contact_submissions` (
   `message` TEXT NOT NULL,
   `source_page` VARCHAR(255) DEFAULT NULL,
   `ip_address` VARCHAR(45) DEFAULT NULL,
+  `remote_address` VARCHAR(45) DEFAULT NULL,
+  `forwarded_for` VARCHAR(255) DEFAULT NULL,
+  `country_code` CHAR(2) DEFAULT NULL,
+  `country_name` VARCHAR(80) DEFAULT NULL,
   `user_agent` VARCHAR(255) DEFAULT NULL,
   `status` VARCHAR(32) NOT NULL DEFAULT 'new',
   `created_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
   KEY `idx_contact_submissions_email` (`email`),
+  KEY `idx_contact_submissions_ip_address` (`ip_address`),
+  KEY `idx_contact_submissions_country_code` (`country_code`),
   KEY `idx_contact_submissions_created_at` (`created_at`),
   KEY `idx_contact_submissions_service_interest` (`service_interest`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;

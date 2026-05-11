@@ -15,6 +15,20 @@ function cms_setup_required(): bool
     return cms_admin_count() === 0;
 }
 
+function cms_admin_exists_by_email(string $email): bool
+{
+    $email = strtolower(trim($email));
+
+    if ($email === '' || !cms_table_exists('admin_users')) {
+        return false;
+    }
+
+    $statement = cms_db()->prepare('SELECT id FROM admin_users WHERE email = :email LIMIT 1');
+    $statement->execute(['email' => $email]);
+
+    return (bool) $statement->fetchColumn();
+}
+
 function cms_create_admin(string $fullName, string $email, string $password): int
 {
     $fullName = trim($fullName);
@@ -30,6 +44,10 @@ function cms_create_admin(string $fullName, string $email, string $password): in
 
     if (strlen($password) < 8) {
         throw new RuntimeException('Admin password must be at least 8 characters long.');
+    }
+
+    if (cms_admin_exists_by_email($email)) {
+        throw new RuntimeException('An admin account with this email already exists. Please sign in instead.');
     }
 
     $statement = cms_db()->prepare(

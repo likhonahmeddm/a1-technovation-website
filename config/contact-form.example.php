@@ -4,7 +4,7 @@ declare(strict_types=1);
 return [
     'app' => [
         'base_url' => 'https://a1technovation.com',
-        'contact_page' => '/pages/contact.html',
+        'contact_page' => '/pages/contact',
         'timezone' => 'Asia/Dhaka',
     ],
     'database' => [
@@ -34,5 +34,45 @@ return [
         'fallback_to_native_mail' => true,
         'send_auto_reply' => true,
         'auto_reply_subject' => 'Thanks for contacting A1 Technovation',
+    ],
+    'captcha' => [
+        'enabled' => true,
+        'ttl_seconds' => 900,
+        'min_number' => 2,
+        'max_number' => 12,
+    ],
+    'anti_spam' => [
+        'enabled' => true,
+        'require_same_site' => true,
+        'minimum_submit_seconds' => 4,
+        'max_links_in_message' => 2,
+        'check_email_dns' => true,
+        'check_website_dns' => true,
+        'rate_limit_window_seconds' => 900,
+        'max_submissions_per_ip' => 3,
+        'max_submissions_per_email' => 2,
+        'blocked_email_domains' => [
+            '10minutemail.com',
+            'guerrillamail.com',
+            'mailinator.com',
+            'tempmail.com',
+            'temp-mail.org',
+            'yopmail.com',
+            'example.com',
+            'test.com',
+            'invalid.com',
+        ],
+        'blocked_website_domains' => [
+            'example.com',
+            'test.com',
+            'localhost',
+        ],
+        'blocked_message_terms' => [
+            'casino',
+            'crypto giveaway',
+            'viagra',
+            'loan offer',
+            'backlink package',
+        ],
     ],
 ];

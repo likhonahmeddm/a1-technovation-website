@@ -67,6 +67,32 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  if (window.CodeMirror) {
+    const cmOptions = (mode) => ({
+      mode,
+      theme: "dracula",
+      lineNumbers: true,
+      lineWrapping: true,
+      tabSize: 2,
+      indentWithTabs: false,
+      autofocus: false,
+      extraKeys: { Tab: (cm) => cm.replaceSelection("  ") },
+    });
+
+    document.querySelectorAll("[data-codemirror='html']").forEach((el) => {
+      CodeMirror.fromTextArea(el, cmOptions("htmlmixed"));
+    });
+    document.querySelectorAll("[data-codemirror='css']").forEach((el) => {
+      CodeMirror.fromTextArea(el, cmOptions("css"));
+    });
+    document.querySelectorAll("[data-codemirror='js']").forEach((el) => {
+      CodeMirror.fromTextArea(el, cmOptions("javascript"));
+    });
+    document.querySelectorAll("[data-codemirror='json']").forEach((el) => {
+      CodeMirror.fromTextArea(el, { ...cmOptions("application/json"), mode: "application/json" });
+    });
+  }
+
   if (window.ClassicEditor) {
     document.querySelectorAll("[data-ckeditor]").forEach((element) => {
       window.ClassicEditor.create(element, {
@@ -160,7 +186,7 @@ document.addEventListener("DOMContentLoaded", () => {
       testimonials: () => ({ quote: "Client quote", name: "Client Name", role: "Owner" }),
       stats: () => ({ number: "250%", label: "Growth" }),
       service_cards: () => ({ title: "Service", text: "Description" }),
-      buttons: () => ({ label: "Button", url: "/pages/contact.html" })
+      buttons: () => ({ label: "Button", url: "/pages/contact" })
     };
 
     const defaultPayload = (type) => JSON.parse(JSON.stringify(defaultsRaw[type] || { heading: "New section" }));

@@ -453,6 +453,7 @@ function cms_save_post(array $input, int $adminId): int
     $status = (string) ($input['status'] ?? 'draft');
     $providedSlug = trim((string) ($input['slug'] ?? ''));
     $contentHtml = cms_clean_html((string) ($input['content_html'] ?? ''));
+    $customHtml = trim((string) ($input['custom_html'] ?? ''));
     $excerpt = trim((string) ($input['excerpt'] ?? ''));
 
     if ($title === '') {
@@ -499,6 +500,7 @@ function cms_save_post(array $input, int $adminId): int
         'status' => $status,
         'excerpt' => $excerpt,
         'content_html' => $contentHtml,
+        'custom_html' => $customHtml,
         'featured_image' => $featuredImage,
         'author_name' => $authorName !== '' ? $authorName : (string) cms_config('app.default_author', 'A1 Technovation'),
         'category' => $category,
@@ -515,9 +517,9 @@ function cms_save_post(array $input, int $adminId): int
         $statement = cms_db()->prepare(
             'UPDATE blog_posts
              SET title = :title, slug = :slug, status = :status, excerpt = :excerpt, content_html = :content_html,
-                 featured_image = :featured_image, author_name = :author_name, category = :category, tags = :tags,
-                 meta_title = :meta_title, meta_description = :meta_description, published_at = :published_at,
-                 updated_by = :updated_by
+                 custom_html = :custom_html, featured_image = :featured_image, author_name = :author_name,
+                 category = :category, tags = :tags, meta_title = :meta_title, meta_description = :meta_description,
+                 published_at = :published_at, updated_by = :updated_by
              WHERE id = :id'
         );
         $statement->execute($payload);
@@ -529,9 +531,9 @@ function cms_save_post(array $input, int $adminId): int
 
     $statement = cms_db()->prepare(
         'INSERT INTO blog_posts
-         (title, slug, status, excerpt, content_html, featured_image, author_name, category, tags, meta_title, meta_description, published_at, created_by, updated_by)
+         (title, slug, status, excerpt, content_html, custom_html, featured_image, author_name, category, tags, meta_title, meta_description, published_at, created_by, updated_by)
          VALUES
-         (:title, :slug, :status, :excerpt, :content_html, :featured_image, :author_name, :category, :tags, :meta_title, :meta_description, :published_at, :created_by, :updated_by)'
+         (:title, :slug, :status, :excerpt, :content_html, :custom_html, :featured_image, :author_name, :category, :tags, :meta_title, :meta_description, :published_at, :created_by, :updated_by)'
     );
     $statement->execute($payload);
 
@@ -655,7 +657,7 @@ function cms_widget_catalog(): array
 function cms_default_widget_payload(string $widgetType): array
 {
     return match ($widgetType) {
-        'hero' => ['eyebrow' => 'New Service', 'heading' => 'Service page heading', 'highlight' => 'that converts', 'text' => 'Explain the offer clearly.', 'primary_label' => 'Get Started', 'primary_url' => '/pages/contact.html', 'secondary_label' => 'See Pricing', 'secondary_url' => '#pricing', 'background_image' => '', 'theme' => 'dark'],
+        'hero' => ['eyebrow' => 'New Service', 'heading' => 'Service page heading', 'highlight' => 'that converts', 'text' => 'Explain the offer clearly.', 'primary_label' => 'Get Started', 'primary_url' => '/pages/contact', 'secondary_label' => 'See Pricing', 'secondary_url' => '#pricing', 'background_image' => '', 'theme' => 'dark'],
         'text' => ['heading' => 'Section heading', 'body' => '<p>Add your rich text content here.</p>'],
         'image' => ['heading' => 'Visual section', 'image_url' => '', 'alt' => '', 'caption' => ''],
         'video' => ['heading' => 'Video section', 'video_url' => '', 'poster_url' => '', 'caption' => ''],
@@ -665,7 +667,7 @@ function cms_default_widget_payload(string $widgetType): array
         'testimonials' => ['heading' => 'Client proof', 'items' => [['quote' => 'Great work and fast communication.', 'name' => 'Client Name', 'role' => 'Business Owner']]],
         'stats' => ['heading' => 'Performance highlights', 'items' => [['number' => '250%', 'label' => 'Growth'], ['number' => '90 days', 'label' => 'Average turnaround']]],
         'service_cards' => ['heading' => 'What is included', 'items' => [['title' => 'Audit', 'text' => 'Technical and growth audit'], ['title' => 'Execution', 'text' => 'Hands-on implementation']]],
-        'buttons' => ['heading' => 'Helpful links', 'items' => [['label' => 'Contact Us', 'url' => '/pages/contact.html'], ['label' => 'Our Work', 'url' => '/pages/portfolio.html']]],
+        'buttons' => ['heading' => 'Helpful links', 'items' => [['label' => 'Contact Us', 'url' => '/pages/contact'], ['label' => 'Our Work', 'url' => '/pages/portfolio']]],
         'custom_html' => ['heading' => 'Custom HTML block', 'html' => '<div class="custom-block">Paste any trusted HTML here.</div>'],
         default => ['heading' => 'New section'],
     };

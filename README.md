@@ -45,6 +45,7 @@ A1 Technovation - Website/
 - SEO and social preview metadata across all public pages
 - Brand logo system with light and dark logo variants
 - Contact form validation on the frontend
+- Built-in math CAPTCHA plus honeypot protection for spam reduction
 - PHP contact form endpoint with built-in SMTP delivery
 - Optional MySQL storage for contact submissions
 - Deployment guide and database schema for production setup
@@ -53,6 +54,7 @@ A1 Technovation - Website/
 
 - Frontend form: [pages/contact.html](/d:/A1 Technovation/A1 Technovation - Website/pages/contact.html)
 - Frontend behavior: [js/main.js](/d:/A1 Technovation/A1 Technovation - Website/js/main.js)
+- CAPTCHA endpoint: [php/contact-captcha.php](/d:/A1 Technovation/A1 Technovation - Website/php/contact-captcha.php)
 - PHP handler: [php/contact-submit.php](/d:/A1 Technovation/A1 Technovation - Website/php/contact-submit.php)
 - Config template: [config/contact-form.example.php](/d:/A1 Technovation/A1 Technovation - Website/config/contact-form.example.php)
 - Database schema: [database/contact_submissions.sql](/d:/A1 Technovation/A1 Technovation - Website/database/contact_submissions.sql)

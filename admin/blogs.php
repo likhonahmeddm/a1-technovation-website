@@ -152,6 +152,15 @@ require __DIR__ . '/includes/header.php';
         <textarea id="content_html" class="editor-textarea" name="content_html" data-ckeditor><?= cms_e((string) $editingPost['content_html']) ?></textarea>
       </div>
 
+      <div class="field">
+        <label for="custom_html">Custom HTML <span class="field-optional">(optional)</span></label>
+        <p class="helper-text" style="margin-top:-4px">Inject raw HTML rendered below the article body — useful for embeds, iframes, maps, or custom elements.</p>
+        <div class="code-editor-wrap">
+          <div class="code-editor-bar"><i class="fas fa-code"></i> HTML</div>
+          <textarea id="custom_html" name="custom_html" data-codemirror="html"><?= cms_e((string) $editingPost['custom_html']) ?></textarea>
+        </div>
+      </div>
+
       <div class="form-grid two-col">
         <div class="field">
           <label for="meta_title">Meta title</label>

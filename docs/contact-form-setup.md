@@ -3,6 +3,7 @@
 This site now uses a first-party PHP endpoint for the contact form instead of Formspree. The handler can:
 
 - validate submissions
+- require a server-backed math CAPTCHA and keep the honeypot spam trap
 - save leads to MySQL
 - send notification emails over SMTP
 - send an automatic thank-you reply to the visitor
@@ -23,6 +24,18 @@ Example with MySQL CLI:
 mysql -u your_user -p your_database < database/contact_submissions.sql
 ```
 
+If the table already exists, add the IP/country columns with:
+
+```sql
+ALTER TABLE contact_submissions
+  ADD COLUMN remote_address VARCHAR(45) DEFAULT NULL AFTER ip_address,
+  ADD COLUMN forwarded_for VARCHAR(255) DEFAULT NULL AFTER remote_address,
+  ADD COLUMN country_code CHAR(2) DEFAULT NULL AFTER forwarded_for,
+  ADD COLUMN country_name VARCHAR(80) DEFAULT NULL AFTER country_code,
+  ADD KEY idx_contact_submissions_ip_address (ip_address),
+  ADD KEY idx_contact_submissions_country_code (country_code);
+```
+
 ## 3. Configure the App
 
 1. Copy [config/contact-form.example.php](/d:/A1 Technovation/A1 Technovation - Website/config/contact-form.example.php) to `config/contact-form.php`.
@@ -30,6 +43,7 @@ mysql -u your_user -p your_database < database/contact_submissions.sql
    - MySQL host, database, username, and password
    - SMTP host, port, username, password, and encryption
    - sender and notification email addresses
+   - optional `captcha.ttl_seconds`, `captcha.min_number`, and `captcha.max_number` values
    - optional `mail.transport` and `mail.fallback_to_native_mail` settings
 3. Set `database.enabled` to `true` when you want submissions stored in MySQL.
 
@@ -79,8 +93,10 @@ Make sure your hosting serves PHP files and allows outbound SMTP connections.
 2. Submit a test lead.
 3. Confirm:
    - the record appears in `contact_submissions`
+   - the notification email includes IP address and country details
    - the notification email arrives in the admin inbox
    - the visitor receives the thank-you email
+   - the math CAPTCHA loads and rejects a wrong answer
    - the submission is sent through `/php/contact-submit.php`, not Formspree
 
 ## 7. Files Involved
@@ -88,5 +104,6 @@ Make sure your hosting serves PHP files and allows outbound SMTP connections.
 - Frontend page: [pages/contact.html](/d:/A1 Technovation/A1 Technovation - Website/pages/contact.html)
 - Frontend script: [js/main.js](/d:/A1 Technovation/A1 Technovation - Website/js/main.js)
 - SMTP mailer: [php/SmtpMailer.php](/d:/A1 Technovation/A1 Technovation - Website/php/SmtpMailer.php)
+- CAPTCHA endpoint: [php/contact-captcha.php](/d:/A1 Technovation/A1 Technovation - Website/php/contact-captcha.php)
 - PHP bootstrap: [php/bootstrap.php](/d:/A1 Technovation/A1 Technovation - Website/php/bootstrap.php)
 - PHP form handler: [php/contact-submit.php](/d:/A1 Technovation/A1 Technovation - Website/php/contact-submit.php)

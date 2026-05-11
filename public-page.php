@@ -40,8 +40,8 @@ $ogImage = is_array($page) ? (string) ($page['og_image'] ?: $page['featured_imag
   <link rel="canonical" href="<?= cms_e($canonical) ?>" />
   <link rel="icon" type="image/png" href="<?= cms_e(cms_url('assets/images/favicon.png')) ?>" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <link rel="stylesheet" href="<?= cms_e(cms_url('css/style.css?v=20260504')) ?>" />
-  <link rel="stylesheet" href="<?= cms_e(cms_url('css/responsive.css?v=20260504')) ?>" />
+  <link rel="stylesheet" href="<?= cms_e(cms_url('css/style.css?v=20260505')) ?>" />
+  <link rel="stylesheet" href="<?= cms_e(cms_url('css/responsive.css?v=20260505')) ?>" />
   <link rel="stylesheet" href="<?= cms_e(cms_url('css/cms-pages.css?v=20260504')) ?>" />
   <?php if (is_array($page) && trim((string) ($page['schema_json'] ?? '')) !== ''): ?><script type="application/ld+json"><?= (string) $page['schema_json'] ?></script><?php endif; ?>
   <?php if (is_array($page) && trim((string) ($page['custom_css'] ?? '')) !== ''): ?><style><?= (string) $page['custom_css'] ?></style><?php endif; ?>
